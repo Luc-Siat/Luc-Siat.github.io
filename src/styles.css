@@ -5,4 +5,20 @@
 
 body {
    @apply bg-cwhite;
+   font-family: "Truculenta", sans-serif;
 }
+
+@font-face {
+   font-family: 'Pacifico';
+   src: url('assets/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Truculenta';
+   src: url('assets/fonts/Truculenta/Truculenta-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
