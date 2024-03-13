@@ -9,6 +9,7 @@ import { MainContainerComponent } from './utils/main-container/main-container.co
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faBars as fasBars,
+  faPersonDigging as fasPersonDigging,
   
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -34,6 +35,7 @@ export class AppModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(
       fasBars,
+      fasPersonDigging
     );
   }
  }
