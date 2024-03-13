@@ -3,6 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+   --bar-width: 1.5rem;
+   --bar-height: 2px;
+   --hamburger-gap: 6px;
+   --foreground: #084c61;
+   --background: #084c61;
+   --animation-timing: 100ms ease-in-out;
+   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+   --spring-multiplier: 2;
+}
+
 body {
    @apply bg-cwhite;
    font-family: "Truculenta", sans-serif;

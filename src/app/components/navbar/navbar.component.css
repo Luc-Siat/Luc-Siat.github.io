@@ -1,0 +1,130 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    /* width: max-content; */
+    z-index: 50;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu:has(input:not(:checked))::after {
+    width: 1rem !important;
+    margin-right: 8px;
+  }
+  
+  
+  .hamburger-menu:has(input:checked) {
+    --foreground: #084c61;
+    --background: #084c61;
+  }
+  
+  .hamburger-menu:has(input:focus-visible)::before,
+  .hamburger-menu:has(input:focus-visible)::after,
+  .hamburger-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+  }
+  
+  .hamburger-menu::before,
+  .hamburger-menu::after,
+  .hamburger-menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+      rotate var(--animation-timing), translate var(--animation-timing),
+      background-color var(--animation-timing), margin var(--animation-timing);
+  }
+  
+  .hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+  }
+  
+  .hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    margin-left: 8px;
+    translate: 0 calc(var(--bar-height) / -2);
+  }
+  
+  .hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    margin-left: 8px;
+    translate: 0 calc(var(--bar-height) / 2);
+  }
+  
+  .hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger-menu:has(input:checked) + .sidebar {
+    scale: 100% 100%;
+    animation: 1s move linear;
+    animation-fill-mode: both;
+  }
+
+  .sidebar {
+    position: fixed;
+    transition: scale var(--animation-timing);
+    translate: 0 -30%; 
+    scale: 100% 0;
+    color: var(--background);
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  }
+
+
+  @keyframes move {
+    0%   { left: -100%; }
+    2%   { left: 103.30887625352196%; }
+    4%   { left: 112.06407562318391%; }
+    6%   { left: 124.54642206432976%; }
+    8%   { left: 139.16640928859013%; }
+    40%  { left: 203.72473387120573%; }
+    42%  { left: 201.2199697208098%; }
+    44%  { left: 199.17202686633095%; }
+    46%  { left: 197.61374067964204%; }
+    48%  { left: 196.53978407975245%; }
+    50%  { left: 195.91514930968282%; }
+    52%  { left: 195.68370845882814%; }
+    54%  { left: 195.7762912646242%; }
+    56%  { left: 196.1178692094388%; }
+    57%  { left: 196.35849187467915%; }
+    58%  { left: 196.63357948554946%; }
+    59%  { left: 196.93457574055066%; }
+    60%  { left: 197.25345307939384%; }
+    62%  { left: 197.91582261394115%; }
+    64%  { left: 198.56947483257156%; }
+    66%  { left: 199.17467862706735%; }
+    68%  { left: 199.70326312039%; }
+    70%  { left: 200.13794350123476%; }
+    72%  { left: 200.47109806939648%; }
+    84%  { left: 200.7105482768328%; }
+    86%  { left: 200.58308284617112%; }
+    88%  { left: 200.44571408112546%; }
+    90%  { left: 200.3092956925791%; }
+    92%  { left: 200.1823050421591%; }
+    94%  { left: 200.07081078240043%; }
+    96%  { left: 199.97860066859386%; }
+    98%  { left: 199.90742722728143%; }
+    100% { left: 0%; }
+  }
+
+
