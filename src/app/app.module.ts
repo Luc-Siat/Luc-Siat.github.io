@@ -10,7 +10,8 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import {
   faBars as fasBars,
   faPersonDigging as fasPersonDigging,
-  faPaperPlane as fasPaperPlane
+  faPaperPlane as fasPaperPlane,
+  faGear as f
   
 } from '@fortawesome/free-solid-svg-icons';
 

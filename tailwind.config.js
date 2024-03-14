@@ -20,7 +20,7 @@ module.exports = {
     {
       polka: 
       {
-        "primary": "#086480",
+        "primary": "#084c61",
         "secondary": "#709176",
         "accent": "#084c61",
         "neutral": "#f0e7d8",
