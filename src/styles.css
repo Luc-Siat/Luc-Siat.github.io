@@ -15,7 +15,7 @@
 }
 
 body {
-   @apply bg-cwhite;
+   /* @apply bg-cwhite; */
    font-family: "Truculenta", sans-serif;
 }
 

@@ -1,15 +1,15 @@
 
 
 
-<nav class="navbar z-40 text-cblue text-center items-center justify-center text-xl md:text-2xl lg:text-3xl relative">
-  <ul class="container flex gap-3 justify-between items-center px-0">
-    <li class="grow justify-start md:hidden flex lg:justify-evenly">
-      <div class="dropdown">
-        <label class="hamburger-menu btn btn-ghost btn-circle">
-          <input type="checkbox"/>
+<nav class="navbar z-10 text-accent text-center items-center justify-center text-xl md:text-2xl lg:text-3xl relative">
+  <ul class="container flex gap-3 justify-between items-center px-0 relative">
+    <li class="grow justify-start md:hidden flex lg:justify-evenly relative">
+      <!-- <div class="">
+        <label class="hamburger-menu btn btn-ghost btn-circle ">
+          <input type="checkbox" class="z-50" />
         </label>
-        <aside tabindex="0" class="sidebar h-auto left-0 z-50 pt-10 p-2 shadow rounded-md text-2xl w-32 md:w-96 flex flex-col gap-2 bg-contain items-start">
-          <ul class="z-50">
+        <aside tabindex="0" class="fixed sidebar left-0 p-2 shadow bg-cgreen text-1xl w-48 flex flex-col h-screen gap-2 items-start">
+          <ul class="text-start container">
             <li><a>HOME</a></li>
             <li>
               <a>PROJECTS</a>
@@ -21,17 +21,37 @@
             <li><a>ABOUT</a></li>
           </ul>
         </aside>
+      </div> -->
+      <div class="menuToggle flex flex-col px-4 py-2">
+        <input type="checkbox" class="my-auto mx-auto"/>
+        <span></span>
+        <span></span>
+        <div></div>
+          <ul class="custom-drawer text-start container text-neutral w-[75vw] min-h-screen ">
+            <li><a >HOME</a></li>
+            <li>
+              <a>PROJECTS</a>
+              <ul class="p-2">
+                <li><a>DealFortress</a></li>
+                <li><a>Cup Of Tickets</a></li>
+              </ul>
+            </li>
+            <li><a>ABOUT</a></li>
+          </ul>
       </div>
     </li>
+
+
+
     <li class="grow justify-start hidden md:flex lg:justify-evenly">
       <ul class="menu menu-horizontal px-1 grow lg:flex lg:justify-evenly  text-xl md:text-2xl lg:text-3xl">
         <li><a>HOME</a></li>
         <li>
           <details>
             <summary>PROJECTS</summary>
-            <ul class="p-2 bg-cwhite shadow-none border border-cblue rounded-md z-40">
-              <li><a>DealFortress</a></li>
-              <li><a>Cup Of Tickets</a></li>
+            <ul class="p-2 bg-cwhite shadow-none border border-accent">
+              <li><a class="">DealFortress</a></li>
+              <li><a class="">Cup Of Tickets</a></li>
             </ul>
           </details>
         </li>
@@ -44,9 +64,13 @@
       </a>
     </li>
     <li class="grow justify-end flex items-center lg:justify-evenly ">
-      <a class="px-4 py-2 hidden md:flex">ABOUT</a>
+      <ul class="menu menu-horizontal">
+        <li><a class="px-4 py-2 hidden md:flex text-3xl">ABOUT</a></li>
+      </ul>
       <a
-        class="btn btn-ghost rounded-md text-lg md:text-2xl lg:text-3xl font-normal border border-[grey] hover:bg-cblue hover:text-cwhite ">CONTACT</a>
+        class="btn btn-ghost btn-circle md:btn-lg font-normal bg-base-100 text-accent hover:bg-accent hover:text-base-100 ">
+        <fa-icon [icon]="['fas', 'paper-plane']" class="fa-fw text-2xl lg:text-3xl w-10 h-10 flex justify-center items-center"></fa-icon>
+      </a>
     </li>
   </ul>
 </nav>

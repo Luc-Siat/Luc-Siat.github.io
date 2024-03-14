@@ -10,6 +10,7 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import {
   faBars as fasBars,
   faPersonDigging as fasPersonDigging,
+  faPaperPlane as fasPaperPlane
   
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -35,7 +36,8 @@ export class AppModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(
       fasBars,
-      fasPersonDigging
+      fasPersonDigging,
+      fasPaperPlane
     );
   }
  }
