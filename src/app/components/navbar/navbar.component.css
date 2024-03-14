@@ -85,10 +85,6 @@
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 .menuToggle input:checked ~ span
 {
   opacity: 1;
@@ -129,8 +125,9 @@
 .custom-drawer
 {
   position: absolute;
-  margin: -48px 0 0 -48px;
+  margin: -52px 0 0 -48px;
   padding: 50px;
+  padding-top: 80px;
   @apply bg-primary;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;

@@ -12,8 +12,8 @@ import {
   faPersonDigging as fasPersonDigging,
   faPaperPlane as fasPaperPlane,
   faGear as fasGear,
-  faChevronDown as fasChevronDown
-  
+  faChevronDown as fasChevronDown,
+  faChevronUp as fasChevronUp
 } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -41,7 +41,8 @@ export class AppModule {
       fasPersonDigging,
       fasPaperPlane,
       fasChevronDown,
-      fasGear
+      fasGear,
+      fasChevronUp
     );
   }
  }

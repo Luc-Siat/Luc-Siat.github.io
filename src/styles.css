@@ -33,3 +33,9 @@ body {
    font-style: normal;
 }
 
+.soft-animation {
+   transition: transform 0.3s ease;
+ }
+ 
+ 
+
