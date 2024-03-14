@@ -157,5 +157,17 @@
   transform: none;
 }
 
+input[type='radio']:checked {
+  @apply accent-primary;
+  @apply bg-primary;
+}
+
+input[type='radio'] {
+  @apply accent-primary;
+  background-color: transparent;
+}
+
+
+
 
  

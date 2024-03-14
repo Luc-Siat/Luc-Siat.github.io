@@ -11,7 +11,8 @@ import {
   faBars as fasBars,
   faPersonDigging as fasPersonDigging,
   faPaperPlane as fasPaperPlane,
-  faGear as f
+  faGear as fasGear,
+  faChevronDown as fasChevronDown
   
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -38,7 +39,9 @@ export class AppModule {
     library.addIcons(
       fasBars,
       fasPersonDigging,
-      fasPaperPlane
+      fasPaperPlane,
+      fasChevronDown,
+      fasGear
     );
   }
  }
