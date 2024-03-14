@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { toggleOverflow } from 'src/app/utils/helper-functions/helper';
 
 @Component({
   selector: 'app-navbar',
@@ -6,26 +7,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit{
-  public darkThemes = ["coffee","dark","synthwave","forest","halloween","black","dracula","business","night","dim","sunset","luxury"]
+  public darkThemes = ["coffee","dark","dim","sunset","luxury",
+  "synthwave","forest","halloween",
+  "black","dracula","business",
+  "night"]
     
-  public lightThemes =  ["luc's homebrew", "light", "cupcake", "bumblebee",  "emerald",  "corporate",   "retro",
-    "cyberpunk",  "valentine",   "garden",  "aqua",  "lofi",  "pastel",
+  public lightThemes =  ["luc's homebrew", "light", "cupcake", "bumblebee",  "emerald",  "corporate", "retro",
+"cyberpunk",  "valentine",   "garden",  "aqua",  "lofi",  "pastel",
     "fantasy",  "wireframe",  "cmyk",  "autumn",  "acid",  "lemonade",
     "winter",  "nord",
   ]
-  
-  public themes = this.lightThemes;
+  public themes : string[] = [];
+  public toggleOverflow = toggleOverflow;
 
   ngOnInit(): void {
+    this.themes = this.lightThemes;
   }
 
   setThemeLibrary(isDark : boolean) {
-    console.log(isDark);
     if (isDark) {
       this.themes = this.darkThemes;
       return;
     } 
     this.themes = this.lightThemes;
   }
+
+  test(boo: boolean){
+    console.log(boo)
+  }
+
+  themesDropdownLeave(input : HTMLInputElement) {
+    setTimeout(() => {
+      input.checked = false 
+      // doing some other stuff...
+  }, 300);
+  }
+
 
 }
