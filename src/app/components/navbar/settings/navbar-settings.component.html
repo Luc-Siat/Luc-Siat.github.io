@@ -58,10 +58,10 @@
             <!-- <fa-icon *ngIf="themesInput.checked" [icon]="['fas', 'chevron-up']" class="fa-fw text-lg aspect-square"></fa-icon> -->
           <ul  #themesDropdown tabindex="0" 
           [ngClass]="themesInput.checked ? '' : 'hidden' " 
-          class="rounded-none p-2 bg-base-content 
-          text-base-content text-lg accent-primary border-l-2 border-base-100 border-opacity-5 flex flex-col gap-1 fixed h-screen top-0 left-[70vw] w-[30vw] join join-vertical overflow-y-auto" 
+          class="rounded-none p-2 ps-4 bg-base-content 
+          text-base-content text-lg accent-primary border-l-2 border-base-100 border-opacity-5 flex flex-col fixed h-[85vh] top-[15vh] left-[70vw] w-[30vw] join join-vertical overflow-y-auto gap-3" 
           >
-              <li *ngFor="let theme of themes" class=""><input type="radio" name="theme-buttons" class="btn theme-controller bg-base-100 w-full text-sm join-item font-thin " [attr.aria-label]="capitalize(theme)" [value]="theme" [value]="theme" [checked]="theme == 'luc\'s homebrew' || theme == 'luc\s darkroast' ? true : false"/></li>
+              <li *ngFor="let theme of themes" class=""><input type="radio" name="theme-buttons" class="btn theme-controller !rounded-box bg-base-100 w-full text-sm join-item font-thin " [attr.aria-label]="capitalize(theme)" [value]="theme" [value]="theme" [checked]="theme == 'luc\'s homebrew' || theme == 'luc\s darkroast' ? true : false"/></li>
           </ul>
         </div>
       </li>

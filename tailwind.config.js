@@ -32,8 +32,8 @@ module.exports = {
         "base-200": "#D0C7B9",
         "base-300": "#B0A99D",
         "base-content": "#084c61",
-        "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
-        "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
+        "--rounded-box": "0.2rem", // border radius rounded-box utility class, used in card and other large boxes
+        "--rounded-btn": "0.2rem", // border radius rounded-btn utility class, used in buttons and similar element
         "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
         "--animation-btn": "0.25s", // duration of animation when you click on button
         "--animation-input": "0.2s", // duration of animation for inputs like checkbox, toggle, radio, etc
@@ -57,8 +57,8 @@ module.exports = {
         "base-300": "#0E0F0F",
         "base-content": "#5b8e7d",
    
-        "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
-        "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
+        "--rounded-box": "0.2rem", // border radius rounded-box utility class, used in card and other large boxes
+        "--rounded-btn": "0.2rem", // border radius rounded-btn utility class, used in buttons and similar element
         "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
         "--animation-btn": "0.25s", // duration of animation when you click on button
         "--animation-input": "0.2s", // duration of animation for inputs like checkbox, toggle, radio, etc

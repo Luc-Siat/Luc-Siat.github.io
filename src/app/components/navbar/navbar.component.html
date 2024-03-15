@@ -9,7 +9,7 @@
           <span></span>
           <span></span>
           <span></span>
-        <ul class="custom-drawer text-start container top-10 text-base-100 w-[90vw] overflow-hidden h-[102vh] flex flex-col justify-start gap-5 text-3xl">
+        <ul class="custom-drawer text-start container top-10 text-base-100 w-[90vw] overflow-hidden h-screen flex flex-col justify-start gap-5 text-3xl">
           <li class="flex flex-col ">
               <app-navbar-settings [themes]="themes" [isOnMobile]="true" (setThemeLibraryEvent)="setThemeLibrary($event)" [drawerEvent]="closeThemeDropdownEvent"></app-navbar-settings>
           </li>
@@ -24,7 +24,7 @@
           <li><a>ABOUT</a></li>
         </ul>
       </div>
-      <a class="absolute h-full aspect-square rounded-full top-0 left-0" [ngClass]="drawerInput.checked ? 'circle-grow-screen' : ''"></a>
+      <span class="absolute h-full aspect-square rounded-full top-0 left-0" [ngClass]="drawerInput.checked ? 'circle-grow-screen' : ''"></span>
     </li>
 
     <li class="grow justify-start hidden md:flex lg:justify-evenly">

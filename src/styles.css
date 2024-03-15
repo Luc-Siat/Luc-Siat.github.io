@@ -14,7 +14,7 @@
    --spring-multiplier: 2;
 }
 
-
+html {margin: 0; height: 100%; overflow: hidden}
 body {
    /* @apply bg-cwhite; */
    font-family: "Truculenta", sans-serif;
