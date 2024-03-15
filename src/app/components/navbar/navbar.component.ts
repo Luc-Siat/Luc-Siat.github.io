@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { isOnMobile, toggleOverflow } from 'src/app/utils/helper-functions/helper';
+import { ReturnStatement } from '@angular/compiler';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+import { capitalize, isOnMobile, toggleOverflow } from 'src/app/utils/helper-functions/helper';
 
 @Component({
   selector: 'app-navbar',
@@ -20,6 +22,9 @@ export class NavbarComponent implements OnInit{
   public themes : string[] = [];
   public toggleOverflow = toggleOverflow;
   public isOnMobile = isOnMobile;
+  public closeThemeDropdownEvent = new EventEmitter<boolean>();
+
+
 
   ngOnInit(): void {
     this.themes = this.lightThemes;
@@ -33,7 +38,5 @@ export class NavbarComponent implements OnInit{
     this.themes = this.lightThemes;
   }
 
-
-
-
 }
+
