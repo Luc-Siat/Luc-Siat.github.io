@@ -4,7 +4,7 @@
 <nav class="navbar z-10 text-primary text-center flex-col items-center justify-center text-xl md:text-2xl lg:text-3xl relative">
   <ul class="container flex gap-3 justify-between items-center px-0 relative">
     <li class="grow justify-start md:hidden flex lg:justify-evenly relative">
-      <div class="menuToggle flex flex-col p-4 rounded-full bg-[red] aspect-square justify-center items-start">
+      <div class="menuToggle flex flex-col p-4 rounded-full aspect-square justify-center items-start" >
           <input #drawerInput type="checkbox" class="my-auto mx-auto" (click)="toggleOverflow()" />
           <span></span>
           <span></span>
@@ -24,6 +24,7 @@
           <li><a>ABOUT</a></li>
         </ul>
       </div>
+      <a class="absolute h-full aspect-square rounded-full top-0 left-0" [ngClass]="drawerInput.checked ? 'circle-grow-screen' : ''"></a>
     </li>
 
     <li class="grow justify-start hidden md:flex lg:justify-evenly">

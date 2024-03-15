@@ -99,6 +99,19 @@
   width: 32px;
 }
 
+.menuToggle::after input:checked {
+  content: '';
+  width: full;
+  height: full;
+  background-color: blue;
+}
+
+.circle-grow-screen {
+  @apply bg-primary;
+  transition: background 0.3s ease;
+  scale: 30;
+  transition: scale 1.1s ease;
+}
 
 /*
  * Make this absolute positioned
@@ -111,7 +124,6 @@
   margin: -52px 0 0 -48px;
   padding: 50px;
   padding-top: 8px;
-  @apply bg-primary;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
