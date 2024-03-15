@@ -7,7 +7,7 @@ import { toggleOverflow } from 'src/app/utils/helper-functions/helper';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit{
-  public darkThemes = ["coffee","dark","dim","sunset","luxury",
+  public darkThemes = ["luc's darkroast", "coffee","dark","dim","sunset","luxury",
   "synthwave","forest","halloween",
   "black","dracula","business",
   "night"]
@@ -32,15 +32,8 @@ export class NavbarComponent implements OnInit{
     this.themes = this.lightThemes;
   }
 
-  test(boo: boolean){
-    console.log(boo)
-  }
-
   themesDropdownLeave(input : HTMLInputElement) {
-    setTimeout(() => {
-      input.checked = false 
-      // doing some other stuff...
-  }, 300);
+    input.checked = false 
   }
 
 
