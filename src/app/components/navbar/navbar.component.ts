@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { toggleOverflow } from 'src/app/utils/helper-functions/helper';
+import { isOnMobile, toggleOverflow } from 'src/app/utils/helper-functions/helper';
 
 @Component({
   selector: 'app-navbar',
@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit{
   ]
   public themes : string[] = [];
   public toggleOverflow = toggleOverflow;
+  public isOnMobile = isOnMobile;
 
   ngOnInit(): void {
     this.themes = this.lightThemes;
@@ -32,9 +33,7 @@ export class NavbarComponent implements OnInit{
     this.themes = this.lightThemes;
   }
 
-  themesDropdownLeave(input : HTMLInputElement) {
-    input.checked = false 
-  }
+
 
 
 }
