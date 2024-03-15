@@ -9,12 +9,14 @@ import { capitalize, isOnMobile, toggleOverflow } from 'src/app/utils/helper-fun
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit{
-  public darkThemes = ["luc's darkroast", "coffee","dark","dim","sunset","luxury",
+
+  // PUT THE THEMES INSIDE THE NAV SETTINGS 
+  public darkThemes = ["coffee","lucDarkroast", "dark","dim","sunset","luxury",
   "synthwave","forest","halloween",
   "black","dracula","business",
   "night"]
     
-  public lightThemes =  ["luc's homebrew", "light", "cupcake", "bumblebee",  "emerald",  "corporate", "retro",
+  public lightThemes =  ["retro","lucHomebrew", "light", "cupcake", "bumblebee",  "emerald",  "corporate", 
 "cyberpunk",  "valentine",   "garden",  "aqua",  "lofi",  "pastel",
     "fantasy",  "wireframe",  "cmyk",  "autumn",  "acid",  "lemonade",
     "winter",  "nord",

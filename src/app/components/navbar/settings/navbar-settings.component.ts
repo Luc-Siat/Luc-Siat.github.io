@@ -14,6 +14,10 @@ export class NavbarSettingsComponent implements OnInit{
   @Input({required: true}) isOnMobile!: boolean;
   @ViewChild('themesInput') themesInput!: ElementRef<HTMLInputElement>;
   public capitalize = capitalize;
+  public currentDarkTheme = 'coffee';
+  public currentLightTheme = 'retro';
+
+
   
   ngOnInit(): void {
     this.drawerEvent?.subscribe(event => {
@@ -23,6 +27,15 @@ export class NavbarSettingsComponent implements OnInit{
 
   themesDropdownLeave(input : HTMLInputElement) {
     input.checked = false 
+  }
+
+  setCurrentTheme(isDark: boolean, theme: string) {
+    if (isDark) {
+      this.currentDarkTheme = theme;
+      return
+    }
+    this.currentLightTheme = theme;
+
   }
 }
 

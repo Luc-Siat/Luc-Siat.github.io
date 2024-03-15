@@ -26,7 +26,10 @@
           <div class="form-control w-full flex justify-between border-b border-base-content border-opacity-15 " *ngFor="let theme of themes">
             <label class="label cursor-pointer gap-4" >
               <span class="">{{theme | uppercase}}</span>
-              <input type="radio" name="theme-radios" class="radio theme-controller " [value]="theme" [checked]="theme == 'luc\'s homebrew' || theme == 'luc\s darkroast' ? true : false"/>
+              <input type="radio" name="theme-radios" class="radio theme-controller " 
+              [value]="theme" 
+              [checked]="theme == currentDarkTheme || theme == currentLightTheme ? true : false"
+              (click)="setCurrentTheme(themesInput.checked, theme)"/>
             </label>
           </div>
         </ul>
@@ -55,13 +58,19 @@
         <div class="dropdown dropdown-end rounded-full py-1 px-2 flex relative" >
           <input #themesInput tabindex="0" type="checkbox" class="py-0 top-0 left-0 absolute w-full z-20 h-full opacity-0" (click)="{}" name="themesInput"> 
             <fa-icon  [icon]="['fas', 'chevron-down']" class="top-0 right-0 fa-fw text-lg aspect-square soft-animation" [ngClass]="themesInput.checked ? 'rotate-180' : ''" ></fa-icon>
-            <!-- <fa-icon *ngIf="themesInput.checked" [icon]="['fas', 'chevron-up']" class="fa-fw text-lg aspect-square"></fa-icon> -->
           <ul  #themesDropdown tabindex="0" 
           [ngClass]="themesInput.checked ? '' : 'hidden' " 
           class="rounded-none p-2 ps-4 bg-base-content 
           text-base-content text-lg accent-primary border-l-2 border-base-100 border-opacity-5 flex flex-col fixed h-[85vh] top-[15vh] left-[70vw] w-[30vw] join join-vertical overflow-y-auto gap-3" 
           >
-              <li *ngFor="let theme of themes" class=""><input type="radio" name="theme-buttons" class="btn theme-controller !rounded-box bg-base-100 w-full text-sm join-item font-thin " [attr.aria-label]="capitalize(theme)" [value]="theme" [value]="theme" [checked]="theme == 'luc\'s homebrew' || theme == 'luc\s darkroast' ? true : false"/></li>
+              <li *ngFor="let theme of themes" >
+                <input type="radio" name="theme-buttons" 
+                class="btn theme-controller !rounded-box bg-base-100 w-full text-sm join-item font-thin " 
+                [attr.aria-label]="capitalize(theme)" 
+                [value]="theme" 
+                [checked]="theme == currentDarkTheme || theme == currentLightTheme ? true : false"
+                (click)="setCurrentTheme(themesInput.checked, theme)"
+                /></li>
           </ul>
         </div>
       </li>
