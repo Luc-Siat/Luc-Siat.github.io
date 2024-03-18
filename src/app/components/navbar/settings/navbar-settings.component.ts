@@ -13,12 +13,12 @@ export class NavbarSettingsComponent implements OnInit, OnDestroy{
   public capitalize = capitalize;
   
   public darkThemes = ['coffee','darkroast', 'dim','sunset','luxury','forest','halloween', 'black','dracula',
-  // 'business', 'night', 'dark', 'synthwave'
+  'business', 'night', 'dark', 'synthwave'
   ];
   
   public lightThemes =  ['retro','homebrew', 'cyberpunk',  'valentine',   'garden',  'aqua',  'lofi',  'pastel', 'fantasy',  'wireframe',  'cmyk',  'autumn',
     'acid',  'lemonade', 'winter',  'nord', 
-    // 'light', 'cupcake', 'bumblebee',  'emerald',  'corporate'
+    'light', 'cupcake', 'bumblebee',  'emerald',  'corporate'
   ];
 
   public currentDarkTheme = 'coffee';

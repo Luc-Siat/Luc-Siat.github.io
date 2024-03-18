@@ -17,14 +17,8 @@ module.exports = {
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
-      "light",
-      "dark",
-      "cupcake",
-      "bumblebee",
-      "emerald",
-      "corporate",
-      "synthwave",
       "retro",
+      "coffee",
       "cyberpunk",
       "valentine",
       "halloween",
@@ -44,11 +38,17 @@ module.exports = {
       "acid",
       "lemonade",
       "night",
-      "coffee",
       "winter",
       "dim",
       "nord",
       "sunset",
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",
+      "synthwave",
       {
         homebrew: 
         {
