@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-eslint/eslint-plugin": "^17.3.0",
     "@angular/animations": "^17.2.4",
     "@angular/common": "^17.2.4",
     "@angular/compiler": "^17.2.4",
@@ -23,6 +24,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "eslint": "^8.57.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.4"
