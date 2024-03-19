@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild, viewChild } from '@angular/core';
-import { capitalize } from 'src/app/utils/helper-functions/helper';
+import { capitalize, isOnMobile } from 'src/app/utils/helper-functions/helper';
 
 @Component({
   selector: 'app-navbar-settings',
@@ -8,9 +8,9 @@ import { capitalize } from 'src/app/utils/helper-functions/helper';
 })
 export class NavbarSettingsComponent implements OnInit, OnDestroy{
   @Input() drawerEvent? : EventEmitter<boolean>;
-  @Input({required: true}) isOnMobile!: boolean;
   @ViewChild('themesInput') themesInput!: ElementRef<HTMLInputElement>;
   public capitalize = capitalize;
+  public isOnMobile = isOnMobile;
   
   public darkThemes = ['coffee','darkroast', 'dim','sunset','luxury','forest','halloween', 'black','dracula',
   'business', 'night', 'dark', 'synthwave'

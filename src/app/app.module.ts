@@ -16,6 +16,7 @@ import {
   faChevronUp as fasChevronUp
 } from '@fortawesome/free-solid-svg-icons';
 import { NavbarSettingsComponent } from './components/navbar/settings/navbar-settings.component';
+import { SideDrawerComponent } from './components/navbar/side-drawer/side-drawer.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { NavbarSettingsComponent } from './components/navbar/settings/navbar-set
     ProjectCardComponent,
     ProjectListComponent,
     MainContainerComponent,
-    NavbarSettingsComponent
+    NavbarSettingsComponent,
+    SideDrawerComponent
   ],
   imports: [
     BrowserModule,

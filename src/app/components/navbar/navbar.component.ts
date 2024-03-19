@@ -9,7 +9,5 @@ import {toggleOverflow } from 'src/app/utils/helper-functions/helper';
 export class NavbarComponent {
 
   public toggleOverflow = toggleOverflow;
-  public closeThemeDropdownEvent = new EventEmitter<boolean>();
-
 }
 

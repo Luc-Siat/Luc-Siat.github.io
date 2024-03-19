@@ -3,30 +3,9 @@
 
 <nav class="navbar z-10 text-base-content text-center flex-col items-center justify-center text-xl md:text-2xl lg:text-3xl relative">
   <ul class="container flex gap-3 justify-between items-center px-0 relative">
-    <li class="grow justify-start md:hidden flex lg:justify-evenly relative">
-      <div class="menuToggle flex flex-col p-4 rounded-full aspect-square justify-center items-start" >
-          <input #drawerInput type="checkbox" class="my-auto mx-auto" (click)="toggleOverflow(); closeThemeDropdownEvent.emit(true)" />
-          <span></span>
-          <span></span>
-          <span></span>
-        <ul class="custom-drawer text-start container top-10 text-base-100 w-[90vw] overflow-hidden h-screen flex flex-col justify-start gap-5 text-3xl">
-          <li class="flex flex-col ">
-              <app-navbar-settings  [isOnMobile]="true" [drawerEvent]="closeThemeDropdownEvent"></app-navbar-settings>
-          </li>
-          <li><a >HOME</a></li>
-          <li>
-            <a>PROJECTS</a>
-            <ul class="p-4 text-2xl">
-              <li><a>DealFortress</a></li>
-              <li><a>Cup Of Tickets</a></li>
-            </ul>
-          </li>
-          <li><a>ABOUT</a></li>
-        </ul>
-      </div>
-      <span class="absolute h-full aspect-square rounded-full top-0 left-0" [ngClass]="drawerInput.checked ? 'circle-grow-screen' : ''"></span>
+    <li class="grow justify-start md:hidden flex relative">
+      <app-side-drawer></app-side-drawer>
     </li>
-
     <li class="grow justify-start hidden md:flex lg:justify-evenly">
       <ul class="menu menu-horizontal px-1 grow lg:flex lg:justify-evenly  text-xl md:text-2xl lg:text-3xl">
         <li><a>HOME</a></li>
@@ -56,7 +35,7 @@
             <fa-icon [icon]="['fas', 'paper-plane']" class="fa-fw text-2xl lg:text-3xl w-10 h-10 flex justify-center items-center"></fa-icon>
           </a>
         </li>
-        <app-navbar-settings [isOnMobile]="false" class="hidden md:flex "></app-navbar-settings>
+        <app-navbar-settings class="hidden md:flex "></app-navbar-settings>
       </ul>
   </li>
   </ul>

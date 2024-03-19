@@ -1,4 +1,4 @@
-<template *ngTemplateOutlet="isOnMobile ? settingsSm : settingsLg"></template>
+<template *ngTemplateOutlet="isOnMobile() ? settingsSm : settingsLg"></template>
 
 <ng-template #settingsLg>
   <ul class="flex-col gap-1 w-16 justify-start relative ">
