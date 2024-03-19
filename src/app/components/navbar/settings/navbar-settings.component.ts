@@ -9,7 +9,6 @@ import { capitalize, isOnMobile } from 'src/app/utils/helper-functions/helper';
 export class NavbarSettingsComponent implements OnInit, OnDestroy{
   @Input() drawerEvent? : EventEmitter<boolean>;
   @ViewChild('themesInput') themesInput!: ElementRef<HTMLInputElement>;
-  public capitalize = capitalize;
   public isOnMobile = isOnMobile;
   
   public darkThemes = ['coffee','darkroast', 'dim','sunset','luxury','forest','halloween', 'black','dracula',
@@ -59,6 +58,13 @@ export class NavbarSettingsComponent implements OnInit, OnDestroy{
       return;
     } 
     this.themes = this.lightThemes;
+  }
+
+  getThemeName(theme : string) {
+    if (theme === 'homebrew' || theme === 'darkroast') {
+      return 'Luc\'s ' + capitalize(theme);
+    }
+    return capitalize(theme);
   }
 
 }
