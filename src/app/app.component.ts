@@ -33,17 +33,37 @@ export class AppComponent implements OnInit{
   }
 
   @HostListener('document:mousemove', ['$event'])
-    onMousemove($event : any) {
-    this.cursorTop=($event.pageY - 13)+ "px";
-    this.cursorLeft= ($event.pageX - 13)+ "px";
-    this.dotTop=($event.pageY - 2)+ "px";
-    this.dotLeft= ($event.pageX - 2)+ "px";
+  onMousemove($event : any) {
+    setTimeout(() => {
+      this.cursorTop=($event.pageY - 13)+ "px";
+      this.cursorLeft= ($event.pageX - 13)+ "px";
+    }, 100)
+    this.dotTop=($event.pageY - 3)+ "px";
+    this.dotLeft= ($event.pageX - 3)+ "px";
   }
+
   @HostListener('document:click', ['$event'])
-  on() {
+  onClick() {
     const cursor = document.querySelector('.cursor');
 
     cursor?.classList.add("expand");
     setTimeout(() => cursor?.classList.remove("expand"), 400) 
+  }
+
+  @HostListener('document:scroll', ['$event'])
+  onWindowScroll($event : any) {
+    const currentScroll = window.scrollY;
+    const navbar = document.querySelector('.navbar');
+    const menu = document.querySelector('.menu');
+
+
+     if (currentScroll > 100) {
+       navbar?.classList.add('navbar-negative-colors');
+
+     }
+     if (currentScroll < 100) {
+      navbar?.classList.remove('navbar-negative-colors');
+
+     }
   }
 }

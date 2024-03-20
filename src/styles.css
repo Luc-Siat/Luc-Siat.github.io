@@ -21,14 +21,14 @@ html {
 
 body {
    font-family: "Truculenta", sans-serif;
-   cursor: none;
+   /* cursor: none; */
   @apply bg-base-100;
   @apply text-base-content;
 }
-
+/* 
 * {
   cursor: none !important;
-}
+} */
 
 @font-face {
    font-family: 'Pacifico';
@@ -124,13 +124,13 @@ body {
 }
 
 .cursor-dot {
-  width: 4px;
+  z-index: 50;
+  width: 6px;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  border-width: 2px;
-  border-style: solid;
-  @apply border-accent;
+  @apply bg-accent;
   position: absolute;
+  pointer-events: none;
 }
 
 .hoverable:hover .cursor {
@@ -155,5 +155,20 @@ body {
   border-width: 1px;
   animation: cursor-animation .4s forwards;
 }
+
+.navbar-negative-colors {
+  @apply bg-base-content;
+  @apply text-base-100;
+}
+
+.navbar-negative-colors summary:hover, a:hover, div:hover fa-icon {
+  @apply text-accent;
+}
+
+.navbar-negative-colors label:hover {
+  @apply text-accent;
+  transform: scale(1.1);
+}
+
 
 

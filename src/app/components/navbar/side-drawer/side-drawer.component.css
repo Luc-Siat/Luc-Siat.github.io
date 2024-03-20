@@ -23,10 +23,10 @@
   top: 0;
   left: 0;
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   position: absolute;
-  cursor: pointer;
+
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
 
