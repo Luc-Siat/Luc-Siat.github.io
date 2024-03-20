@@ -8,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'portfolio';
 
-    ngOnInit(): void {
+  ngOnInit(): void {
+    this.handleSlidingElements();
+
+    this.handleCursor();
+  }
+
+  handleSlidingElements() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -19,7 +25,16 @@ export class AppComponent implements OnInit{
       })
     });
 
-    const slidingElements= document.querySelectorAll('.slide-in-view')
-    slidingElements.forEach(el => observer.observe(el));
+  const slidingElements= document.querySelectorAll('.slide-in-view')
+  slidingElements.forEach(el => observer.observe(el));
   }
+
+  handleCursor() {
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', e => {
+      cursor?.setAttribute("style", `top: ${+e.pageY}px; left: ${+e.pageX}px;`)
+    })
+  }
+
 }

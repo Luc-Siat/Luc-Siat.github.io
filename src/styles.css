@@ -17,6 +17,17 @@
 body {
    /* @apply bg-cwhite; */
    font-family: "Truculenta", sans-serif;
+   cursor: none;
+}
+
+.cursor {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  @apply border-accent;
+  position: absolute;
 }
 
 @font-face {
@@ -69,7 +80,7 @@ body {
 }
 .slide-in-view {
   opacity: 0;
-  transition: all 1.2s;
+  transition: all 1s;
   transform: translateX(-100%);
   filter: blur(5px);
 }

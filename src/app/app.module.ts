@@ -20,6 +20,7 @@ import { SideDrawerComponent } from './components/navbar/side-drawer/side-drawer
 import { SectionComponent } from './utils/section/section.component';
 import { BannerComponent } from './utils/banner/banner.component';
 import { AboutCardComponent } from './components/about/about-card/about-card.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AboutCardComponent } from './components/about/about-card/about-card.com
     SideDrawerComponent,
     SectionComponent,
     BannerComponent,
-    AboutCardComponent
+    AboutCardComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

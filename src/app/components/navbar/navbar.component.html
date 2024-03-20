@@ -3,10 +3,10 @@
 
 <nav class="navbar z-10 text-base-content text-center flex-col items-center justify-center  relative h-[10vh]">
   <ul class="container flex gap-3 justify-between items-center px-0 relative">
-    <li class="grow-[2] basis-0 justify-start md:hidden flex relative">
+    <li class="grow-[2] basis-0 justify-start lg:hidden flex relative">
       <app-side-drawer></app-side-drawer>
     </li>
-    <li class="grow-[2] basis-0 justify-start hidden md:flex lg:justify-between">
+    <li class="grow-[2] basis-0 justify-start hidden lg:flex lg:justify-between">
       <ul class="menu menu-horizontal px-1 grow lg:flex lg:justify-between  ">
         <li><a>HOME</a></li>
         <li>
@@ -21,22 +21,22 @@
         <li><a>EXPERIENCE</a></li>
       </ul>
     </li>
-    <li class="grow-[3] md:grow xl:grow-[2] basis-0 justify-center">
+    <li class="grow-[2] md:grow xl:grow-[2] basis-0 justify-center">
       <a class="flex flex-col">
         <h3 class="font-['Pacifico'] ">Luc Siat</h3>
         <p class="text-sm md:text-xl xl:text-2xl font-thin">FULL STACK DEVELOPER</p>
       </a>
     </li>
     <li class="grow-[2] basis-0 justify-end flex items-center ">
-      <ul class="menu menu-horizontal items-center justify-end md:justify-evenly grow">
-        <li><a class="px-4 py-2 hidden md:flex ">ABOUT</a></li>
+      <ul class="menu menu-horizontal items-center justify-end lg:justify-evenly grow">
+        <li><a class="px-4 py-2 hidden lg:flex ">ABOUT</a></li>
         <li>
           <a
           class="btn btn-ghost btn-circle md:btn-lg font-normal bg-base-100 text-base-content hover:bg-accent hover:text-base-100 ">
             <fa-icon [icon]="['fas', 'paper-plane']" class="fa-fw w-10 h-10 flex justify-center items-center"></fa-icon>
           </a>
         </li>
-        <app-navbar-settings class="hidden md:flex "></app-navbar-settings>
+        <app-navbar-settings class="hidden lg:flex "></app-navbar-settings>
       </ul>
   </li>
   </ul>
