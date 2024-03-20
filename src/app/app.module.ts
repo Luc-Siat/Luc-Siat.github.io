@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -17,6 +17,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { NavbarSettingsComponent } from './components/navbar/settings/navbar-settings.component';
 import { SideDrawerComponent } from './components/navbar/side-drawer/side-drawer.component';
+import { SectionComponent } from './utils/section/section.component';
+import { BannerComponent } from './utils/banner/banner.component';
+import { AboutCardComponent } from './components/about/about-card/about-card.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { SideDrawerComponent } from './components/navbar/side-drawer/side-drawer
     ProjectListComponent,
     MainContainerComponent,
     NavbarSettingsComponent,
-    SideDrawerComponent
+    SideDrawerComponent,
+    SectionComponent,
+    BannerComponent,
+    AboutCardComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,7 @@ import { SideDrawerComponent } from './components/navbar/side-drawer/side-drawer
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
+export class AppModule{
 
   constructor(library: FaIconLibrary) {
     library.addIcons(
@@ -49,4 +55,5 @@ export class AppModule {
       fasChevronUp
     );
   }
+
  }
