@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'portfolio';
+  cursorTop: any;
+  cursorLeft: any;
+  dotTop: any;
+  dotLeft: any;
 
   ngOnInit(): void {
     this.handleSlidingElements();
 
-    this.handleCursor();
   }
 
   handleSlidingElements() {
@@ -25,29 +28,22 @@ export class AppComponent implements OnInit{
       })
     });
 
-  const slidingElements= document.querySelectorAll('.slide-in-view')
-  slidingElements.forEach(el => observer.observe(el));
+    const slidingElements= document.querySelectorAll('.slide-in-view')
+    slidingElements.forEach(el => observer.observe(el));
   }
 
-  handleCursor() {
+  @HostListener('document:mousemove', ['$event'])
+    onMousemove($event : any) {
+    this.cursorTop=($event.pageY - 13)+ "px";
+    this.cursorLeft= ($event.pageX - 13)+ "px";
+    this.dotTop=($event.pageY - 2)+ "px";
+    this.dotLeft= ($event.pageX - 2)+ "px";
+  }
+  @HostListener('document:click', ['$event'])
+  on() {
     const cursor = document.querySelector('.cursor');
-    const cursorDot = document.querySelector('.cursor-dot');
 
-
-    document.addEventListener('mousemove', e => {
-      cursor?.setAttribute("style", `top: ${(+e.pageY) - 13}px; left: ${(+e.pageX) - 13}px;`)
-    })
-
-    document.addEventListener('click', e => {
-      cursor?.classList.add("expand");
-      setTimeout(() => cursor?.classList.remove("expand"), 400) 
-    })
-  
-    document.addEventListener('mousemove', e => {
-      cursorDot?.setAttribute("style", `top: ${(+e.pageY)-2 }px; left: ${(+e.pageX)- 2}px;`)
-    })
-
-    
+    cursor?.classList.add("expand");
+    setTimeout(() => cursor?.classList.remove("expand"), 400) 
   }
-
 }
