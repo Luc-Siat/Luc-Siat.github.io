@@ -31,10 +31,23 @@ export class AppComponent implements OnInit{
 
   handleCursor() {
     const cursor = document.querySelector('.cursor');
+    const cursorDot = document.querySelector('.cursor-dot');
+
 
     document.addEventListener('mousemove', e => {
-      cursor?.setAttribute("style", `top: ${+e.pageY}px; left: ${+e.pageX}px;`)
+      cursor?.setAttribute("style", `top: ${(+e.pageY) - 13}px; left: ${(+e.pageX) - 13}px;`)
     })
+
+    document.addEventListener('click', e => {
+      cursor?.classList.add("expand");
+      setTimeout(() => cursor?.classList.remove("expand"), 400) 
+    })
+  
+    document.addEventListener('mousemove', e => {
+      cursorDot?.setAttribute("style", `top: ${(+e.pageY)-2 }px; left: ${(+e.pageX)- 2}px;`)
+    })
+
+    
   }
 
 }
