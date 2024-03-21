@@ -4,36 +4,37 @@
   box-sizing: border-box;
 }
 
-.menuToggle
+.menu-toggle
 {
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
 }
 
-.menuToggle a
+.menu-toggle a
 {
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 
-.menuToggle input
+.menu-toggle input
 {
   top: 0;
   left: 0;
   display: block;
-  width: 3rem;
-  height: 3rem;
+  width: 3.1rem;
+  height: 3.1rem;
   position: absolute;
-
+  padding: 1rem;
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
 
 }
 
-.menuToggle > span
+.menu-toggle > span
 {
+  top: 3px;
   display: block;
   width: 33px;
   height: 3px;
@@ -48,18 +49,18 @@
               opacity 0.55s ease;
 }
 
-.menuToggle span:first-child
+.menu-toggle span:first-child
 {
   transform-origin: 0% 0%;
 }
 
-.menuToggle span:nth-last-child(2)
+.menu-toggle span:nth-last-child(2)
 {
   transform-origin: 0% 100%;
   width: 18px;
 }
 
-.menuToggle input:checked ~ span
+.menu-toggle input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-4px, -2px);
@@ -68,7 +69,7 @@
   left: 5px;
 }
 
-.menuToggle input:checked ~ span:nth-last-child(2)
+.menu-toggle input:checked ~ span:nth-last-child(2)
 {
   opacity: 1;
   transform: rotate(45deg) translate(-4px, -2px);
@@ -77,7 +78,7 @@
   left: 5px;
 }
 
-.menuToggle input:checked ~ span:nth-last-child(3)
+.menu-toggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
@@ -86,7 +87,7 @@
 }
 
 
-.menuToggle input:checked ~ span:nth-last-child(2)
+.menu-toggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
   width: 32px;
@@ -94,7 +95,7 @@
   left: 5px;
 }
 
-.menuToggle::after input:checked {
+.menu-toggle::after input:checked {
   content: '';
   width: full;
   height: full;
@@ -133,7 +134,7 @@
 /*
  * And let's slide it in from the left
  */
-.menuToggle input:checked ~ ul
+.menu-toggle input:checked ~ ul
 {
   transform: none;
 }

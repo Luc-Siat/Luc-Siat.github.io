@@ -7,7 +7,7 @@ import {toggleOverflow } from 'src/app/utils/helper-functions/helper';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+  public scrollYOffset = '0';
   public toggleOverflow = toggleOverflow;
 }
 

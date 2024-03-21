@@ -1,0 +1,12 @@
+[
+    {
+        "title": "DealFortress",
+        "description": "Second-hand PC marketplace built with .NET, Angular and Azure",
+        "imagePath": "assets/DealFortress.png",
+        "githubLink": "https://github.com/DealFortress/DealFortress",
+        "isDeployed": true,
+        "deployedLink": "https://green-sand-04a2d9f03.3.azurestaticapps.net/notices",
+        "backgroundColor": "blue"
+    }
+]
+

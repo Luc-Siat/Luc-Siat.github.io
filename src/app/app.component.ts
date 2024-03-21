@@ -7,10 +7,11 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'portfolio';
-  cursorTop: any;
-  cursorLeft: any;
-  dotTop: any;
-  dotLeft: any;
+  cursorTop: string  = '';
+  cursorLeft: string = '';
+  dotTop: string = '';
+  dotLeft: string = '';
+  lastScrollY: number = 0;
 
   ngOnInit(): void {
     this.handleSlidingElements();
@@ -54,16 +55,24 @@ export class AppComponent implements OnInit{
   onWindowScroll($event : any) {
     const currentScroll = window.scrollY;
     const navbar = document.querySelector('.navbar');
-    const menu = document.querySelector('.menu');
+    const menuToggle = document.querySelector('.menu-toggle');
 
+    if (currentScroll < this.lastScrollY - 50) {
+      navbar?.classList.remove('opacity-0');
+      navbar?.classList.remove('hidden')
+      this.lastScrollY = currentScroll;
+    } else if (currentScroll > 1000 && currentScroll > this.lastScrollY) {
+     navbar?.classList.add('opacity-0');
+     setTimeout(() => navbar?.classList.add('hidden'), 500)
+     this.lastScrollY = currentScroll;
+    }
+    
+    if (currentScroll > 100) {
+      navbar?.classList.add('navbar-negative-colors');
+    }
 
-     if (currentScroll > 100) {
-       navbar?.classList.add('navbar-negative-colors');
-
-     }
-     if (currentScroll < 100) {
+    if (currentScroll < 100) {
       navbar?.classList.remove('navbar-negative-colors');
-
-     }
+    } 
   }
 }

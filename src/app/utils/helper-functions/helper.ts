@@ -3,7 +3,7 @@ export const toggleOverflow = () => {
     document.documentElement.classList.toggle('overflow-hidden');
 }
 
-export const isOnMobile = () => window.innerWidth <= 768;
+export const isOnMobile = () => window.outerWidth <= 1024;
 
 export const capitalize = (string : string) => {
   return string[0].toLocaleUpperCase() + string.slice(1);

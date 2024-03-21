@@ -13,3 +13,7 @@
         @apply text-3xl;
     }
 }
+
+.navbar {
+    transition: all 600ms;
+}

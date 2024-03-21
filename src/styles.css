@@ -110,6 +110,7 @@ body {
 }
 
 
+
 .cursor {
   z-index: 50;
   width: 26px;
@@ -133,8 +134,13 @@ body {
   pointer-events: none;
 }
 
-.hoverable:hover .cursor {
-  transform: scale(5);
+@media (max-width: 1024px) {
+  .cursor  {
+    visibility: hidden;
+  }
+  .cursor-dot {
+    visibility: hidden;
+  }
 }
 
 
@@ -169,6 +175,13 @@ body {
   @apply text-accent;
   transform: scale(1.1);
 }
+
+.navbar-negative-colors .menu-toggle > span {
+  @apply !bg-base-100;
+}
+
+
+
 
 
 
