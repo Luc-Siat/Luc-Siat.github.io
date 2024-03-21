@@ -7,5 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SectionComponent{
   @Input({required: true}) title!: string;
+  @Input() colorClass?: string;
 
 }

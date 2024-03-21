@@ -1,6 +1,6 @@
 <div class="h-full min-h-96 w-full flex flex-col items-center justify-between">
     <div [style.background]="project.backgroundColor" class="h-[60%] w-full flex justify-center items-center bg/50">
-        <img [src]="project.imagePath" alt="project image" class="w-[70%] h-auto object-contain object-center rounded-t-lg mt-10 drop-shadow-xl shadow-2xl ">
+        <img [src]="project.imagePath" alt="project image" class="w-[70%] h-full object-cover object-center rounded-t-lg mt-10 drop-shadow-xl shadow-2xl ">
     </div>
     <div class="card-body flex flex-col items-center justify-center top-[-16%] bg-base-100 w-4/5 p-5 text-center relative shadow-none h-[40%] self-justify-bottom">
         <h2 class="card-title font-thin text-3xl">{{project.title}}</h2>

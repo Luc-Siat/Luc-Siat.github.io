@@ -11,13 +11,31 @@
             "backgroundColor": "rgba(122, 133, 137, .5)"
         },
         {
+            "title": "Cup Of Tickets",
+            "description": "Ticketing app for developers using Auth0 to create role based authenfication and access levels",
+            "imagePath": "assets/images/cupoftickets.png",
+            "githubLink": "https://github.com/cup-of-T/cup-of-Tickets",
+            "isDeployed": true,
+            "deployedLink": "https://orange-pond-040622003.2.azurestaticapps.net/dashboard",
+            "backgroundColor": "rgba(87, 165, 184, .3)"
+        },
+        {
             "title": "One Degree Design",
             "description": "Carbon calculator designed for developers to improve their website's co2 footprint",
             "imagePath": "assets/images/onedegreedesign.png",
             "githubLink": "https://github.com/brendan-oconnell/one-degree-design",
             "isDeployed": true,
             "deployedLink": "https://onedegreedesign.com",
-            "backgroundColor": "rgba(103, 141, 88, .5)"
+            "backgroundColor": "rgba(103, 141, 88, .4)"
+        },
+        {
+            "title": "Mockea",
+            "description": "Mock version of IKEA. 2 weeks project focusing on mocking the front page of IKEA",
+            "imagePath": "assets/images/mockea.png",
+            "githubLink": "https://github.com/Mockea/Mockea",
+            "isDeployed": true,
+            "deployedLink": "https://agreeable-field-0b3b0bc03.3.azurestaticapps.net/",
+            "backgroundColor": "rgba(0, 88, 171, 0.4)"
         }
     ]
 }

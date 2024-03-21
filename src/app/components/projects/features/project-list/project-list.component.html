@@ -1,4 +1,4 @@
-<app-section title="PROJECTS">
+<app-section title="PROJECTS" [colorClass]="'projects'">
     <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 h-[32rem]">
         <li *ngFor="let project of projects">
             <app-project-card [project]="project"></app-project-card>
