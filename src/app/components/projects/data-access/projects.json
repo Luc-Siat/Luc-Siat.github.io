@@ -1,12 +1,24 @@
-[
-    {
-        "title": "DealFortress",
-        "description": "Second-hand PC marketplace built with .NET, Angular and Azure",
-        "imagePath": "assets/DealFortress.png",
-        "githubLink": "https://github.com/DealFortress/DealFortress",
-        "isDeployed": true,
-        "deployedLink": "https://green-sand-04a2d9f03.3.azurestaticapps.net/notices",
-        "backgroundColor": "blue"
-    }
-]
+{ 
+    "projects": 
+    [
+        {
+            "title": "DealFortress",
+            "description": "Second-hand PC marketplace built with .NET, Angular and Azure",
+            "imagePath": "assets/images/dealfortress.png",
+            "githubLink": "https://github.com/DealFortress/DealFortress",
+            "isDeployed": true,
+            "deployedLink": "https://green-sand-04a2d9f03.3.azurestaticapps.net/notices",
+            "backgroundColor": "rgba(122, 133, 137, .5)"
+        },
+        {
+            "title": "One Degree Design",
+            "description": "Carbon calculator designed for developers to improve their website's co2 footprint",
+            "imagePath": "assets/images/onedegreedesign.png",
+            "githubLink": "https://github.com/brendan-oconnell/one-degree-design",
+            "isDeployed": true,
+            "deployedLink": "https://onedegreedesign.com",
+            "backgroundColor": "rgba(103, 141, 88, .5)"
+        }
+    ]
+}
 

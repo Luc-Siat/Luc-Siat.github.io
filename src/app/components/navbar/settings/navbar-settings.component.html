@@ -1,7 +1,7 @@
 <template *ngTemplateOutlet="isOnMobile() ? settingsSm : settingsLg"></template>
 
 <ng-template #settingsLg>
-  <ul class="settingsLg flex-col gap-1 w-16 justify-start relative ">
+  <ul class="settings-lg flex-col gap-1 w-16 justify-start relative ">
     <li class="">
       <label class="swap swap-rotate py-1 px-2">
         <input type="checkbox" />   
@@ -40,7 +40,7 @@
 
 
   <ng-template #settingsSm>
-    <ul class="settingsSm flex grow gap-4 justify-end items-center w-full relative">
+    <ul class="settings-sm flex grow gap-4 justify-end items-center w-full relative">
       <li class="">
         <label class="swap swap-rotate py-1 px-2 h-12 w-12">
           <input type="checkbox" />   

@@ -57,7 +57,7 @@ export class AppComponent implements OnInit{
     const navbar = document.querySelector('.navbar');
     const menuToggle = document.querySelector('.menu-toggle');
 
-    if (currentScroll < this.lastScrollY - 50) {
+    if (currentScroll < this.lastScrollY - 65) {
       navbar?.classList.remove('opacity-0');
       navbar?.classList.remove('hidden')
       this.lastScrollY = currentScroll;
@@ -76,3 +76,5 @@ export class AppComponent implements OnInit{
     } 
   }
 }
+
+

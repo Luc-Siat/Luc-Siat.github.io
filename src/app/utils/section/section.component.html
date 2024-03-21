@@ -1,6 +1,8 @@
 <section class="mt-20 min-h-screen slide-in-view">    
-    <app-main-container>
-        <h2 class="text-4xl md:text-6xl lg:text-6xl relative highlight-cap me-auto shrink ">{{title}}</h2>
-        <ng-content></ng-content>
-    </app-main-container>
+    <app-container>
+        <h2 class="text-4xl md:text-6xl lg:text-6xl relative highlight-cap me-auto shrink mb-20">{{title}}</h2>
+        <div class="flex flex-col gap-4">
+            <ng-content></ng-content>
+        </div>
+    </app-container>
 </section>

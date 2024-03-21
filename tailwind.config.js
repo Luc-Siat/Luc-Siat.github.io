@@ -7,6 +7,12 @@ module.exports = {
             padding: '1rem',
           },
     },
+    variants: {
+      extend: {
+        // ...
+       backgroundOpacity: ['active'],
+      }
+    },
     colors: {
         'cwhite' : '#f0e7d8',
         'cgreen' : '#709176', 

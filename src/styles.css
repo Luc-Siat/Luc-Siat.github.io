@@ -167,7 +167,10 @@ body {
   @apply text-base-100;
 }
 
-.navbar-negative-colors summary:hover, a:hover, div:hover fa-icon {
+.navbar-negative-colors summary:hover,
+.navbar-negative-colors a:hover,
+.navbar-negative-colors div:hover,
+.navbar-negative-colors .settings-lg fa-icon:hover {
   @apply text-accent;
 }
 
@@ -178,6 +181,10 @@ body {
 
 .navbar-negative-colors .menu-toggle > span {
   @apply !bg-base-100;
+}
+
+.navbar-negative-colors .menu fa-icon:hover {
+  @apply text-base-100;
 }
 
 

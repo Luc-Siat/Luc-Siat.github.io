@@ -1,7 +1,14 @@
-<div class="h-full w-full">
-    <div class="absolute top-0 h-[60%] bg-neutral" >
-        <div class="flex flex-col items-center justify-center mt-[-50px] bg-white mx-auto p-[22px] text-center">
-
+<div class="h-full min-h-96 w-full flex flex-col items-center justify-between">
+    <div [style.background]="project.backgroundColor" class="h-[60%] w-full flex justify-center items-center bg/50">
+        <img [src]="project.imagePath" alt="project image" class="w-[70%] h-auto object-contain object-center rounded-t-lg mt-10 drop-shadow-xl shadow-2xl ">
+    </div>
+    <div class="card-body flex flex-col items-center justify-center top-[-16%] bg-base-100 w-4/5 p-5 text-center relative shadow-none h-[40%] self-justify-bottom">
+        <h2 class="card-title font-thin text-3xl">{{project.title}}</h2>
+        <p>{{project.description}}</p>
+        <div class="card-actions justify-end">
+          <a [href]="project.githubLink" class="btn btn-md btn-neutral btn-circle hover:text-neutral hover:bg-neutral-content "><fa-icon [icon]="['fab','github']" class="text-3xl "></fa-icon></a>
+          <a [href]="project.deployedLink" class="btn btn-md btn-neutral btn-circle hover:text-neutral hover:bg-neutral-content"><fa-icon [icon]="['fas','desktop']" class=" text-2xl "></fa-icon></a>
         </div>
     </div>
 </div>
+
