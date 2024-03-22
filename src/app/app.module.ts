@@ -5,7 +5,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectCardComponent } from './components/projects/features/project-list/project-card/project-card.component';
 import { ProjectListComponent } from './components/projects/features/project-list/project-list.component';
-import { ContainerComponent } from './utils/main-container/container.component';
+import { ContainerComponent } from './utils/container/container.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faBars as fasBars,
