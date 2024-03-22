@@ -52,17 +52,16 @@ export class AppComponent implements OnInit{
   }
 
   @HostListener('document:scroll', ['$event'])
-  onWindowScroll($event : any) {
+  onWindowScroll() {
     const currentScroll = window.scrollY;
     const navbar = document.querySelector('.navbar');
-    const menuToggle = document.querySelector('.menu-toggle');
 
     console.log(currentScroll, this.lastScrollY);
     if (currentScroll < this.lastScrollY - 265) {
       setTimeout(() => navbar?.classList.remove('opacity-0'), 500)
       navbar?.classList.remove('hidden')
       this.lastScrollY = currentScroll;
-    } else if (currentScroll > 2000 && currentScroll > this.lastScrollY) {
+    } else if (currentScroll > 2000 && currentScroll > this.lastScrollY + 500) {
      navbar?.classList.add('opacity-0');
      setTimeout(() => navbar?.classList.add('hidden'), 500)
      this.lastScrollY = currentScroll;

@@ -1,3 +1,57 @@
-<app-section title="ABOUT">
+<app-section title="ABOUT" colorClass="bg-secondary bg-opacity-50">
+  <div class="flex flex-col min-h-[50vh] w-full">
+    <div class="intro p-10 rounded-box text-primary-content">
+      <h3>Intro</h3>
+      <p>
+        Originally from a hospitality background I have decided a few years ago to pursue a career that I would
+        passionate about.
+        While I enjoyed the thrills, social aspect and multi-tasking of the reception, I lacked continiuous learning and
+        complex problem solviing.
+        Always interested by computers I had never dared to start coding without a mentor. I bridged the gap with Le
+        Wagon bootcamp and never looked back.
+      </p>
+    </div>
+  </div>
 
+  <div class="me bg-secondary w-screen p-10 rounded-box text-secondary-content">
+    <app-container>
+      <h3>Me</h3>
+      <p>
+        I would describe myself as very curious, empathic, quick learner and solution oriented.
+        Originally from Alsace, France I carry with me a small cultural bagage that mostly includes recipes like
+        Dampfnuddle and Flammekueche.
+        I have settled in Sweden with my girlfriend (also from Alsace) almost 3 years ago and I really love it.
+        Very fond of nordic countries I am currently trying to visit the 25 swedish 'landskapen'.
+        I am also doing quite a bit of travelling across Europe with night trains. This includes Hamburg, Leipzig,
+        Copenhagen, Oslo and more.
+      </p>
+    </app-container>
+  </div>
+
+  <div class="polka">
+    <ul class="carousel carousel-center p-4 space-x-4 bg-base-100 rounded-box">
+      <li *ngFor="let i of [1,2,3,4,5]" class="carousel-item">
+        <img [src]="'assets/images/polka/' + i + '.JPG'"
+          class="rounded-box mask mask-squircle max-h-80 aspect-square object-cover" />
+      </li>
+    </ul>
+  </div>
+
+  <div class="hobbies bg-neutral p-10 rounded-box text-neutral-content">
+    <h3>Hobbies</h3>
+    <p>
+      I have many hobbies mostly because I love to collect skills.
+      That includes crafting my own modern fishing rod, soldering my keyboard or making a historically accurate viking
+      shield from scratch.
+      I am interesting in learning anything especially if I can be mentored while doing it.
+      My main hobbies are:
+    </p>
+    <ul>
+      <li>Hiking with my dog Polka</li>
+      <li>Board games</li>
+      <li>Video Games</li>
+      <li>Bouldering</li>
+      <li>Crafting</li>
+    </ul>
+  </div>
 </app-section>

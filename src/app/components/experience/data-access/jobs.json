@@ -44,6 +44,22 @@
                 "Agile",
                 "SQL Server"
             ]
+        },
+        {
+            "title" : "Receptionist",
+            "company": "Hotel Reisen *****",
+            "descriptionPoints": [
+                "Unbound Collection By Hyatt"
+            ],
+            "timeline": "Jan 2019 - Dec 2021",
+            "skills" : [
+                "Social skills",
+                "Communication",
+                "Crisis Handling",
+                "Multi-Tasking",
+                "Prioritizing",
+                "Stakeholders communication"
+            ]
         }
     ]
 }

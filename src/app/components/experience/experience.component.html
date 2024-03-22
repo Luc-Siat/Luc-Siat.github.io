@@ -2,11 +2,11 @@
     <ul class="flex flex-col gap-40">
         <li *ngFor="let job of jobs" id="experience-section" class="flex items-center justify-center ">
             <div class="grid grid-cols-1 md:grid-cols-[2fr,1fr,3fr] gap-2 gap-y-5 ">
-                <p class="px-2 text-end flex-col text-2xl">{{job.timeline | uppercase}}</p>
-                <span class="h-full min-h-24 md:min-h-0 md:h-[1px] md:mt-4 bg-base-100 w-[1px] md:w-full mx-auto"></span>
-                <div class="pl-6 flex flex-col grow gap-4 items-start justify-center">
+                <p class="px-2 text-center md:text-end flex-col text-2xl">{{job.timeline | uppercase}}</p>
+                <span class="h-full min-h-16 md:min-h-0 md:h-[1px] md:mt-4 bg-base-100 w-[1px] md:w-full mx-auto"></span>
+                <div class="pl-6 flex flex-col grow gap-4 items-start justify-center text-center">
                     <h3 class="text-2xl">{{job.title | uppercase}}<!-- --> · <!-- -->{{job.company | uppercase}}</h3>
-                    <ul class="text-justify  list-disc ps-4">
+                    <ul class="text-justify flex flex-col list-disc ps-4 gap-3">
                         <li *ngFor="let bulletPoint of job.descriptionPoints">{{bulletPoint}}</li>
                     </ul>
                     <ul class="flex flex-wrap gap-2">
