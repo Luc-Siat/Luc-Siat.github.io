@@ -1,28 +1,17 @@
 <app-section title="EXPERIENCE" colorClass="experience">
-    <ul>
-        <li id="experience-section" class="bg-navy-blue flex flex-col items-center justify-center py-[80px]">
-            <div class="grid grid-cols-[minmax(375px,652px)] laptop:grid-cols-[257px,140px,652px] laptop:gap-y-[63px] gap-y-2 mb-[70px]">
-                <div class="px-2 text-center uppercase font-halisMedium text-[17px] text-blue-gray tracking-wide flex-col">2023 - present
-                    <div class="h-[50px] w-[1px] bg-blue-gray mx-auto mt-2 laptop:hidden"></div>
-                </div>
-                    <div class="hidden laptop:block">
-                        <div class="h-[1px] bg-blue-gray w-full mt-3">
-        
-                        </div>
-                    </div>
-                    <div class="pl-6 flex flex-col mb-[70px] laptop:mb-0">
-                        <div class="uppercase font-halisMedium text-[17px] text-blue-gray tracking-wide mb-[11px]">C# .NET Fullstack Developer Consultant<!-- --> · <!-- -->School of Applied Technology &lt;/salt&gt;</div>
-                        <div class="font-halisBook text-base text-white tablet:w-[464px] mb-[11px] container">Intensive three month training program for full stack web development with a focus on TDD, mob programming, and applied learning. Acquired solid foundation in C# and frameworks such as ASP.NET Core and NextJS. Hands-on experience utilizing Docker, Github Actions and Azure. Built a fullstack plant watering app with C#, .NET Web API, Entity Framework, Typescript, React, Azure (Azure SQL, Azure App Service, Azure Blob Storage)</div><div class="flex flex-wrap">
-                            <div class="bg-secondary py-[4px] px-[15px] rounded-full text-secondary-content mr-[10px] mb-[10px]">C#</div>
-                            <div class="bg-secondary py-[4px] px-[15px] rounded-full text-secondary-content mr-[10px] mb-[10px]">TypeScript</div>
-                            <div class="bg-secondary py-[4px] px-[15px] rounded-full text-secondary-content mr-[10px] mb-[10px]">Javascript</div>
-                            <div class="bg-secondary py-[4px] px-[15px] rounded-full text-secondary-content mr-[10px] mb-[10px]">Tailwind CSS</div>
-                            <div class="bg-secondary py-[4px] px-[15px] rounded-full text-secondary-content mr-[10px] mb-[10px]">xUnit</div>
-                            <div class="bg-secondary py-[4px] px-[15px] rounded-full text-secondary-content mr-[10px] mb-[10px]">React</div>
-                            <div class="bg-secondary py-[4px] px-[15px] rounded-full text-secondary-content mr-[10px] mb-[10px]">ASP.NET Core</div>
-                            <div class="bg-secondary py-[4px] px-[15px] rounded-full text-secondary-content mr-[10px] mb-[10px]">Entity Framework</div>
-                            <div class="bg-secondary py-[4px] px-[15px] rounded-full text-secondary-content mr-[10px] mb-[10px]">Azure</div>
-                    </div>
+    <ul class="flex flex-col gap-40">
+        <li *ngFor="let job of jobs" id="experience-section" class="flex items-center justify-center ">
+            <div class="grid grid-cols-1 md:grid-cols-[2fr,1fr,3fr] gap-2 gap-y-5 ">
+                <p class="px-2 text-end flex-col text-2xl">{{job.timeline | uppercase}}</p>
+                <span class="h-full min-h-24 md:min-h-0 md:h-[1px] md:mt-4 bg-base-100 w-[1px] md:w-full mx-auto"></span>
+                <div class="pl-6 flex flex-col grow gap-4 items-start justify-center">
+                    <h3 class="text-2xl">{{job.title | uppercase}}<!-- --> · <!-- -->{{job.company | uppercase}}</h3>
+                    <ul class="text-justify  list-disc ps-4">
+                        <li *ngFor="let bulletPoint of job.descriptionPoints">{{bulletPoint}}</li>
+                    </ul>
+                    <ul class="flex flex-wrap gap-2">
+                        <li *ngFor="let skill of job.skills" class="bg-secondary rounded-full text-secondary-content py-1 px-4">{{skill}}</li>
+                    </ul>
                 </div>
             </div>
         </li>

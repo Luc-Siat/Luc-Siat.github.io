@@ -3,8 +3,13 @@
         {
             "title" : "Full Stack .NET Developer Consultant",
             "company": "DealFortress",
-            "description": "Orchestrating the planification and development of the website in a team of two using a kanban board, pair programming and agile methodologies. Designed and developed a micro-services ready backend based on modules using .NET, SignalR, Auth0, SQL Server, Github CI/CD and ElasticSearch. Designed UI and developed frontend using React/Angular and libraries such as NGRX Store. Handled deployment on Azure with a CI/CD pipeline and custom Github Actions             ",
-            "timeline": "Apr 2023 Current",
+            "descriptionPoints": [
+                "Orchestrating the planification and development of the website in a team of two using a kanban board, pair programming and agile methodologies.",
+                "Designed and developed a micro-services ready backend based on modules using .NET, SignalR, Auth0, SQL Server, Github CI/CD and ElasticSearch.",
+                "Designed UI and developed frontend using React/Angular and libraries such as NGRX Store.",
+                "Handled deployment on Azure with a CI/CD pipeline and custom Github Actions"
+            ],
+            "timeline": "Apr 2023 - Current",
             "skills" : [
                 "C#",
                 "Typescript",
@@ -23,7 +28,9 @@
         {
             "title" : "Full Stack .NET Developer / Co-Founder",
             "company": "</salt>",
-            "description": "In charge of planning and designing the open-source DealFortress marketplace project. ",
+            "descriptionPoints": [
+                "In charge of planning and designing the open-source DealFortress marketplace project. "
+            ],
             "timeline": "Apr 2023 - Feb 2024",
             "skills" : [
                 "C#",

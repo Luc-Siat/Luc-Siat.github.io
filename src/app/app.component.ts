@@ -57,21 +57,22 @@ export class AppComponent implements OnInit{
     const navbar = document.querySelector('.navbar');
     const menuToggle = document.querySelector('.menu-toggle');
 
-    if (currentScroll < this.lastScrollY - 65) {
-      navbar?.classList.remove('opacity-0');
+    console.log(currentScroll, this.lastScrollY);
+    if (currentScroll < this.lastScrollY - 265) {
+      setTimeout(() => navbar?.classList.remove('opacity-0'), 500)
       navbar?.classList.remove('hidden')
       this.lastScrollY = currentScroll;
-    } else if (currentScroll > 1000 && currentScroll > this.lastScrollY) {
+    } else if (currentScroll > 2000 && currentScroll > this.lastScrollY) {
      navbar?.classList.add('opacity-0');
      setTimeout(() => navbar?.classList.add('hidden'), 500)
      this.lastScrollY = currentScroll;
     }
     
-    if (currentScroll > 100) {
+    if (currentScroll > 500) {
       navbar?.classList.add('navbar-negative-colors');
     }
 
-    if (currentScroll < 100) {
+    if (currentScroll < 500) {
       navbar?.classList.remove('navbar-negative-colors');
     } 
   }
