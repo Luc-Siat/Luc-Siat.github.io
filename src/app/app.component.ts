@@ -1,11 +1,11 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements AfterViewInit{
   title = 'portfolio';
   cursorTop: string  = '';
   cursorLeft: string = '';
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
   dotLeft: string = '';
   lastScrollY: number = 0;
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.handleSlidingElements();
 
   }
@@ -30,6 +30,7 @@ export class AppComponent implements OnInit{
     });
 
     const slidingElements= document.querySelectorAll('.slide-in-view')
+    console.log(slidingElements)
     slidingElements.forEach(el => observer.observe(el));
   }
 
@@ -56,7 +57,6 @@ export class AppComponent implements OnInit{
     const currentScroll = window.scrollY;
     const navbar = document.querySelector('.navbar');
 
-    console.log(currentScroll, this.lastScrollY);
     if (currentScroll < this.lastScrollY - 265) {
       setTimeout(() => navbar?.classList.remove('opacity-0'), 500)
       navbar?.classList.remove('hidden')

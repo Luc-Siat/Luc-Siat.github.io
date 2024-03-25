@@ -5,8 +5,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './section.component.html',
   styleUrl: './section.component.css'
 })
-export class SectionComponent{
+export class SectionComponent {
+
   @Input({required: true}) title!: string;
-  @Input() colorClass?: string;
-  @Input() IsToBeContained: boolean = true;
+  @Input() classes?: string;
+  @Input() isToBeContained? : boolean = true ;
 }

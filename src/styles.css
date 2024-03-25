@@ -25,10 +25,10 @@ body {
   @apply bg-base-100;
   @apply text-base-content;
 }
-/* 
+
 * {
   cursor: none !important;
-} */
+} 
 
 @font-face {
    font-family: 'Pacifico';
@@ -186,4 +186,3 @@ body {
 .navbar-negative-colors .menu fa-icon:hover {
   @apply text-base-100;
 }
-

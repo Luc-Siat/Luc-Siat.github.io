@@ -14,8 +14,19 @@ import {
   faGear as fasGear,
   faChevronDown as fasChevronDown,
   faChevronUp as fasChevronUp,
-  faDesktop as fasDesktop
+  faDesktop as fasDesktop,
+  faWandMagicSparkles as fasWandMagicSparkles,
+  faHeart as fasHeart,
+  faCompass as fasCompass,
+  faCheck as fasCheck,
+  faGamepad as fasGamepad,
+  faPersonHiking as fasPersonHiking,
+  faMountain as fasMountain,
+  faPuzzlePiece as fasPuzzlePiece,
+  faHammer as fasHammer,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
+
 import { NavbarSettingsComponent } from './components/navbar/settings/navbar-settings.component';
 import { SideDrawerComponent } from './components/navbar/side-drawer/side-drawer.component';
 import { SectionComponent } from './utils/section/section.component';
@@ -23,8 +34,10 @@ import { BannerComponent } from './utils/banner/banner.component';
 import { AboutCardComponent } from './components/about/about-card/about-card.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectDetailComponent } from './components/projects/features/project-detail/project-detail.component';
-import { AppRoutingModule } from 'src/app-routing.module';
-import { faGithub as fabGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub as fabGithub,
+        faLinkedinIn as fabLinkedinIn
+} from '@fortawesome/free-brands-svg-icons';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -42,10 +55,10 @@ import { faGithub as fabGithub } from '@fortawesome/free-brands-svg-icons';
     BannerComponent,
     AboutCardComponent,
     ExperienceComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    ContactComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
     FontAwesomeModule
   ],
@@ -63,7 +76,18 @@ export class AppModule{
       fasGear,
       fasChevronUp,
       fabGithub,
-      fasDesktop
+      fasDesktop,
+      fasWandMagicSparkles,
+      fasHeart,
+      fasCompass,
+      fasCheck,
+      fasGamepad,
+      fasPuzzlePiece,
+      fasMountain,
+      fasPersonHiking,
+      fasHammer,
+      fabLinkedinIn,
+      faEnvelope
     );
   }
 
