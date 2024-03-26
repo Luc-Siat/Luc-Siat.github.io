@@ -55,22 +55,26 @@ export class AppComponent implements AfterViewInit{
   onWindowScroll() {
     const currentScroll = window.scrollY;
     const navbar = document.querySelector('.navbar');
+    console.log(document.body.clientHeight);
 
     if (currentScroll < this.lastScrollY - 265) {
       setTimeout(() => navbar?.classList.remove('opacity-0'), 500)
       navbar?.classList.remove('hidden')
       this.lastScrollY = currentScroll;
-    } else if (currentScroll > 2000 && currentScroll > this.lastScrollY + 500) {
+
+    } else if (currentScroll > 3000 && currentScroll > this.lastScrollY + 500) {
+
      navbar?.classList.add('opacity-0');
      setTimeout(() => navbar?.classList.add('hidden'), 500)
      this.lastScrollY = currentScroll;
+
     }
     
-    if (currentScroll > 500) {
+    if (currentScroll > window.outerHeight) {
       navbar?.classList.add('navbar-negative-colors');
     }
 
-    if (currentScroll < 500) {
+    if (currentScroll < window.outerHeight) {
       navbar?.classList.remove('navbar-negative-colors');
     } 
   }

@@ -15,5 +15,5 @@
 }
 
 .navbar {
-    transition: all 600ms;
+    transition: opacity 600ms;
 }
