@@ -8,16 +8,12 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 export class LandscapeCssComponent implements AfterViewInit {
 
   @ViewChild('canvas')  canvas!: ElementRef<HTMLCanvasElement>;
-  document = document;
-
-  
-
-
+ 
   ngAfterViewInit(): void {
 
 
-    this.canvas.nativeElement.height = document.body.clientHeight
-    this.canvas.nativeElement.width = document.body.clientWidth
+  this.canvas.nativeElement.height = document.body.clientHeight
+  this.canvas.nativeElement.width = document.body.clientWidth
 
   
   if (this.canvas!.nativeElement.getContext !== undefined){
