@@ -1,0 +1,89 @@
+<section class="min-h-screen flex flex-col">
+  <div class="flex flex-col gap-4 min-h-screen w-full bg-secondary bg-opacity-40 py-12 md:py-40">
+    <div class="container mx-auto flex flex-col gap-12 md:justify-between slide-in-view">
+      <h2 class="text-4xl md:text-6xl lg:text-8xl relative me-auto shrink md:mb-40 font-[pacifico] ">Who am I</h2>
+      <div class="flex flex-col md:flex-row gap-12 md:gap-50 justify-between">
+        <ul class="font-normal text-2xl md:text-6xl flex flex-col gap-1 items-end md:items-start justify-evenly ms-16">
+          <li class="font-[zeyada] text-3xl md:text-7xl flex flex-row-reverse md:flex-row gap-4"><fa-icon [icon]="['fas', 'heart']" class="text-heart drop-shadow-xl fa-beat"></fa-icon>Passionate</li>
+          <li class="font-[pacifico] flex flex-row-reverse md:flex-row gap-4"><fa-icon [icon]="['fas', 'wand-magic-sparkles']" class="text-[black] fa-beat"></fa-icon>Creative</li>
+          <li class="font-sans mt-3 flex flex-row-reverse md:flex-row gap-4"><fa-icon [icon]="['fas', 'compass']" class="text-brass drop-shadow-xl fa-beat"></fa-icon>Resilient</li>
+        </ul>
+        <img src="assets/images/luc-about.jpg" alt="" class="relative left-0 basis-0 grow custom-mask text-end max-w-[50%] opacity-50 aspect-square object-cover object-center  ">
+  
+      </div>
+      <p class="text-3xl text-justify tracking-widest leading-loose basis-0 grow border-2 px-4 border-r-secondary-content border-l-secondary-content border-t-transparent border-b-transparent border-opacity-5">
+        Originally from a hospitality background I have decided a few years ago to pursue a career that I would
+        passionate about.
+        While I enjoyed the thrills, social aspect and multi-tasking of the reception, I lacked continuous learning, creativity and
+        complex problem solving.
+        I bridged the gap with Le Wagon bootcamp and never looked back.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="hobbies bg-neutral text-neutral-content  flex gap-4 min-h-screen w-screen py-12 md:py-40">
+    <div class="container mx-auto flex flex-col gap-16">
+      
+      <div class="flex">
+        <h3 class="text-8xl font-[Zeyada] grow basis-0">Hobbies & Passions</h3>
+      </div>
+
+      <div class="carousel carousel-center rounded-box md:hidden ">
+        <div class="carousel-item aspect-square max-w-full" *ngFor="let i of [1,2,3,4,5]">
+          <img [src]="'assets/images/polka/' + i + '.jpg'"
+          class="rounded-box  md:polka-mask max-w-full md:max-w-[50%] aspect-square object-cover object-center md:object-top opacity-45" />
+        </div> 
+      </div>
+      
+      <div class="h-[30rem] w-50% carousel carousel-vertical hidden md:flex grow basis-0 bg-transparent shadow-2xl drop-shadow-2xl sepia opacity-80">
+        <div class="carousel-item aspect-video  relative w-full" *ngFor="let i of [1,2,3,4,5]">
+          <div class="flex gap-2 absolute top-2 right-2 items-center">
+            <img class="h-20 w-30" src="assets/images/circle-stamp.png" alt="stamp">
+            <img class=" h-24 w-20" src="assets/images/stamp.png" alt="stamp">
+          </div>
+          <img [src]="'assets/images/polka/' + i + '.jpg'" class=" w-full md:polka-mask object-contain object-center " />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-12 md:gap-40 z-10">
+        <ul class="text-4xl flex flex-col gap-6 justify-between items-start">
+          <li><fa-icon class="text-5xl " [icon]="['fas','person-hiking']"></fa-icon>  Hiking with my dog Polka</li>
+          <li><fa-icon class="text-5xl " [icon]="['fas','puzzle-piece']"></fa-icon>  Board games</li>
+          <li><fa-icon class="text-5xl " [icon]="['fas','gamepad']"></fa-icon>  Video Games</li>
+          <li><fa-icon class="text-5xl " [icon]="['fas','mountain']"></fa-icon>  Bouldering</li>
+          <li><fa-icon class="text-5xl " [icon]="['fas','hammer']"></fa-icon>  Crafting</li>
+        </ul>
+        <p class="text-2xl md:text-3xl  text-justify md:text-end tracking-widest leading-loose basis-0 grow ">
+          I have many hobbies mostly because I love to collect skills.
+          That includes crafting my own modern fishing rod, soldering my keyboard or making a historically accurate viking
+          shield from scratch.
+          I am interesting in learning anything especially if I can be mentored while doing it.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="me flex min-h-screen bg-accent w-screen text-accent-content py-12 md:py-40 bg-opacity-40">
+    <div class="container mx-auto flex flex-col gap-20">
+      <h3 class="text-4xl font-[pacifico]">A little backstory</h3>
+      <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-40">
+        <p class="text-2xl md:text-3xl text-justify tracking-widest leading-loose basis-0 grow">
+          Born in Alsace, France I carry with me a small cultural bagage which, truth be told, mostly includes recipes like
+          Dampfnuddle and Flammekueche. 
+        </p>
+        <app-envelope-css class="basis-0 flex-grow"></app-envelope-css>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-end gap-4 md:gap-40 ">
+        <app-train-css class="basis-0 flex-grow"></app-train-css>
+        <p class="text-2xl md:text-3xl text-justify tracking-widest leading-loose basis-0 grow">I have settled in Sweden with my girlfriend (also from Alsace) almost 3 years ago and We really love it.
+          Very fond of nordic countries we are currently trying to visit the 25 swedish 'landskapen' with 17 done so far.
+          I am also doing quite a bit of travelling across Europe with night trains. This includes Hamburg, Leipzig,
+          Copenhagen, Oslo and more.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>

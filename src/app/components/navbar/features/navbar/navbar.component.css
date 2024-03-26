@@ -1,0 +1,19 @@
+.navbar a,summary {
+    @apply text-xl;
+}
+
+@media (min-width: 768px) {
+    .navbar a, summary, fa-icon {
+        @apply text-2xl;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navbar a,summary {
+        @apply text-3xl;
+    }
+}
+
+.navbar {
+    transition: all 600ms;
+}

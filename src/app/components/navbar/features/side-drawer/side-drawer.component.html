@@ -1,0 +1,22 @@
+<div  class="menu-toggle lg:hidden flex flex-col p-2 rounded-full aspect-square justify-center items-star " >
+    <input #drawerInput type="checkbox" class="my-auto mx-auto z-30" (click)="toggleOverflow; setScrollYOffset($event)" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul [style.top]="top" class="custom-drawer text-start container text-base-content w-[90vw] overflow-hidden h-screen flex flex-col justify-start gap-5 text-3xl z-[1]">
+        <li class="flex flex-col">
+            <app-navbar-settings [drawerEvent]="closeThemeDropdownEvent"></app-navbar-settings>
+        </li>
+        <li><a >HOME</a></li>
+        <li>
+            <a>PROJECTS</a>
+            <ul class="p-4 text-2xl ">
+                <li><a>DealFortress</a></li>
+                <li><a>Cup Of Tickets</a></li>
+            </ul>
+        </li>
+        <li><a>EXPERIENCE</a></li>
+        <li><a>ABOUT</a></li>
+    </ul>
+</div>
+<span class="absolute h-full aspect-square rounded-full top-0 left-0 " [ngClass]="drawerInput.checked ? 'circle-grow-screen' : ''"></span>

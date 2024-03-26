@@ -1,0 +1,13 @@
+
+.experience {
+    @apply !bg-neutral;
+    @apply !text-neutral-content;
+  }
+  
+.projects {
+    @apply bg-base-100;
+    @apply text-base-content;
+}
+  
+  
+  

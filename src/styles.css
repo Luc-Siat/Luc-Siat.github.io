@@ -17,6 +17,10 @@
 html {
   @apply bg-base-100;
   @apply text-base-content;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  position: relative;
 }
 
 body {
