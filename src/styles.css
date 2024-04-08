@@ -28,6 +28,7 @@ body {
    /* cursor: none; */
   @apply bg-base-100;
   @apply text-base-content;
+  position: relative;
 }
 
 * {

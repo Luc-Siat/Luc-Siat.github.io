@@ -70,11 +70,11 @@ export class AppComponent implements AfterViewInit{
 
     }
     
-    if (currentScroll > window.outerHeight) {
+    if (currentScroll > window.innerHeight - 50) {
       navbar?.classList.add('navbar-negative-colors');
     }
 
-    if (currentScroll < window.outerHeight) {
+    if (currentScroll < window.innerHeight - 50) {
       navbar?.classList.remove('navbar-negative-colors');
     } 
   }

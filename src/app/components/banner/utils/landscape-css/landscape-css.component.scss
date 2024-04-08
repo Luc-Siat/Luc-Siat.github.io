@@ -20,7 +20,8 @@ $greenshadow: #648459;
 }
 
 .landscape {
-    height: 100vh;
+    height: 100%;
+    max-height: 101vh;
     background: linear-gradient(to bottom, $darkblue, $lightblue);
     position: relative;
 

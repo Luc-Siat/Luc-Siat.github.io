@@ -1,4 +1,4 @@
-<div class="h-full min-h-96 w-full flex flex-col items-center justify-between">
+<!-- <div class="h-full min-h-96 w-full flex flex-col items-center justify-between">
     <div [style.background]="project.backgroundColor" class="h-[60%] w-full flex justify-center items-center bg/50">
         <img [src]="project.imagePath" alt="project image" class="w-[70%] h-full object-cover object-center rounded-t-lg mt-10 drop-shadow-xl shadow-2xl ">
     </div>
@@ -11,4 +11,12 @@
         </div>
     </div>
 </div>
+ -->
 
+ <a class="aspect-square bg-base-200 rounded-box relative flex justify-center items-center p-4 bg-opacity-50 " [href]="project.deployedLink">
+    <img [src]="project.imagePath" alt="project image" class="object-contain hover:mb-4  w-[75%]  mx-auto hover:drop-shadow-2xl hover:grayscale shadow-2xl transition-all duration-500 rounded-lg ">
+    <div class="absolute bottom-0 w-full flex justify-between px-4 py-2 opacity-50">
+        <h2 class="font-thin text-2xl">{{project.title}}</h2>
+        <a [href]="project.githubLink" class=""><fa-icon [icon]="['fab','github']" class="text-3xl "></fa-icon></a>
+    </div>
+</a>

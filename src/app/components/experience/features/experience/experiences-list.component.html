@@ -1,9 +1,10 @@
-<app-section title="EXPERIENCE" classes="experience" [isToBeContained]="false">
+<app-section title="EXPERIENCE" classes="experience" [isToBeContained]="false" >
     <app-container>
         <ul class="flex flex-col gap-40">
             <li *ngFor="let job of jobs" id="experience-section" class="flex items-center justify-center ">
                 <app-experience-card [job]="job"></app-experience-card>
             </li>
-        </ul>
+         </ul>
     </app-container>
 </app-section>
+
