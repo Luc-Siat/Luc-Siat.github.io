@@ -31,7 +31,6 @@ import { NavbarSettingsComponent } from './components/navbar/utils/settings/navb
 import { SideDrawerComponent } from './components/navbar/features/side-drawer/side-drawer.component';
 import { SectionComponent } from './shared/section/section.component';
 import { BannerComponent } from './components/banner/features/banner/banner.component';
-import { AboutCardComponent } from './components/about/features/about-card/about-card.component';
 import { ExperiencesListComponent } from './components/experience/features/experience/experiences-list.component';
 import { ProjectDetailComponent } from './components/projects/features/project-detail/project-detail.component';
 import { faGithub as fabGithub,
@@ -58,7 +57,6 @@ import { LandscapeCssComponent } from './components/banner/utils/landscape-css/l
     SideDrawerComponent,
     SectionComponent,
     BannerComponent,
-    AboutCardComponent,
     ExperiencesListComponent,
     ProjectDetailComponent,
     ContactComponent,
