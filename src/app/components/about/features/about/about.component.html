@@ -11,9 +11,15 @@
         I bridged the gap with Le Wagon bootcamp and never looked back
       </p>
     </div>
-    <span class="absolute top-2 right-2 h-40 aspect-square rounded-full bg-accent hover:scale-105 "></span>
-    <span class="absolute bottom-2 left-2 h-40 aspect-square rounded-full bg-accent hover:scale-105"></span>
-    <span class="absolute bottom-2 right-2 h-40 aspect-square rounded-full bg-accent hover:scale-105"></span>
+    <span class="absolute top-2 right-2 h-40 aspect-square rounded-full bg-accent" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-base-content;' : ''">
+      <input #hobbiesInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow()">
+    </span>
+    <span class="absolute bottom-2 left-2 h-40 aspect-square rounded-full bg-accent" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-base-content;' : ''">
+      <input #dogInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow()">
+    </span>
+    <span class="absolute bottom-2 right-2 h-40 aspect-square rounded-full bg-accent" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-base-content;' : ''">
+      <input #backstoryInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow()">
+    </span>
   </div>
 
 
