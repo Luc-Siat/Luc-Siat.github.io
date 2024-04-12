@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
-import {toggleOverflow } from 'src/app/shared/helper-functions/helper';
+import { toggleOverflow } from 'src/app/shared/helper-functions/helper';
 
 @Component({
   selector: 'app-navbar',
