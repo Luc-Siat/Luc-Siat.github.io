@@ -10,11 +10,11 @@ export class SideDrawerComponent{
   public toggleOverflow = toggleOverflow;
   public closeThemeDropdownEvent = new EventEmitter<boolean>();
   public isOnMobile = isOnMobile;
-  public top = `40px`;
+  public top = `0px`;
   
 
   public setScrollYOffset(e : MouseEvent) {
-    this.top = `${+(e.clientY)}px`;
+    this.top = `${+(e.offsetY)}px`;
     console.log(this.top)
   }
 }

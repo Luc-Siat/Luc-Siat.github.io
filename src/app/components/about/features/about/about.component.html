@@ -11,22 +11,21 @@
         I bridged the gap with Le Wagon bootcamp and never looked back
       </p>
     </div>
-    <span class="absolute top-2 right-2 h-40 aspect-square rounded-full bg-accent" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-base-content;' : ''">
-      <input #hobbiesInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow()">
+    <span class="absolute top-2 right-2 md:right-24 h-40 aspect-square rounded-full bg-accent" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-40' : ''">
+      <input #hobbiesInput type="checkbox" class="h-full w-full opacity-0" (click)="setScrollYOffset($event)">
     </span>
-    <span class="absolute bottom-2 left-2 h-40 aspect-square rounded-full bg-accent" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-base-content;' : ''">
-      <input #dogInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow()">
+    <span class="absolute bottom-2 left-2 md:left-24 h-40 aspect-square rounded-full bg-accent" [ngClass]="dogInput.checked ? 'circle-grow-screen bg-accent z-40' : ''">
+      <input #dogInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow(); setScrollYOffset($event)">
     </span>
-    <span class="absolute bottom-2 right-2 h-40 aspect-square rounded-full bg-accent" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-base-content;' : ''">
-      <input #backstoryInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow()">
+    <span class="absolute bottom-2 right-2 md:right-24 h-40 aspect-square rounded-full bg-accent" [ngClass]="backstoryInput.checked ? 'circle-grow-screen bg-accent z-40' : ''">
+      <input #backstoryInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow(); setScrollYOffset($event)">
     </span>
   </div>
 
 
 
-<!--
-  <div class="hobbies bg-neutral text-neutral-content  flex gap-4 min-h-screen w-full py-12 md:py-40">
-    <div class="container mx-auto flex flex-col gap-16">
+  <ng-container *ngIf="hobbiesInput.checked" [style.top]="top">
+    <div class="container mx-auto flex flex-col gap-16 z-50">
       
       <div class="flex">
         <h3 class="text-8xl font-[Zeyada] grow basis-0">Hobbies & Passions</h3>
@@ -65,8 +64,8 @@
         </ul>
       </div>
     </div>
-  </div>
-
+  </ng-container>
+<!--
   <div class="me flex min-h-screen bg-accent w-full text-accent-content py-12 md:py-40 bg-opacity-40">
     <div class="container mx-auto flex flex-col gap-20">
       <h3 class="text-4xl font-[pacifico]">A little backstory</h3>

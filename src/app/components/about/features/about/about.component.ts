@@ -9,4 +9,10 @@ import { toggleOverflow } from 'src/app/shared/helper-functions/helper';
 export class AboutComponent {
 
   toggleOverflow = toggleOverflow;
+  top = '0px';
+
+
+  public setScrollYOffset(e : MouseEvent) {
+    this.top = `${+(e.clientY)}px`;
+  }
 }
