@@ -18,7 +18,7 @@
 }
 
 
-.menu-toggle input
+.menu-toggle div input
 {
   top: 0;
   left: 0;
@@ -32,7 +32,7 @@
 
 }
 
-.menu-toggle > span
+.menu-toggle div > span
 {
   top: 3px;
   display: block;
@@ -49,18 +49,18 @@
               opacity 0.55s ease;
 }
 
-.menu-toggle span:first-child
+.menu-toggle div span:first-child
 {
   transform-origin: 0% 0%;
 }
 
-.menu-toggle span:nth-last-child(2)
+.menu-toggle  div  span:nth-last-child(2)
 {
   transform-origin: 0% 100%;
   width: 18px;
 }
 
-.menu-toggle input:checked ~ span
+.menu-toggle  div  input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-4px, -2px);
@@ -69,7 +69,7 @@
   left: 5px;
 }
 
-.menu-toggle input:checked ~ span:nth-last-child(2)
+.menu-toggle div  input:checked ~ span:nth-last-child(3)
 {
   opacity: 1;
   transform: rotate(45deg) translate(-4px, -2px);
@@ -78,24 +78,24 @@
   left: 5px;
 }
 
-.menu-toggle input:checked ~ span:nth-last-child(3)
+.menu-toggle div  input:checked ~ span:nth-last-child(2)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
-  top:5px;
-  left: 5px;
+  top:4px;
+  left: 4px;
 }
 
 
-.menu-toggle input:checked ~ span:nth-last-child(2)
+.menu-toggle  div  input:checked ~ span:nth-last-child(1)
 {
   transform: rotate(-45deg) translate(0, -1px);
   width: 32px;
-  top:5px;
-  left: 5px;
+  top:3px;
+  left: 3px;
 }
 
-.menu-toggle::after input:checked {
+.menu-toggle::after  div  input:checked {
   content: '';
   width: full;
   height: full;
@@ -120,7 +120,7 @@
 }
 
 
-.custom-drawer li
+.custom-drawer  div  li
 {
   padding: 10px 0;
   @apply text-base-100;
