@@ -1,5 +1,4 @@
 export const toggleOverflow = () => {
-  console.log("toggle");
     document.body.classList.toggle('overflow-hidden');
     document.documentElement.classList.toggle('overflow-hidden');
 }

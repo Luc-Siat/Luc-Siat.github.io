@@ -56,7 +56,7 @@
           </svg>
         </label>
         <div class="dropdown dropdown-end rounded-full py-1 px-2 flex relative" >
-          <input #themesInput tabindex="0" type="checkbox" class="py-0 top-0 left-0 absolute w-full z-20 h-full opacity-0 text-base-100" (click)="{}" name="themesInput"> 
+          <input #themesInput tabindex="0" type="checkbox" class="py-0 top-0 left-0 absolute w-full z-20 h-full opacity-0 text-base-100" (click)="''" name="themesInput"> 
             <fa-icon  [icon]="['fas', 'chevron-down']" class="top-0 right-0 fa-fw text-lg aspect-square soft-animation !text-base-100 " [ngClass]="themesInput.checked ? 'rotate-180' : ''" ></fa-icon>
           <ul  #themesDropdown tabindex="0" 
           [ngClass]="themesInput.checked ? '' : 'hidden' " 

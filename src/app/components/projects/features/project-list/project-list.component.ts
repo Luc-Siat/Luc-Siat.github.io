@@ -8,11 +8,7 @@ import { Project } from '../../data-access/project.model';
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.css']
 })
-export class ProjectListComponent implements OnInit {
+export class ProjectListComponent{
   projects? : Project[] = data.projects;
-  
-  
-  ngOnInit(): void {
-    console.log(this.projects)
-  }
+
 }

@@ -42,6 +42,7 @@ import { ExperienceCardComponent } from './components/experience/features/experi
 import { EnvelopeCssComponent } from './components/about/utils/envelope-css/envelope-css.component';
 import { CorgiCssComponent } from './components/banner/utils/corgi-css/corgi-css.component';
 import { LandscapeCssComponent } from './components/banner/utils/landscape-css/landscape-css.component';
+import { AboutHobbiesComponent } from './components/about/features/about-hobbies/about-hobbies.component';
 
 
 
@@ -64,7 +65,8 @@ import { LandscapeCssComponent } from './components/banner/utils/landscape-css/l
     ExperienceCardComponent,
     EnvelopeCssComponent,
     CorgiCssComponent,
-    LandscapeCssComponent
+    LandscapeCssComponent,
+    AboutHobbiesComponent
   ],
   imports: [
     BrowserModule,

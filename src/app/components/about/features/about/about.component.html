@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-4 min-h-screen w-full bg-secondary bg-opacity-40 py-12 md:py-40 relative">
     <div class="container mx-auto flex flex-col gap-12 md:justify-between slide-in-view relative">
       <h2 class="text-4xl md:text-6xl lg:text-7xl relative me-auto basis-0 shrink highlight-cap">ABOUT</h2>
-      <div class="flex flex-col md:flex-row gap-4 justify-evenly my-20 ">
+      <div class="flex flex-col md:flex-row gap-10 justify-evenly my-20 px-2  ">
         <span 
         class="h-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center shadow-lg  relative" 
         [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-30 bg-bouncy ' : 'bouncy-btn'">
@@ -57,41 +57,43 @@
 </section>
 
 <ng-template #hobbies >
-    <div class="flex flex-col gap-16 z-30  justify-between w-full container " [style.top]="top" *ngIf="hobbiesInput.checked" (click)="hobbiesInput.checked = false; toggleOverflow()">
-      <div class="flex">
-        <h3 class="text-8xl font-[Zeyada] grow basis-0">Hobbies & Passions</h3>
-      </div>
-  
-        <div 
-        class="max-w-[38rem] max-h-[32rem] min-h-[15.5rem] md:min-h-[25rem] aspect-auto carousel justify-self-end items-end carousel-center mx-2 md:carousel-vertical flex grow basis-0 bg-transparent shadow-2xl drop-shadow-2xl sepia opacity-80">
-          <div  class=" carousel-item aspect-auto relative w-full" *ngFor="let i of [1,2,3,4,5]">
-            <div class="flex gap-2 absolute top-2 right-2 items-center " >
-              <img class="h-20 w-30" src="assets/images/circle-stamp.png" alt="stamp">
-              <img class=" h-24 w-20" src="assets/images/stamp.png" alt="stamp">
-              <p class="text-[white] md:hidden absolute top-52 right-0 font-mono">&#10229; SWIPE </p>
-            </div>
-            <img [src]="'assets/images/polka/' + i + '.jpg'" class=" w-full md:polka-mask object-contain object-center " />
-            <p class="text-[white] hidden md:block rotate-90 top-1 absolute "> SCROLL &#10230;</p>
-          </div>
-        </div>
-  
-  
-      <div class="flex flex-col md:flex-row gap-12 md:gap-40 z-10 w-full">
-        <p class="text-2xl md:text-3xl max-w-[38rem] text-justify md:text-end tracking-widest leading-loose basis-0 grow ">
-          I have many hobbies mostly because I love to collect skills.
-          That includes crafting my own modern fishing rod, soldering my keyboard or making a historically accurate viking
-          shield from scratch.
-          I am interesting in learning anything especially if I can be mentored while doing it.
-        </p>
-        <ul class="text-4xl flex flex-col gap-6 justify-between items-start">
-          <li><fa-icon class="text-5xl " [icon]="['fas','person-hiking']"></fa-icon>  Hiking with my dog Polka</li>
-          <li><fa-icon class="text-5xl " [icon]="['fas','puzzle-piece']"></fa-icon>  Board games</li>
-          <li><fa-icon class="text-5xl " [icon]="['fas','gamepad']"></fa-icon>  Video Games</li>
-          <li><fa-icon class="text-5xl " [icon]="['fas','mountain']"></fa-icon>  Bouldering</li>
-          <li><fa-icon class="text-5xl " [icon]="['fas','hammer']"></fa-icon>  Crafting</li>
-        </ul>
-      </div>
+  <div class="flex flex-col gap-16 z-30  justify-between w-full container " [style.top]="top" *ngIf="hobbiesInput.checked" (click)="hobbiesInput.checked = false; toggleOverflow()">
+    <div class="flex">
+      <h3 class="text-8xl font-[Zeyada] grow basis-0">Hobbies & Passions</h3>
     </div>
+
+      <div 
+      [ngClass]="hobbiesInput.checked ? 'shown-in-view !delay-1000': ''"
+      class="max-w-[38rem] max-h-[32rem] min-h-[15.5rem] md:min-h-[25rem] aspect-auto carousel justify-self-end items-end 
+      carousel-center mx-2 md:carousel-vertical flex grow basis-0 bg-transparent shadow-2xl drop-shadow-2xl opacity-80 slide-in-view ">
+        <div  class=" carousel-item aspect-auto relative w-full" *ngFor="let i of [1,2,3,4,5]">
+          <div class="flex gap-2 absolute top-2 right-2 items-center " >
+            <img class="h-20 w-30" src="assets/images/circle-stamp.png" alt="stamp">
+            <img class=" h-24 w-20" src="assets/images/stamp.png" alt="stamp">
+            <p class="text-[white] md:hidden absolute top-52 right-0 font-mono">&#10229; SWIPE </p>
+          </div>
+          <img [src]="'assets/images/polka/' + i + '.jpg'" class=" w-full md:polka-mask object-contain object-center " />
+          <p class="text-[white] hidden md:block rotate-90 top-1 absolute "> SCROLL &#10230;</p>
+        </div>
+      </div>
+
+
+    <div class="flex flex-col md:flex-row gap-12 md:gap-40 z-10 w-full">
+      <p class="text-2xl md:text-3xl max-w-[38rem] text-justify md:text-end tracking-widest leading-loose basis-0 grow ">
+        I have many hobbies mostly because I love to collect skills.
+        That includes crafting my own modern fishing rod, soldering my keyboard or making a historically accurate viking
+        shield from scratch.
+        I am interesting in learning anything especially if I can be mentored while doing it.
+      </p>
+      <ul class="text-4xl flex flex-col gap-6 justify-between items-start">
+        <li><fa-icon class="text-5xl " [icon]="['fas','person-hiking']"></fa-icon>  Hiking with my dog Polka</li>
+        <li><fa-icon class="text-5xl " [icon]="['fas','puzzle-piece']"></fa-icon>  Board games</li>
+        <li><fa-icon class="text-5xl " [icon]="['fas','gamepad']"></fa-icon>  Video Games</li>
+        <li><fa-icon class="text-5xl " [icon]="['fas','mountain']"></fa-icon>  Bouldering</li>
+        <li><fa-icon class="text-5xl " [icon]="['fas','hammer']"></fa-icon>  Crafting</li>
+      </ul>
+    </div>
+  </div> 
 </ng-template>
 
 <ng-template #backstory >

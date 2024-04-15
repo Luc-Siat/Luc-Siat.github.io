@@ -55,7 +55,6 @@ export class AppComponent implements AfterViewInit{
   onWindowScroll() {
     const currentScroll = window.scrollY;
     const navbar = document.querySelector('.navbar');
-    console.log(document.body.clientHeight);
 
     if (currentScroll < this.lastScrollY - 265) {
       setTimeout(() => navbar?.classList.remove('opacity-0'), 500)
