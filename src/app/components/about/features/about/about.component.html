@@ -2,6 +2,19 @@
   <div class="flex flex-col gap-4 min-h-screen w-full bg-secondary bg-opacity-40 py-12 md:py-40 relative">
     <div class="container mx-auto flex flex-col gap-12 md:justify-between slide-in-view relative">
       <h2 class="text-4xl md:text-6xl lg:text-7xl relative me-auto shrink md:mb-40 highlight-cap">ABOUT</h2>
+      <div class="flex gap-4 justify-evenly my-20">
+        <span class="h-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center hover:scale-105 relative" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-30' : ''">
+          <input #hobbiesInput type="checkbox" class="h-full w-full opacity-0 z-50" (click)="toggleOverflow(); setScrollYOffset($event)">
+          <img  *ngIf="!hobbiesInput.checked" src="assets/images/heart.png" alt="passion icon" class="absolute aspect-square h-2/3">
+        </span>
+        <!-- <span class="absolute bottom-2 left-2 md:left-24 h-40 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center hover:scale-105" [ngClass]="dogInput.checked ? 'circle-grow-screen bg-accent z-30' : ''">
+          <input #dogInput type="checkbox" class="h-full w-full opacity-0 z-50" (click)="toggleOverflow(); setScrollYOffset($event)">    
+        </span> -->
+        <span class="h-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center hover:scale-105 relative" [ngClass]="backstoryInput.checked ? 'circle-grow-screen bg-accent z-30' : ''">
+          <input #backstoryInput type="checkbox" class="h-full w-full opacity-0 z-50" (click)="toggleOverflow(); setScrollYOffset($event)">
+          <img  *ngIf="!backstoryInput.checked" src="assets/images/books.png" alt="backstory icon" class="absolute aspect-square h-2/3">
+        </span>
+      </div>
     
       <p class="text-3xl text-justify tracking-widest leading-loose basis-0 grow border-2 px-4 border-r-secondary-content border-l-secondary-content border-t-transparent border-b-transparent border-opacity-5">
         Originally from a hospitality background I have decided a few years ago to pursue a career that I would
@@ -11,61 +24,24 @@
         I bridged the gap with Le Wagon bootcamp and never looked back
       </p>
     </div>
-    <span class="absolute top-2 md:top-16 right-2 md:right-24 h-40 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-30' : ''">
-      <input #hobbiesInput type="checkbox" class="h-full w-full opacity-0 z-50" (click)="toggleOverflow(); setScrollYOffset($event)">
-      <!-- <p class="absolute">Hobbies</p> -->
-    </span>
-    <span class="absolute bottom-2 left-2 md:left-24 h-40 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center" [ngClass]="dogInput.checked ? 'circle-grow-screen bg-accent z-30' : ''">
-      <input #dogInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow(); setScrollYOffset($event)">
-      <!-- <p class="absolute">dog</p> -->
-    </span>
-    <span class="absolute bottom-2 right-2 md:right-24 h-40 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center" [ngClass]="backstoryInput.checked ? 'circle-grow-screen bg-accent z-30' : ''">
-      <input #backstoryInput type="checkbox" class="h-full w-full opacity-0" (click)="toggleOverflow(); setScrollYOffset($event)">
-      <!-- <p class="absolute">backstory</p> -->
-    </span>
-    <app-container>
+    <div class="w-screen h-screen flex items-center justify-center fixed top-0" *ngIf="hobbiesInput.checked || backstoryInput.checked">
       <template *ngTemplateOutlet="hobbies"></template>
-    </app-container>
+      <template *ngTemplateOutlet="backstory"></template>
+    </div>
   </div>
-
-
-
-
-<!--
-  <div class="me flex min-h-screen bg-accent w-full text-accent-content py-12 md:py-40 bg-opacity-40">
-    <div class="container mx-auto flex flex-col gap-20">
-      <h3 class="text-4xl font-[pacifico]">A little backstory</h3>
-      <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-40">
-        <p class="text-2xl md:text-3xl text-justify tracking-widest leading-loose basis-0 grow">
-          Born in Alsace, France I carry with me a small cultural bagage which, truth be told, mostly includes recipes like
-          Dampfnuddle and Flammekueche. 
-        </p>
-        <app-envelope-css class="basis-0 flex-grow"></app-envelope-css>
-      </div>
-
-      <div class="flex flex-col md:flex-row justify-end gap-4 md:gap-40 ">
-        <app-train-css class="basis-0 flex-grow"></app-train-css>
-        <p class="text-2xl md:text-3xl text-justify tracking-widest leading-loose basis-0 grow">I have settled in Sweden with my girlfriend (also from Alsace) almost 3 years ago and We really love it.
-          Very fond of nordic countries we are currently trying to visit the 25 swedish 'landskapen' with 17 done so far.
-          I am also doing quite a bit of travelling across Europe with night trains. This includes Hamburg, Leipzig,
-          Copenhagen, Oslo and more.
-        </p>
-      </div>
-    </div> 
-  </div> -->
 
 </section>
 
 <ng-template #hobbies >
-    <div class="flex flex-col gap-16 z-30 absolute justify-between w-full" [style.top]="top" *ngIf="hobbiesInput.checked" (click)="hobbiesInput.checked = false">
-      
+    <div class="flex flex-col gap-16 z-30  justify-between w-full container " [style.top]="top" *ngIf="hobbiesInput.checked" (click)="hobbiesInput.checked = false; toggleOverflow()">
       <div class="flex">
         <h3 class="text-8xl font-[Zeyada] grow basis-0">Hobbies & Passions</h3>
       </div>
   
-        <div class="max-w-[38rem] max-h-[32rem] min-h-[15.5rem] md:min-h-[25rem] aspect-auto carousel justify-self-end items-end carousel-center mx-2 md:carousel-vertical flex grow basis-0 bg-transparent shadow-2xl drop-shadow-2xl sepia opacity-80">
-          <div class="carousel-item aspect-auto relative w-full" *ngFor="let i of [1,2,3,4,5]">
-            <div class="flex gap-2 absolute top-2 right-2 items-center">
+        <div 
+        class="max-w-[38rem] max-h-[32rem] min-h-[15.5rem] md:min-h-[25rem] aspect-auto carousel justify-self-end items-end carousel-center mx-2 md:carousel-vertical flex grow basis-0 bg-transparent shadow-2xl drop-shadow-2xl sepia opacity-80">
+          <div  class=" carousel-item aspect-auto relative w-full" *ngFor="let i of [1,2,3,4,5]">
+            <div class="flex gap-2 absolute top-2 right-2 items-center " >
               <img class="h-20 w-30" src="assets/images/circle-stamp.png" alt="stamp">
               <img class=" h-24 w-20" src="assets/images/stamp.png" alt="stamp">
               <p class="text-[white] md:hidden absolute top-52 right-0 font-mono">&#10229; SWIPE </p>
@@ -92,4 +68,29 @@
         </ul>
       </div>
     </div>
+</ng-template>
+
+<ng-template #backstory >
+  <div class="container flex flex-col gap-16 z-30 justify-between w-full" [style.top]="top" *ngIf="backstoryInput.checked" (click)="backstoryInput.checked = false; toggleOverflow()">
+    <div class="flex">
+      <h3 class="text-8xl font-[Zeyada] grow basis-0">Backstory</h3>
+    </div>
+
+        <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-40">
+          <p class="text-2xl md:text-3xl text-justify tracking-widest leading-loose basis-0 grow">
+            Born in Alsace, France I carry with me a small cultural bagage which, truth be told, mostly includes recipes like
+            Dampfnuddle and Flammekueche. 
+          </p>
+          <app-envelope-css class="basis-0 flex-grow"></app-envelope-css>
+        </div>
+  
+        <div class="flex flex-col md:flex-row justify-end gap-4 md:gap-40 ">
+          <app-train-css class="basis-0 flex-grow"></app-train-css>
+          <p class="text-2xl md:text-3xl text-justify tracking-widest leading-loose basis-0 grow">I have settled in Sweden with my girlfriend (also from Alsace) almost 3 years ago and We really love it.
+            Very fond of nordic countries we are currently trying to visit the 25 swedish 'landskapen' with 17 done so far.
+            I am also doing quite a bit of travelling across Europe with night trains. This includes Hamburg, Leipzig,
+            Copenhagen, Oslo and soon a trip in Slovenia.
+          </p>
+        </div>
+      </div> 
 </ng-template>
