@@ -3,13 +3,33 @@
     <div class="container mx-auto flex flex-col gap-12 md:justify-between slide-in-view relative">
       <h2 class="text-4xl md:text-6xl lg:text-7xl relative me-auto basis-0 shrink highlight-cap">ABOUT</h2>
       <div class="flex flex-col md:flex-row gap-4 justify-evenly my-20 ">
-        <span class="h-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center hover:scale-105 relative" [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-30' : ''">
-          <input #hobbiesInput type="checkbox" class="h-full w-full opacity-0 z-50" (click)="toggleOverflow(); setScrollYOffset($event)">
-          <img  *ngIf="!hobbiesInput.checked" src="assets/images/heart.png" alt="passion icon" class="absolute aspect-square h-2/3 ">
+        <span 
+        class="h-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center shadow-lg  relative" 
+        [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-30 bg-bouncy ' : 'bouncy-btn'">
+          <input 
+          #hobbiesInput 
+          type="checkbox" 
+          class="h-full w-full opacity-0 z-50" 
+          (click)="toggleOverflow(); setScrollYOffset($event)">
+          <img  
+          *ngIf="!hobbiesInput.checked" 
+          src="assets/images/heart.png" alt="passion icon" 
+          class="absolute aspect-square h-2/3 " 
+          [ngClass]="backstoryInput.checked? 'opacity-0': ''">
         </span>
-        <span class="h-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center hover:scale-105 relative" [ngClass]="backstoryInput.checked ? 'circle-grow-screen bg-accent z-30' : ''">
-          <input #backstoryInput type="checkbox" class="h-full w-full opacity-0 z-50" (click)="toggleOverflow(); setScrollYOffset($event)">
-          <img  *ngIf="!backstoryInput.checked" src="assets/images/books.png" alt="backstory icon" class="absolute aspect-square h-2/3">
+        <span 
+        class="h-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center shadow-lg  relative" 
+        [ngClass]="backstoryInput.checked ? 'circle-grow-screen bg-accent z-30 bg-bouncy ' : 'bouncy-btn'">
+          <input 
+          #backstoryInput 
+          type="checkbox" 
+          class="h-full w-full opacity-0 z-50" 
+          (click)="toggleOverflow(); setScrollYOffset($event)">
+          <img  
+          *ngIf="!backstoryInput.checked" 
+          src="assets/images/books.png" alt="backstory icon" 
+          class="absolute aspect-square h-2/3 " 
+          [ngClass]="backstoryInput.checked? 'opacity-0': ''">
         </span>
       </div>
     
@@ -21,7 +41,7 @@
         I bridged the gap with Le Wagon bootcamp and never looked back.
         <br>
         <br>
-        I would describe myself a passionate .NET developer, currently working on a marketplace he has co-built from the ground up using agile methodologies. 
+        I would describe myself a passionate .NET developer, currently working on a passion project I have co-built from the ground up with my friend and colleague Atte. We hope we can soon release this to the public. 
         My skills extend across the entire spectrum of programming, encompassing frontend, backend, and database. <br>
         I am used to working in high paced environments and never hesitate to go a step further, achieving that “extra-mile” essential to most projects’ success.<br>
         Luc's dedication to continuous learning and his unwavering belief in the power of teamwork make him a strong asset to any developer team.<br><br>
