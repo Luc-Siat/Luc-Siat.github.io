@@ -29,6 +29,15 @@
             "backgroundColor": "rgba(103, 141, 88, .4)"
         },
         {
+            "title": "Portfolio",
+            "description": "Portfolio webpage hosted on github Pages and developed in Angular/Typescript",
+            "imagePath": "assets/images/luc-siat.png",
+            "githubLink": "https://github.com/luc-siat/luc-siat.github.io",
+            "isDeployed": true,
+            "deployedLink": "https://luc-siat.github.io/",
+            "backgroundColor": "rgba(35, 65, 92, 0.4)"
+        },
+        {
             "title": "Mockea",
             "description": "Mock version of IKEA. 2 weeks project focusing on mocking the front page of IKEA",
             "imagePath": "assets/images/mockea.png",
