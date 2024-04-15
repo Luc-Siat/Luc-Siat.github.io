@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $bg__color: bg-base-100; //bg-brown
 $bg__color2: bg-base-100; //bg-darkblue
 
@@ -35,7 +37,7 @@ $total-steps: 20;
 @mixin animate ($name, $animation-set) {
     @keyframes #{$name} {
         @each $interval, $property, $value in $animation-set {
-            #{percentage($interval/$total-steps)} {
+            #{math.percentage(math.div($interval,$total-steps))} {
                 #{$property}:$value
             }
         }
@@ -45,7 +47,7 @@ $total-steps: 20;
 @mixin animate-trans ($name, $animation-set) {
     @keyframes #{$name} {
         @each $interval, $transform in $animation-set {
-            #{percentage($interval/$total-steps)} {
+            #{math.percentage(math.div($interval,$total-steps))} {
                 transform: $transform;
             }
         }
