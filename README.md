@@ -1,6 +1,6 @@
-[Take a peek!](https://luc-siat.github.io/)
+**[Take a peek!](https://luc-siat.github.io/)**
 
-Techstack:
+**TECH STACK**
 -  Angular 17
 -  Typescript
 -  HTML
