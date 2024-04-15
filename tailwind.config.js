@@ -86,13 +86,12 @@ module.exports = {
           "secondary-content": "#212323",  
           "accent": "#FF928B",
           "accent-content": "#212323",   
-          "neutral": "",
-          "neutral-content": "",   
+          "neutral": "#red",
+          "neutral-content": "#red",   
           "base-100": "#212323",
           "base-200": "#161817",
           "base-300": "#0E0F0F",
           "base-content": "#5b8e7d",
-    
           "--rounded-box": "0.2rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "0.2rem", // border radius rounded-btn utility class, used in buttons and similar element
           "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar

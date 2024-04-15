@@ -8,16 +8,17 @@
             <li class="flex flex-col !pt-2">
                 <app-navbar-settings *ngIf="drawerInput.checked" [drawerEvent]="closeThemeDropdownEvent"></app-navbar-settings>
             </li>
-            <li><a >HOME</a></li>
-            <li>
+            <li><a href="#home" (click)="drawerInput.checked = false">HOME</a></li>
+            <li><a href="#projects" (click)="drawerInput.checked = false">PROJECTS</a></li>
+            <!-- <li>
                 <a>PROJECTS</a>
                 <ul class="p-4 text-2xl ">
                     <li><a>DealFortress</a></li>
                     <li><a>Cup Of Tickets</a></li>
                 </ul>
-            </li>
-            <li><a>EXPERIENCE</a></li>
-            <li><a>ABOUT</a></li>
+            </li> -->
+            <li><a href="#experience" (click)="drawerInput.checked = false">EXPERIENCE</a></li>
+            <li><a href="#about" (click)="drawerInput.checked = false">ABOUT</a></li>
         </ul>
     </div>
 </div>

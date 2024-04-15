@@ -105,7 +105,7 @@ $animation-ear-set-left:(
 );
 
 $body-shake: 2%;
-$div-6: ($total-steps/6);
+$div-6: calc($total-steps/6);
 
 $animation-body-set:(
     ($div-6 * 0): translateY(0px),
