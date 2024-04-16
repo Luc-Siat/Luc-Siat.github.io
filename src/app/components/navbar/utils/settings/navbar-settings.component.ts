@@ -10,7 +10,7 @@ export class NavbarSettingsComponent implements OnInit{
   @Input() drawerEvent? : EventEmitter<boolean>;
   @ViewChild('themesInput') themesInput!: ElementRef<HTMLInputElement>;
   @Input({required:true}) isOnMobile! : boolean;
-  isDark = false;
+  public isDarkEvent = new EventEmitter<boolean>(false);
 
   
   public darkThemes = ['coffee','darkroast', 'dim','luxury','forest','halloween', 'black','dracula',
@@ -52,11 +52,12 @@ export class NavbarSettingsComponent implements OnInit{
 
   setThemeLibrary(isDark : boolean) {
     if (isDark) {
-      this.isDark = true;
+
+      this.isDarkEvent.emit(true);
       this.themes = this.darkThemes;
       return;
     } 
-    this.isDark = false;
+    this.isDarkEvent.emit(false);
     this.themes = this.lightThemes;
   }
 

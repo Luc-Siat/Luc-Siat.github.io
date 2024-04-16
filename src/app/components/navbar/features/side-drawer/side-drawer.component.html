@@ -6,7 +6,7 @@
         <span></span>
         <ul  class="custom-drawer text-start container text-base-content w-[90vw] overflow-hidden h-screen flex flex-col justify-start gap-5 text-3xl z-[1]">
             <li class="flex flex-col !pt-2">
-                <app-navbar-settings [isOnMobile]="true" [drawerEvent]="closeThemeDropdownEvent"></app-navbar-settings>
+                <app-navbar-settings [isOnMobile]="true" [drawerEvent]="closeThemeDropdownEvent" (isDarkEvent)="handleIsDarkEvent($event)"></app-navbar-settings>
             </li>
             <li><a href="#home" >HOME</a></li>
             <li><a href="#projects">PROJECTS</a></li>

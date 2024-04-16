@@ -11,9 +11,15 @@ export class SideDrawerComponent{
   public closeThemeDropdownEvent = new EventEmitter<boolean>();
   public isOnMobile = isOnMobile;
   public top = `0px`;
+  public isDarkEvent = new EventEmitter<boolean>();
   
 
   public setScrollYOffset(e : MouseEvent) {
     this.top = `${+(e.offsetY)}px`;
+  }
+
+  public handleIsDarkEvent(event : Event) {
+    console.log(event);
+    // this.isDarkEvent.emit(event);
   }
 }
