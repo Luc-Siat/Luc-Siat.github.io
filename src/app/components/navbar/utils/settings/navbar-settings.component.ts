@@ -1,5 +1,5 @@
-import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild, viewChild } from '@angular/core';
-import { capitalize, isOnMobile} from 'src/app/shared/helper-functions/helper';
+import { Component, ElementRef, EventEmitter, Input, OnInit,  Output,  ViewChild } from '@angular/core';
+import { capitalize} from 'src/app/shared/helper-functions/helper';
 
 @Component({
   selector: 'app-navbar-settings',
@@ -10,7 +10,7 @@ export class NavbarSettingsComponent implements OnInit{
   @Input() drawerEvent? : EventEmitter<boolean>;
   @ViewChild('themesInput') themesInput!: ElementRef<HTMLInputElement>;
   @Input({required:true}) isOnMobile! : boolean;
-  public isDarkEvent = new EventEmitter<boolean>(false);
+  @Output() isDarkEvent = new EventEmitter<boolean>(false);
 
   
   public darkThemes = ['coffee','darkroast', 'dim','luxury','forest','halloween', 'black','dracula',
@@ -52,7 +52,6 @@ export class NavbarSettingsComponent implements OnInit{
 
   setThemeLibrary(isDark : boolean) {
     if (isDark) {
-
       this.isDarkEvent.emit(true);
       this.themes = this.darkThemes;
       return;

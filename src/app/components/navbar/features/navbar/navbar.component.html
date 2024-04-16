@@ -1,10 +1,10 @@
 
 
 <div class="h-full absolute w-full">
-  <nav id="home" class=" navbar z-10 text-base-100 bg-transparent text-center flex-col items-center justify-center !sticky top-0" [ngClass]="isDark ? 'bg-base-content' : 'bg-transparent'">
+  <nav id="home" class=" navbar z-10 text-base-100 text-center flex-col items-center justify-center !sticky top-0" [ngClass]="isDark ? 'bg-base-content' : 'bg-transparent'">
     <ul class="container flex gap-3 justify-between items-center px-0 relative">
       <li class="grow-[2] basis-0 justify-start lg:hidden flex relative">
-        <app-side-drawer (isDarkEvent)="isDark = $event.returnValue"></app-side-drawer>
+        <app-side-drawer (isDarkEvent)="handleIsDarkEvent($event)"></app-side-drawer>
       </li>
       <li class="grow-[2] basis-0 justify-start hidden lg:flex lg:justify-between">
         <ul class="menu menu-horizontal px-1 grow lg:flex lg:justify-between ">
@@ -37,7 +37,7 @@
               <fa-icon [icon]="['fas', 'paper-plane']" class="fa-fw w-10 h-10 flex justify-center items-center" ></fa-icon>
             </a>
           </li>
-          <app-navbar-settings [isOnMobile]="false" class="hidden lg:flex " (isDarkEvent)="isDark = $event.returnValue"></app-navbar-settings>
+          <app-navbar-settings [isOnMobile]="false" class="hidden lg:flex " (isDarkEvent)="handleIsDarkEvent($event)"></app-navbar-settings>
         </ul>
     </li>
     </ul>

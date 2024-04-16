@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { isOnMobile, toggleOverflow } from 'src/app/shared/helper-functions/helper';
 
 @Component({
@@ -11,15 +11,11 @@ export class SideDrawerComponent{
   public closeThemeDropdownEvent = new EventEmitter<boolean>();
   public isOnMobile = isOnMobile;
   public top = `0px`;
-  public isDarkEvent = new EventEmitter<boolean>();
+  @Output() isDarkEvent = new EventEmitter<boolean>();
   
 
   public setScrollYOffset(e : MouseEvent) {
     this.top = `${+(e.offsetY)}px`;
   }
 
-  public handleIsDarkEvent(event : Event) {
-    console.log(event);
-    // this.isDarkEvent.emit(event);
-  }
 }

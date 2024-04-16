@@ -13,6 +13,6 @@ export class AboutComponent {
 
 
   public setScrollYOffset(e : MouseEvent) {
-    this.top = `${+(e.offsetY - 100)}px`;
+    this.top = `${+(e.offsetY)}px`;
   }
 }
