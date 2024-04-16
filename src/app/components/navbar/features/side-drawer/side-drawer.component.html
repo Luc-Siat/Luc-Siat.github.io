@@ -6,10 +6,10 @@
         <span></span>
         <ul  class="custom-drawer text-start container text-base-content w-[90vw] overflow-hidden h-screen flex flex-col justify-start gap-5 text-3xl z-[1]">
             <li class="flex flex-col !pt-2">
-                <app-navbar-settings *ngIf="drawerInput.checked" [drawerEvent]="closeThemeDropdownEvent"></app-navbar-settings>
+                <app-navbar-settings [isOnMobile]="true" [drawerEvent]="closeThemeDropdownEvent"></app-navbar-settings>
             </li>
-            <li><a href="#home" (click)="drawerInput.checked = false">HOME</a></li>
-            <li><a href="#projects" (click)="drawerInput.checked = false">PROJECTS</a></li>
+            <li><a href="#home" >HOME</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
             <!-- <li>
                 <a>PROJECTS</a>
                 <ul class="p-4 text-2xl ">
@@ -17,8 +17,8 @@
                     <li><a>Cup Of Tickets</a></li>
                 </ul>
             </li> -->
-            <li><a href="#experience" (click)="drawerInput.checked = false">EXPERIENCE</a></li>
-            <li><a href="#about" (click)="drawerInput.checked = false">ABOUT</a></li>
+            <li><a href="#experience" >EXPERIENCE</a></li>
+            <li><a href="#about" >ABOUT</a></li>
         </ul>
     </div>
 </div>

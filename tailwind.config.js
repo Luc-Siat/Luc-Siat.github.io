@@ -46,7 +46,6 @@ module.exports = {
       "winter",
       "dim",
       "nord",
-      "sunset",
       "light",
       "dark",
       "cupcake",

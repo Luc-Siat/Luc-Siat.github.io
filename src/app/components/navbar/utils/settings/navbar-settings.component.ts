@@ -6,13 +6,14 @@ import { capitalize, isOnMobile} from 'src/app/shared/helper-functions/helper';
   templateUrl: './navbar-settings.component.html',
   styleUrl: './navbar-settings.component.css'
 })
-export class NavbarSettingsComponent implements OnInit, OnDestroy{
+export class NavbarSettingsComponent implements OnInit{
   @Input() drawerEvent? : EventEmitter<boolean>;
   @ViewChild('themesInput') themesInput!: ElementRef<HTMLInputElement>;
-  public isOnMobile = isOnMobile;
+  @Input({required:true}) isOnMobile! : boolean;
+  isDark = false;
 
   
-  public darkThemes = ['coffee','darkroast', 'dim','sunset','luxury','forest','halloween', 'black','dracula',
+  public darkThemes = ['coffee','darkroast', 'dim','luxury','forest','halloween', 'black','dracula',
   'business', 'night', 'dark', 'synthwave'
   ];
   
@@ -35,10 +36,6 @@ export class NavbarSettingsComponent implements OnInit, OnDestroy{
       this.themesInput.nativeElement.checked = false;
     })
   }
-
-  ngOnDestroy(): void {
-   this.drawerEvent?.unsubscribe();
-  }
   
 
   themesDropdownLeave(input : HTMLInputElement) {
@@ -55,9 +52,11 @@ export class NavbarSettingsComponent implements OnInit, OnDestroy{
 
   setThemeLibrary(isDark : boolean) {
     if (isDark) {
+      this.isDark = true;
       this.themes = this.darkThemes;
       return;
     } 
+    this.isDark = false;
     this.themes = this.lightThemes;
   }
 
