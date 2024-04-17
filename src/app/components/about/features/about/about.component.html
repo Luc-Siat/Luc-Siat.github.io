@@ -89,44 +89,43 @@
       *ngIf="selectedHobby == ''  || selectedHobby == 'hiking'"  
       (click)="handleHobbySelection('hiking') "
       class="rounded-full p-3 bg-accent aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
-      [ngClass]="selectedHobby == 'hiking' ? '!w-full z-10': ''"
+      [ngClass]="selectedHobby == 'hiking' ? 'absolute !w-[30%] z-10': ''"
       >
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','person-hiking']"></fa-icon>
-        <p class="text-xl md:text-2xl xl:text-3xl" *ngIf="selectedHobby == 'hiking'" >Hiking with my dog</p>
+        <p class="text-xl md:text-2xl xl:text-3xl transition-all" [ngClass]="selectedHobby == 'hiking' ? 'opacity-100' : 'hidden opacity-0'" >Hiking with my dog</p>
       </li>
       <li 
       *ngIf="selectedHobby == ''  || selectedHobby == 'boardGames'"  
       (click)="handleHobbySelection('boardGames') "
       class="rounded-full p-3 bg-base-100 aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
-      [ngClass]="selectedHobby == 'boardGames' ? '!w-full z-10': ''"
-      <!-- [ngClass]="selectedHobby !== 'boardGames' && selectedHobby !== '' ? 'opacity-0' : ''" -->
+      [ngClass]="selectedHobby == 'boardGames' ? 'absolute !w-[30%]  z-10': ''"
       >
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','puzzle-piece']"></fa-icon>
-        <p class="text-xl md:text-2xl xl:text-3xl" *ngIf="selectedHobby == 'boardGames'" >Everdell, ResArcana, Bunny Kingdom, DnD</p>
+        <p class="text-xl md:text-2xl xl:text-3xl" [ngClass]="selectedHobby == 'boardGames' ? 'opacity-100' : 'hidden opacity-0'" >Everdell, ResArcana, Bunny Kingdom, DnD</p>
       </li>
       <li 
       *ngIf="selectedHobby == ''  || selectedHobby == 'gaming'"  
       (click)="handleHobbySelection('gaming') "
       class="rounded-full p-3 bg-primary aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
-      [ngClass]="selectedHobby == 'gaming' ? '!w-full z-10': ''">
+      [ngClass]="selectedHobby == 'gaming' ? 'absolute !w-[30%] z-10': ''">
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','gamepad']"></fa-icon>
-        <p class="text-xl md:text-2xl xl:text-3xl" *ngIf="selectedHobby == 'gaming'" >TF2, The Finals, It takes two, BG3</p>
+        <p class="text-xl md:text-2xl xl:text-3xl" [ngClass]="selectedHobby == 'gaming' ? 'opacity-100' : 'hidden opacity-0'" >TF2, The Finals, It takes two, BG3</p>
       </li>
       <li
       *ngIf="selectedHobby == ''  || selectedHobby == 'climbing'"  
       (click)="handleHobbySelection('climbing') "
       class="rounded-full p-3 bg-base-300 aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
-      [ngClass]="selectedHobby == 'climbing' ? '!w-full z-10': ''">
+      [ngClass]="selectedHobby == 'climbing' ? 'absolute !w-[30%] z-10': ''">
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','mountain']"></fa-icon>
-        <p class="text-xl md:text-2xl xl:text-3xl" *ngIf="selectedHobby == 'climbing'" >Bouldering at slaktis (6c-7a)</p>
+        <p class="text-xl md:text-2xl xl:text-3xl" [ngClass]="selectedHobby == 'climbing' ? 'opacity-100' : 'hidden opacity-0'" >Bouldering at slaktis (6c-7a)</p>
       </li>
       <li 
       *ngIf="selectedHobby == ''  || selectedHobby == 'crafting'"  
       (click)="handleHobbySelection('crafting') "
       class="rounded-full p-3 bg-neutral text-neutral-content aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
-      [ngClass]="selectedHobby == 'crafting' ? '!w-full z-10': ''">
+      [ngClass]="selectedHobby == 'crafting' ? 'absolute !w-[30%] z-10': ''">
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','hammer']"></fa-icon>
-        <p class="text-xl md:text-2xl xl:text-3xl" *ngIf="selectedHobby == 'crafting'" >soldering keyboards, making wooden tables, fishing rods from scratch, etc..</p>
+        <p class="text-xl md:text-2xl xl:text-3xl" [ngClass]="selectedHobby == 'crafting' ? 'opacity-100' : 'hidden opacity-0'" >Soldering keyboards, making wooden tables, fishing rods from scratch, etc..</p>
       </li>
       </ul>
     </div>
