@@ -5,12 +5,12 @@
       <div class="flex flex-row gap-10 justify-evenly items-center my-20 px-2  ">
         <span 
         class="h-36 w-36 md:h-56 md:w-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center shadow-lg  relative" 
-        [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-30 bg-bouncy ' : 'bouncy-btn'">
+        [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-[60] bg-bouncy ' : 'bouncy-btn'">
           <input 
           #hobbiesInput 
           type="checkbox" 
           class="h-full w-full opacity-0 z-50" 
-          (click)=" setScrollYOffset($event)">
+          (click)="toggleOverflow(); setScrollYOffset($event)">
           <img  
           *ngIf="!hobbiesInput.checked" 
           src="assets/images/heart.png" alt="passion icon" 
@@ -19,12 +19,12 @@
         </span>
         <span 
         class="h-36 w-36 md:h-56 md:w-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center shadow-lg  relative" 
-        [ngClass]="backstoryInput.checked ? 'circle-grow-screen bg-accent z-30 bg-bouncy ' : 'bouncy-btn'">
+        [ngClass]="backstoryInput.checked ? 'circle-grow-screen bg-accent z-[60] bg-bouncy ' : 'bouncy-btn'">
           <input 
           #backstoryInput 
           type="checkbox" 
           class="h-full w-full opacity-0 z-50" 
-          (click)=" setScrollYOffset($event)">
+          (click)="toggleOverflow(); setScrollYOffset($event)">
           <img  
           *ngIf="!backstoryInput.checked" 
           src="assets/images/books.png" alt="backstory icon" 
@@ -33,7 +33,7 @@
         </span>
       </div>
     
-      <p class="text-2xl md:text-3xl text-justify tracking-widest leading-loose basis-0 grow border-2 px-4 border-r-secondary-content border-l-secondary-content border-t-transparent border-b-transparent border-opacity-5">
+      <p class="text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow border-2 px-4 border-r-secondary-content border-l-secondary-content border-t-transparent border-b-transparent border-opacity-5">
         Originally from a hospitality background I have decided a few years ago to pursue a career that I would
         passionate about.<br>
         While I enjoyed the thrills, social aspect and multi-tasking of the reception, I lacked continuous learning, creativity and
@@ -48,7 +48,7 @@
         And more than anything I love to solve a good problem!
       </p>
     </div>
-    <div class="w-screen h-screen flex items-center justify-center fixed top-20 z-30" *ngIf="hobbiesInput.checked || backstoryInput.checked">
+    <div class="w-screen h-screen flex items-center justify-center fixed top-2 xl:top-20 z-30" *ngIf="hobbiesInput.checked || backstoryInput.checked">
       <template *ngTemplateOutlet="hobbies"></template>
       <template *ngTemplateOutlet="backstory"></template>
     </div>
@@ -57,40 +57,39 @@
 </section>
 
 <ng-template #hobbies >
-  <div class="flex flex-col gap-16 z-30  justify-between w-full container "  
+  <div class="flex flex-col gap-2 md:gap-6 xl:gap-16 z-30  justify-between w-full container md:items-center "  
   *ngIf="hobbiesInput.checked" 
-  (click)="hobbiesInput.checked = false; ">
+  (click)="hobbiesInput.checked = false;toggleOverflow(); ">
     <div class="flex">
-      <h3 class="text-8xl font-[Zeyada] grow basis-0">Hobbies & Passions</h3>
+      <h3 class="text-4xl md:text-6xl xl:text-8xl font-[Zeyada] grow basis-0 ">Hobbies & Passions</h3>
     </div>
 
       <div 
-      class="w-[21rem] md:w-full md:max-w-[50%] md:min-w-24 carousel md:h-96  shrink items-start 
-       md:carousel-vertical shadow-2xl drop-shadow-2xl bg-[url(assets/images/postcard.jpeg)] bg-contain sepia ">
+      class="w-[21rem] md:w-full xl:max-w-[50%] md:max-w-[80%] md:min-w-24 carousel md:h-[28rem] xl:h-[32rem]  shrink items-start 
+       md:carousel-vertical shadow-2xl drop-shadow-2xl bg-[url(assets/images/postcard.jpeg)] bg-contain ">
         <div  class="carousel-item relative w-full md:w-auto md:h-full " *ngFor="let i of [1,2,3,4,5]">
           <div class="flex gap-2 absolute top-2 right-2 items-center " >
-            <img class="h-10 w-16 md:h-20 md:w-30" src="assets/images/circle-stamp.png" alt="stamp">
-            <img class=" h-12 w-10 md:h-24 md:w-20" src="assets/images/stamp.png" alt="stamp">
+            <img class="h-10 w-16 md:h-20 md:w-32" src="assets/images/circle-stamp.png" alt="stamp">
+            <img class="h-12 w-10 md:h-24 md:w-20" src="assets/images/stamp.png" alt="stamp">
             <p class="text-[white] md:hidden absolute top-48 right-0 font-mono">&#10229; SWIPE </p>
           </div>
-          <img [src]="'assets/images/polka/' + i + '.jpg'" class="w-full md:w-auto md:h-full md:polka-mask " />
+          <img [src]="'assets/images/polka/' + i + '.jpg'" class="w-full md:w-auto md:h-full md:polka-mask object-cover" />
           <p class="text-[white] hidden md:block rotate-90 top-1 absolute "> SCROLL &#10230;</p>
         </div>
       </div>
 
-
-    <div class="flex flex-col md:flex-row gap-12 md:gap-40 z-10 w-full">
-      <p class="text-xl md:text-3xl max-w-[38rem] text-justify md:text-end tracking-widest leading-loose basis-0 grow ">
+    <div class="flex flex-col xl:flex-row gap-2 md:gap-12 xl:gap-40 z-10 w-full ">
+      <p class="text-xl md:text-2xl xl:text-3xl max-w-[38rem] text-justify md:text-center md:self-center xl:text-end md:tracking-widest md:leading-loose basis-0 grow ">
         I have many hobbies mostly because I love to learn and perfect new skills.
         That includes crafting my own modern fishing rod, soldering my keyboard or making a historically accurate viking
-        shield from scratch. But I have some hobbies that standout
+        shield from scratch. But I have some hobbies that standout:
       </p>
-      <ul class="text-4xl flex flex-col gap-6 justify-between items-start">
-        <li><fa-icon class="text-5xl " [icon]="['fas','person-hiking']"></fa-icon>  Hiking with my dog Polka</li>
-        <li><fa-icon class="text-5xl " [icon]="['fas','puzzle-piece']"></fa-icon>  Board games</li>
-        <li><fa-icon class="text-5xl " [icon]="['fas','gamepad']"></fa-icon>  Video Games</li>
-        <li><fa-icon class="text-5xl " [icon]="['fas','mountain']"></fa-icon>  Bouldering</li>
-        <li><fa-icon class="text-5xl " [icon]="['fas','hammer']"></fa-icon>  Crafting</li>
+      <ul class="flex text-xl md:text-2xl xl:text-4xl xl:flex-col gap-2 md:gap-12 xl:gap-6 justify-between items-start flex-wrap">
+        <li><fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','person-hiking']"></fa-icon>  Hiking with my dog Polka</li>
+        <li><fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','puzzle-piece']"></fa-icon>  Board games</li>
+        <li><fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','gamepad']"></fa-icon>  Video Games</li>
+        <li><fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','mountain']"></fa-icon>  Bouldering</li>
+        <li><fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','hammer']"></fa-icon>  Crafting</li>
       </ul>
     </div>
   </div> 
@@ -98,26 +97,26 @@
 
 <ng-template #backstory >
   <div 
-  class="container flex flex-col gap-16 z-30 justify-between w-full relative" 
+  class="container flex flex-col gap-2 md:gap-6 xl:gap-16 z-30 justify-between w-full relative" 
   *ngIf="backstoryInput.checked" 
-  (click)="backstoryInput.checked = false;">
+  (click)="backstoryInput.checked = false;toggleOverflow();">
     <div class="flex">
-      <h3 class="text-8xl font-[Zeyada] grow basis-0">Backstory</h3>
+      <h3 class="text-4xl md:text-6xl xl:text-8xl font-[Zeyada] grow basis-0">Backstory</h3>
     </div>
-      <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-40">
-        <p class="text-xl md:text-3xl text-justify tracking-widest leading-loose basis-0 grow">
+      <div class="flex flex-col md:flex-row justify-between gap-4 xl:gap-40">
+        <p class="text-xl md:text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow">
           Born in Alsace, France I carry with me a small cultural bagage which, truth be told, mostly includes recipes like
           Dampfnuddle and Flammekueche. 
         </p>
-        <app-envelope-css class="basis-0 flex-grow hidden md:block"></app-envelope-css>
+        <app-envelope-css class="basis-0 flex-grow h-24 hidden xl:block"></app-envelope-css>
+        <img class="md:w-[50%] xl:hidden" src="assets/images/alsace.png" alt="picture of alsace">
       </div>
 
-      <div class="flex flex-col md:flex-row justify-end gap-4 md:gap-40 ">
+      <div class="flex flex-col xl:flex-row justify-end gap-4 xl:gap-40 ">
         <app-train-css class="basis-0 flex-grow hidden md:block"></app-train-css>
-        <p class="text-2xl md:text-3xl text-justify tracking-widest leading-loose basis-0 grow">I have settled in Sweden with my girlfriend (also from Alsace) almost 3 years ago and We really love it.
-          Very fond of nordic countries we are currently trying to visit the 25 swedish 'landskapen' with 17 done so far.
-          I am also doing quite a bit of travelling across Europe with night trains. This includes Hamburg, Leipzig,
-          Copenhagen, Oslo and soon a trip in Slovenia.
+        <p class="text-xl md:text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow ">I have settled in Sweden with my girlfriend (also from Alsace) almost 3 years ago and We really love it.
+          Very fond of nordic countries we are currently trying to visit the 25 swedish 'landskapen' with 17 done so far.<span class="hidden md:inline-block">I am also doing quite a bit of travelling across Europe with night trains. This includes Hamburg, Leipzig,
+          Copenhagen, Oslo and soon a trip in Slovenia.</span>
         </p>
       </div>
     </div> 
