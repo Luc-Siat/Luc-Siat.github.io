@@ -59,9 +59,11 @@
 <ng-template #hobbies >
   <div class="flex flex-col gap-4 md:gap-6 xl:gap-16 z-20  justify-between w-full container md:items-center "  
   *ngIf="hobbiesInput.checked" 
+  (click)="toggleOverflow(); hobbiesInput.checked = false"
   >
-    <div class="flex">
+    <div class="flex justify-between w-full">
       <h3 class="text-4xl md:text-6xl xl:text-8xl font-[Zeyada] grow basis-0 ">Hobbies & Passions</h3>
+      <p (click)="toggleOverflow(); hobbiesInput.checked = false" >X</p>
     </div>
 
       <div 
@@ -79,7 +81,7 @@
       </div>
 
     <div class="flex flex-col xl:flex-row gap- md:gap-12 xl:gap-40 z-10 w-full ">
-      <p class="text-xl md:text-2xl xl:text-3xl max-w-[38rem] text-justify md:text-center md:self-center xl:text-end md:tracking-widest md:leading-loose basis-0 grow ">
+      <p class="text-xl md:text-2xl xl:text-3xl max-w-[38rem] text-justify md:text-center xl:text-start md:self-center xl:text-end md:tracking-widest md:leading-loose basis-0 grow ">
         I have many hobbies mostly because I love to learn and perfect new skills.
         That includes crafting my own modern fishing rod, soldering my keyboard or making a historically accurate viking
         shield from scratch. But I have some hobbies that standout:
@@ -88,7 +90,7 @@
       <li 
       *ngIf="selectedHobby == ''  || selectedHobby == 'hiking'"  
       (click)="handleHobbySelection('hiking') "
-      class="rounded-full p-3 bg-accent aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
+      class="bouncy-btn rounded-full p-3 bg-accent aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
       [ngClass]="selectedHobby == 'hiking' ? 'absolute !w-[30%] z-10': ''"
       >
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','person-hiking']"></fa-icon>
@@ -97,7 +99,7 @@
       <li 
       *ngIf="selectedHobby == ''  || selectedHobby == 'boardGames'"  
       (click)="handleHobbySelection('boardGames') "
-      class="rounded-full p-3 bg-base-100 aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
+      class="bouncy-btn rounded-full p-3 bg-base-100 aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
       [ngClass]="selectedHobby == 'boardGames' ? 'absolute !w-[30%]  z-10': ''"
       >
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','puzzle-piece']"></fa-icon>
@@ -106,7 +108,7 @@
       <li 
       *ngIf="selectedHobby == ''  || selectedHobby == 'gaming'"  
       (click)="handleHobbySelection('gaming') "
-      class="rounded-full p-3 bg-primary aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
+      class="bouncy-btn rounded-full p-3 bg-primary aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
       [ngClass]="selectedHobby == 'gaming' ? 'absolute !w-[30%] z-10': ''">
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','gamepad']"></fa-icon>
         <p class="text-xl md:text-2xl xl:text-3xl" [ngClass]="selectedHobby == 'gaming' ? 'opacity-100' : 'hidden opacity-0'" >TF2, The Finals, It takes two, BG3</p>
@@ -114,7 +116,7 @@
       <li
       *ngIf="selectedHobby == ''  || selectedHobby == 'climbing'"  
       (click)="handleHobbySelection('climbing') "
-      class="rounded-full p-3 bg-base-300 aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
+      class="bouncy-btn rounded-full p-3 bg-base-300 aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
       [ngClass]="selectedHobby == 'climbing' ? 'absolute !w-[30%] z-10': ''">
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','mountain']"></fa-icon>
         <p class="text-xl md:text-2xl xl:text-3xl" [ngClass]="selectedHobby == 'climbing' ? 'opacity-100' : 'hidden opacity-0'" >Bouldering at slaktis (6c-7a)</p>
@@ -122,7 +124,7 @@
       <li 
       *ngIf="selectedHobby == ''  || selectedHobby == 'crafting'"  
       (click)="handleHobbySelection('crafting') "
-      class="rounded-full p-3 bg-neutral text-neutral-content aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
+      class="bouncy-btn rounded-full p-3 bg-neutral text-neutral-content aspect-square w-[3rem] h-[3rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
       [ngClass]="selectedHobby == 'crafting' ? 'absolute !w-[30%] z-10': ''">
         <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="['fas','hammer']"></fa-icon>
         <p class="text-xl md:text-2xl xl:text-3xl" [ngClass]="selectedHobby == 'crafting' ? 'opacity-100' : 'hidden opacity-0'" >Soldering keyboards, making wooden tables, fishing rods from scratch, etc..</p>
