@@ -43,6 +43,7 @@ import { EnvelopeCssComponent } from './components/about/utils/envelope-css/enve
 import { CorgiCssComponent } from './components/banner/utils/corgi-css/corgi-css.component';
 import { LandscapeCssComponent } from './components/banner/utils/landscape-css/landscape-css.component';
 import { AboutHobbiesComponent } from './components/about/features/about-hobbies/about-hobbies.component';
+import { HobbyButtonComponent } from './components/about/utils/hobby-button/hobby-button.component';
 
 
 
@@ -66,7 +67,8 @@ import { AboutHobbiesComponent } from './components/about/features/about-hobbies
     EnvelopeCssComponent,
     CorgiCssComponent,
     LandscapeCssComponent,
-    AboutHobbiesComponent
+    AboutHobbiesComponent,
+    HobbyButtonComponent
   ],
   imports: [
     BrowserModule,

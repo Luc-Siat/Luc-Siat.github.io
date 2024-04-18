@@ -1,0 +1,35 @@
+{
+    "hobbies" : 
+    [
+        {
+            "name": "hiking",
+            "description": "Hiking in the Nordics with my dog Polka (2 years old)",
+            "icon": ["fas","person-hiking"],
+            "background": "bg-accent"
+        },
+        {
+            "name": "boardGames",
+            "description": "Everdell, ResArcana, Bunny Kingdom, DnD",
+            "icon": ["fas","puzzle-piece"],
+            "background": "bg-base-100"
+        },
+        {
+            "name": "gaming",
+            "description": "TF2, The Finals, It takes two, BG3",
+            "icon": ["fas","gamepad"],
+            "background": "bg-primary"
+        },
+        {
+            "name": "climbing",
+            "description": "Bouldering at slaktis (6c-7a)",
+            "icon": ["fas","mountain"],
+            "background": "bg-base-300"
+        },
+        {
+            "name": "crafting",
+            "description": "Soldering keyboards, making wooden tables, fishing rods from scratch, etc..",
+            "icon": ["fas","hammer"],
+            "background": "bg-neutral-content text-neutral"
+        }
+    ]
+}
