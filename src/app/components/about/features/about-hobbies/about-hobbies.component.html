@@ -30,7 +30,7 @@
       </p>
       <ul class="flex text-xl md:text-2xl xl:text-3xl  gap-2 md:gap-12 xl:gap-6 justify-between items-start flex-wrap pt-8 md:pt-0 z-30 basis-0 grow relative">
         <ng-container  >
-          <app-hobby-button *ngFor="let hobby of hobbies" [selectedHobby]="selectedHobby" [hobby]="hobby" (hobbySelectionEvent)="handleHobbySelection($event)"></app-hobby-button>
+          <app-hobby-button *ngFor="let hobby of hobbies" [selectedHobby]="selectedHobby" [hobby]="hobby" (hobbySelectionEvent)="handleHobbySelection($event)" class="rounded-full" [ngClass]="hobby.background"></app-hobby-button>
         </ng-container>
       </ul>
     </div>
