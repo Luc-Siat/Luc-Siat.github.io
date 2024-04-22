@@ -3,7 +3,7 @@
     [
         {
             "name": "hiking",
-            "description": "Hiking in the Nordics with my dog Polka (2 years old)",
+            "description": "Hiking in the Nordics with my dog Polka",
             "icon": ["fas","person-hiking"],
             "background": "bg-accent"
         },
@@ -17,11 +17,11 @@
             "name": "boardGames",
             "description": "Everdell, ResArcana, Bunny Kingdom, DnD",
             "icon": ["fas","puzzle-piece"],
-            "background": "bg-heart"
+            "background": "bg-accent"
         },
         {
             "name": "crafting",
-            "description": "Soldering keyboards, crafting wooden tables, fishing rods, etc..",
+            "description": "Soldering keyboards, crafting tables, fishing rods, etc..",
             "icon": ["fas","hammer"],
             "background": "bg-base-200"
         },
@@ -29,7 +29,7 @@
             "name": "climbing",
             "description": "Bouldering at slaktis (6c-7a)",
             "icon": ["fas","mountain"],
-            "background": "bg-brass"
+            "background": "bg-accent"
         }
     ]
 }
