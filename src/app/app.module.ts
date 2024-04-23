@@ -24,6 +24,7 @@ import {
   faMountain as fasMountain,
   faPuzzlePiece as fasPuzzlePiece,
   faHammer as fasHammer,
+  faCompactDisc as faCompactDisc,
   faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -99,7 +100,8 @@ export class AppModule{
       fasPersonHiking,
       fasHammer,
       fabLinkedinIn,
-      faEnvelope
+      faEnvelope,
+      faCompactDisc
     );
   }
 

@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit,  Output,  ViewChild } from '@angular/core';
-import { capitalize} from 'src/app/shared/helper-functions/helper';
+import { capitalize, toggleLanguage} from 'src/app/shared/helper-functions/helper';
 
 @Component({
   selector: 'app-navbar-settings',
@@ -11,6 +11,7 @@ export class NavbarSettingsComponent implements OnInit{
   @ViewChild('themesInput') themesInput!: ElementRef<HTMLInputElement>;
   @Input({required:true}) isOnMobile! : boolean;
   @Output() isDarkEvent = new EventEmitter<boolean>(false);
+  toggleLanguage = toggleLanguage;
 
   
   public darkThemes = ['coffee','darkroast', 'dim','luxury','forest','halloween', 'black','dracula',

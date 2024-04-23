@@ -5,31 +5,31 @@
             "name": "hiking",
             "description": "Hiking in the Nordics with my dog Polka",
             "icon": ["fas","person-hiking"],
-            "background": "bg-accent"
+            "background": "#5b8e7d"
         },
         {
             "name": "gaming",
             "description": "TF2, The Finals, It takes two, BG3",
             "icon": ["fas","gamepad"],
-            "background": "bg-base-100"
+            "background": "#f0e7d8"
         },
         {
             "name": "boardGames",
             "description": "Everdell, ResArcana, Bunny Kingdom, DnD",
             "icon": ["fas","puzzle-piece"],
-            "background": "bg-accent"
+            "background": "#C8553D"
         },
         {
-            "name": "crafting",
-            "description": "Soldering keyboards, crafting tables, fishing rods, etc..",
-            "icon": ["fas","hammer"],
-            "background": "bg-base-200"
+            "name": "music",
+            "description": "Johnny Flynn, Hermanos Guiterrez, Pomme",
+            "icon": ["fas","compact-disc"],
+            "background": "grey"
         },
         {
             "name": "climbing",
             "description": "Bouldering at slaktis (6c-7a)",
             "icon": ["fas","mountain"],
-            "background": "bg-accent"
+            "background": "#A77D4A"
         }
     ]
 }

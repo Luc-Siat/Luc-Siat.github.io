@@ -4,7 +4,7 @@
   <ul class="settings-lg flex-col gap-1 w-16 justify-start relative ">
     <li class="">
       <label class="swap swap-rotate py-1 px-2">
-        <input type="checkbox" />   
+        <input #language type="checkbox" (click)="toggleLanguage()"/>   
         <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" alt="svensk flagga" class="swap-off fill-current w-6 aspect-square">
         <img src="https://cdn-icons-png.flaticon.com/128/197/197564.png" alt="england flag" class="swap-on fill-current w-6  aspect-square">
       </label>
@@ -43,7 +43,7 @@
     <ul class="settings-sm flex grow gap-4 justify-end items-center w-full relative">
       <li class="">
         <label class="swap swap-rotate py-1 px-2 h-12 w-12">
-          <input type="checkbox" />   
+          <input #language type="checkbox" (click)="toggleLanguage()"/>   
           <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" alt="svensk flagga" class="swap-off fill-current w-7 aspect-square opacity-75">
           <img src="https://cdn-icons-png.flaticon.com/128/197/197564.png" alt="england flag" class="swap-on fill-current w-7  aspect-square  opacity-75">
         </label>

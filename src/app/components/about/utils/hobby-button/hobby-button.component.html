@@ -1,10 +1,10 @@
 <li 
 (click)="handleHobbySelection(hobby.name) "
-class="bouncy-btn rounded-full  p-3 aspect-square w-[3rem] h-[3rem] md:w-[4rem] md:h-[4rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
-[ngClass]="{'absolute left-2 md:top-0 md:left-0 !w-[95%] md:!w-[100%] z-10' : isSelected}"
-[class]="hobby.background"
+class="bouncy-btn rounded-full  p-1 aspect-square w-[3rem] h-[3rem] md:w-[4rem] md:h-[4rem] xl:w-[5rem] xl:h-[5rem] flex justify-center items-center transition-all gap-2"
+[ngClass]="{'absolute left-[5vw] md:top-0 md:left-0 !w-[81vw] md:!w-[100%] z-10' : isSelected}"
+[style.background]="hobby.background"
 >
     <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="hobby.icon"></fa-icon>
-    <p class="text-xl md:text-2xl xl:text-3xl " [ngClass]="isSelected ? 'opacity-100 ' : 'hidden opacity-0 '"  >{{hobby.description}}</p>
+    <p class="text-lg md:text-2xl xl:text-3xl py-2 rounded-full" [ngClass]="isSelected ? 'opacity-100 ' : 'hidden opacity-0 '"  >{{hobby.description}}</p>
 </li>
 <li class="w-[3rem] h-[3rem] md:w-[4rem] md:h-[4rem] xl:w-[5rem] xl:h-[5rem]" *ngIf="isSelected"></li>

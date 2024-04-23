@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,7 @@ import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit{
+  
   title = 'portfolio';
   cursorTop: string  = '';
   cursorLeft: string = '';
@@ -17,6 +19,8 @@ export class AppComponent implements AfterViewInit{
     this.handleSlidingElements();
 
   }
+
+  
 
   handleSlidingElements() {
     const observer = new IntersectionObserver((entries) => {

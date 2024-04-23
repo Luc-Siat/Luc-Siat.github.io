@@ -207,3 +207,8 @@ body {
       transform:scale(1.2,1.2) translate3d(0,0,0)
   }
 }
+html[lang="en"] [lang="sv"],
+html[lang="sv"] [lang="en"]
+{ 
+    display: none;
+}
