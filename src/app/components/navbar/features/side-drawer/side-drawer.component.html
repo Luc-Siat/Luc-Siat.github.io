@@ -8,17 +8,32 @@
             <li class="flex flex-col !pt-2">
                 <app-navbar-settings [isOnMobile]="true" [drawerEvent]="closeThemeDropdownEvent" (isDarkEvent)="isDarkEvent.emit($event)"></app-navbar-settings>
             </li>
-            <li><a href="#home" >HOME</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <!-- <li>
-                <a>PROJECTS</a>
-                <ul class="p-4 text-2xl ">
-                    <li><a>DealFortress</a></li>
-                    <li><a>Cup Of Tickets</a></li>
-                </ul>
-            </li> -->
-            <li><a href="#experience" >EXPERIENCE</a></li>
-            <li><a href="#about" >ABOUT</a></li>
+            <li>
+                <a (click)="drawerInput.checked =false;scrollTo('home')">
+                    <span lang="en">HOME</span>
+                    <span lang="sv">HEM</span>
+                </a>
+            </li>
+
+            <li >
+                <a (click)="drawerInput.checked =false;scrollTo('projects')">
+                    <span lang="en">PROJECTS</span>
+                    <span lang="sv">PROJEKTER</span>
+                </a>
+            </li>
+
+            <li>
+                <a (click)="drawerInput.checked =false;scrollTo('experience')">
+                    <span lang="en">EXPERIENCE</span>
+                    <span lang="sv">ERFARENHET</span>
+                </a>
+            </li>
+            <li>
+                <a (click)="drawerInput.checked =false;scrollTo('about')">
+                  <span lang="en">ABOUT</span>
+                  <span lang="sv">OM MIG</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

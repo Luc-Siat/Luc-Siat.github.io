@@ -13,7 +13,7 @@
             "description": "TF2, The Finals, It takes two, BG3",
             "descriptionSv" : "TF2, The Finals, It takes two, BG3",
             "icon": ["fas","gamepad"],
-            "background": "#f0e7d8"
+            "background": "#B3ACA0"
         },
         {
             "name": "boardGames",
