@@ -1,6 +1,6 @@
 <div class="grid grid-cols-1 md:grid-cols-[2fr,1fr,3fr] gap-2 gap-y-5 ">
     <p class="px-2 text-center md:text-end flex-col text-2xl">{{job.timeline | uppercase}}</p>
-    <span class="h-full min-h-16 md:min-h-0 md:h-[1px] md:mt-4 bg-base-100 w-[1px] md:w-full mx-auto"></span>
+    <span class="h-full min-h-16 md:min-h-0 md:h-[1px] md:mt-4 bg-accent w-[1.5px] md:w-full mx-auto"></span>
     <div class="pl-6 flex flex-col grow gap-4 items-start justify-center text-center">
         <h3 class="text-2xl">
             <span lang="en">{{job.title | uppercase}}<!-- --> · <!-- -->{{job.company | uppercase}}</span>
@@ -11,8 +11,8 @@
             <li lang="sv" *ngFor="let bulletPoint of job.descriptionPointsSv">{{bulletPoint}}</li>
         </ul>
         <ul class="flex flex-wrap gap-2">
-            <li lang="en" *ngFor="let skill of job.skills" class="bg-secondary rounded-full text-secondary-content py-1 px-4 bg-opacity-60">{{skill}}</li>
-            <li lang="sv" *ngFor="let skill of job.skillsSv" class="bg-secondary rounded-full text-secondary-content py-1 px-4 bg-opacity-60">{{skill}}</li>
+            <li lang="en" *ngFor="let skill of job.skills" class="bg-accent rounded-full text-accent-content py-1 px-4 bg-opacity-60">{{skill}}</li>
+            <li lang="sv" *ngFor="let skill of job.skillsSv" class="bg-accent rounded-full text-accent-content py-1 px-4 bg-opacity-60">{{skill}}</li>
         </ul>
     </div>
 </div>

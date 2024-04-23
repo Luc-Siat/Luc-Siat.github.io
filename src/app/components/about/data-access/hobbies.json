@@ -6,14 +6,14 @@
             "description": "Hiking in the Nordics with my dog Polka",
             "descriptionSv" : "Vandring i Norden med min hund Polka",
             "icon": ["fas","dog"],
-            "background": "#5b8e7d"
+            "background": "#3C787E"
         },
         {
             "name": "gaming",
             "description": "TF2, The Finals, It takes two, BG3",
             "descriptionSv" : "TF2, The Finals, It takes two, BG3",
             "icon": ["fas","gamepad"],
-            "background": "#B3ACA0"
+            "background": "#D8A900"
         },
         {
             "name": "boardGames",
