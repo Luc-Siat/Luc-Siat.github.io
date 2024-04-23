@@ -1,0 +1,40 @@
+<div class="menu-toggle lg:hidden flex flex-col p-2 rounded-full aspect-square justify-center items-star" >
+    <div [style.top]="top">
+        <input #drawerInput  type="checkbox" class="my-auto mx-auto z-30" (click)=" setScrollYOffset($event)" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul  class="custom-drawer text-start container text-base-content w-[90vw] overflow-hidden h-screen flex flex-col justify-start gap-5 text-3xl z-[1]">
+            <li class="flex flex-col !pt-2">
+                <app-navbar-settings [isOnMobile]="true" [drawerEvent]="closeThemeDropdownEvent" (isDarkEvent)="isDarkEvent.emit($event)"></app-navbar-settings>
+            </li>
+            <li>
+                <a (click)="drawerInput.checked =false;scrollTo('home')">
+                    <span lang="en">HOME</span>
+                    <span lang="sv">HEM</span>
+                </a>
+            </li>
+
+            <li >
+                <a (click)="drawerInput.checked =false;scrollTo('projects')">
+                    <span lang="en">PROJECTS</span>
+                    <span lang="sv">PROJEKTER</span>
+                </a>
+            </li>
+
+            <li>
+                <a (click)="drawerInput.checked =false;scrollTo('experience')">
+                    <span lang="en">EXPERIENCE</span>
+                    <span lang="sv">ERFARENHET</span>
+                </a>
+            </li>
+            <li>
+                <a (click)="drawerInput.checked =false;scrollTo('about')">
+                  <span lang="en">ABOUT</span>
+                  <span lang="sv">OM MIG</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<span class="absolute h-full aspect-square rounded-full top-0 left-0 " [ngClass]="drawerInput.checked ? 'circle-grow-screen bg-base-content' : ''"></span>

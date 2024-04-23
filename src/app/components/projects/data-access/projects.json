@@ -1,0 +1,56 @@
+{ 
+    "projects": 
+    [
+        {
+            "name": "DealFortress",
+            "description": "Second-hand PC marketplace built with .NET, Angular and Azure",
+            "descriptionSv": "Begagnad PC-marknadsplats utvecklat med .NET, Angular och Azure",
+            "imagePath": "assets/images/dealfortress.png",
+            "githubLink": "https://github.com/DealFortress/DealFortress",
+            "isDeployed": true,
+            "deployedLink": "https://green-sand-04a2d9f03.3.azurestaticapps.net/notices",
+            "backgroundColor": "rgba(122, 133, 137, .5)"
+        },
+        {
+            "name": "Cup Of Tickets",
+            "description": "Ticketing app for developers using Auth0 to create role based authenfication and access levels",
+            "descriptionSv": "Biljettapp för utvecklare som använder Auth0 för att skapa rollbaserade autentiserings- och å",
+            "imagePath": "assets/images/cupoftickets.png",
+            "githubLink": "https://github.com/cup-of-T/cup-of-Tickets",
+            "isDeployed": true,
+            "deployedLink": "https://orange-pond-040622003.2.azurestaticapps.net/dashboard",
+            "backgroundColor": "rgba(87, 165, 184, .3)"
+        },
+        {
+            "name": "One Degree Design",
+            "description": "Carbon calculator designed for developers to improve their website's co2 footprint",
+            "descriptionSv": "Koldioxidkalkylator designad för utvecklare att förbättra sin webbplatss CO2-fotavtryck",
+            "imagePath": "assets/images/onedegreedesign.png",
+            "githubLink": "https://github.com/brendan-oconnell/one-degree-design",
+            "isDeployed": true,
+            "deployedLink": "https://www.onedegreedesign.com",
+            "backgroundColor": "rgba(103, 141, 88, .4)"
+        },
+        {
+            "name": "Portfolio",
+            "description": "Portfolio webpage hosted on github Pages and developed in Angular/Typescript",
+            "descriptionSv": "Portföljwebbsida värd på github-sidor och utvecklad i Angular/Typescript",
+            "imagePath": "assets/images/luc-siat.png",
+            "githubLink": "https://github.com/luc-siat/luc-siat.github.io",
+            "isDeployed": true,
+            "deployedLink": "https://luc-siat.github.io/",
+            "backgroundColor": "rgba(35, 65, 92, 0.4)"
+        },
+        {
+            "name": "Mockea",
+            "description": "Mock version of IKEA. 2 weeks project focusing on mocking the front page of IKEA",
+            "descriptionSv": "Mock version av IKEA. 2 veckors projekt med fokus på att kopiera IKEAs förstasida",
+            "imagePath": "assets/images/mockea.png",
+            "githubLink": "https://github.com/Mockea/Mockea",
+            "isDeployed": true,
+            "deployedLink": "https://agreeable-field-0b3b0bc03.3.azurestaticapps.net/",
+            "backgroundColor": "rgba(0, 88, 171, 0.4)"
+        }
+    ]
+}
+

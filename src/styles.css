@@ -3,6 +3,212 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+   --bar-width: 1.5rem;
+   --bar-height: 2px;
+   --hamburger-gap: 6px;
+   --foreground: #084c61;
+   --background: #084c61;
+   --animation-timing: 100ms ease-in-out;
+   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+   --spring-multiplier: 2;
+}
+
+html {
+  @apply text-base-content;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  position: relative;
+  @apply !bg-neutral;
+}
+
 body {
-   @apply bg-cwhite;
+   font-family: "Truculenta", sans-serif;
+   /* cursor: none; */
+  @apply bg-base-100;
+  @apply text-base-content;
+  position: relative;
+}
+
+* {
+  cursor: none !important;
+} 
+
+@font-face {
+   font-family: 'Pacifico';
+   src: url('assets/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Truculenta';
+   src: url('assets/fonts/Truculenta/Truculenta-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zeyada';
+  src: url('assets/fonts/Zeyada/Zeyada-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.soft-animation {
+   transition: transform 0.3s ease;
+ }
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  @apply bg-accent;
+  z-index: -1;
+  top: 60%;
+  left: 20%;
+  height: 30%;
+  width: 90%;
+  opacity: 60%;
+}
+
+.highlight-cap::after {
+  content: '';
+  position: absolute;
+  @apply bg-accent;
+  z-index: -1;
+  top: 50%;
+  left: 20%;
+  height: 50%;
+  width: 90%;
+  opacity: 60%;
+}
+.slide-in-view {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(-100%);
+  filter: blur(5px);
+}
+ 
+.shown-in-view {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+   
+@media(prefers-reduced-motion) {
+  .slide-in-view {
+    transition: none;
+  }
+} 
+ 
+.handwriting {
+  font-family: Zeyada, sans-serif;
+  font-weight: 100;
+}
+
+.blob{
+  border-radius: 94% 31% 30% 67% / 67% 37% 56% 34%;
+  width: 250px;
+  height: 250px;
+}
+
+
+
+.cursor {
+  z-index: 50;
+  width: 26px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  @apply border-accent;
+  position: absolute;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  z-index: 50;
+  width: 6px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  @apply bg-accent;
+  position: absolute;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .cursor  {
+    visibility: hidden;
+  }
+  .cursor-dot {
+    visibility: hidden;
+  }
+}
+
+
+@keyframes cursor-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 40%;
+  }
+}
+
+.expand {
+  border-width: 1px;
+  animation: cursor-animation .4s forwards;
+}
+
+.navbar-negative-colors {
+  @apply bg-base-content;
+  @apply text-base-100;
+}
+
+.navbar-negative-colors summary:hover,
+.navbar-negative-colors a:hover,
+.navbar-negative-colors div:hover,
+.navbar-negative-colors .settings-lg fa-icon:hover {
+  @apply text-accent;
+}
+
+.navbar-negative-colors label:hover {
+  @apply text-accent;
+  transform: scale(1.1);
+}
+
+.navbar-negative-colors .menu-toggle > span {
+  @apply !bg-base-100;
+}
+
+.navbar-negative-colors .menu fa-icon:hover {
+  @apply text-base-100;
+}
+
+.circle-grow-screen {
+  transition: background 0.3s ease;
+  scale: 100;
+  transition: scale 2.6s ease;
+}
+
+.bouncy-btn{
+  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  
+  &:hover{
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-duration: 400ms;
+      transform:scale(1.2,1.2) translate3d(0,0,0)
+  }
+}
+html[lang="en"] [lang="sv"],
+html[lang="sv"] [lang="en"]
+{ 
+    display: none;
 }

@@ -1,0 +1,80 @@
+<section class="min-h-screen flex flex-col">
+  <div class="flex flex-col gap-4 min-h-screen w-full bg-secondary text-base-content bg-opacity-5 py-12 md:py-40 relative">
+    <div class="container mx-auto flex flex-col gap-12 md:justify-between slide-in-view relative">
+      <h2 class="text-4xl md:text-6xl lg:text-7xl relative me-auto basis-0 shrink highlight-cap">ABOUT</h2>
+      <div class="flex flex-row gap-10 justify-evenly items-center my-20 px-2">
+        <span 
+        class="h-36 w-36 md:h-56 md:w-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center shadow-lg  relative" 
+        [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-[60] bg-bouncy ' : 'bouncy-btn'">
+          <input 
+          #hobbiesInput 
+          type="checkbox" 
+          class="h-full w-full opacity-0 z-50" 
+          (click)="toggleOverflow(); setScrollYOffset($event)">
+          <img  
+          *ngIf="!hobbiesInput.checked" 
+          src="assets/images/heart.png" alt="passion icon" 
+          class="absolute aspect-square h-2/3 " 
+          [ngClass]="backstoryInput.checked? 'opacity-0': ''">
+        </span>
+        <span 
+        class="h-36 w-36 md:h-56 md:w-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center shadow-lg  relative" 
+        [ngClass]="backstoryInput.checked ? 'circle-grow-screen bg-accent z-[60] bg-bouncy ' : 'bouncy-btn'">
+          <input 
+          #backstoryInput 
+          type="checkbox" 
+          class="h-full w-full opacity-0 z-50" 
+          (click)="toggleOverflow(); setScrollYOffset($event)">
+          <img  
+          *ngIf="!backstoryInput.checked" 
+          src="assets/images/books.png" alt="backstory icon" 
+          class="absolute aspect-square h-2/3 " 
+          [ngClass]="backstoryInput.checked? 'opacity-0': ''">
+        </span>
+      </div>
+    
+      <p class="text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow border-2 px-4 border-r-secondary-content border-l-secondary-content border-t-transparent border-b-transparent border-opacity-5">
+        <span lang="en">
+          Originally from a hospitality background, I have decided a few years ago to pursue a career that I would
+          be passionate about.<br>
+          While I enjoyed the thrills, social aspect and multi-tasking of the reception, I lacked continuous learning, creativity and
+          complex problem solving.<br>
+          I bridged the gap with Le Wagon bootcamp and never looked back.
+          <br>
+          <br>
+          I would describe myself as a passionate .NET developer, currently working on a project I have co-built from the ground up with my friend and colleague Atte. We hope we can soon release this to the public. 
+          My skills extend across the entire spectrum of programming, encompassing frontend, backend, cloud and databases. <br>
+          I am used to working in high paced environments and never hesitate to go a step further, achieving that “extra-mile” essential to most projects’ success.<br>
+          My dedication to continuous learning and my unwavering belief in the power of teamwork make me a strong asset to any developer team.<br><br>
+          And more than anything I love to solve a good problem!
+        </span>
+        <span lang="sv">
+          Jag kommer ursprungligen från en hotellsbakgrund och har för några år sedan bestämt mig för att göra en karriär som jag skulle göra
+           brinner för.<br>
+           Samtidigt som jag njöt av spänningen, den sociala aspekten och multi-taskingen av mottagningen, saknade jag kontinuerligt lärande, kreativitet och
+           komplex problemlösning.<br>
+           Jag överbryggade klyftan med Le Wagon bootcamp och tittade aldrig tillbaka.
+           <br>
+           <br>
+           Jag skulle beskriva mig själv som en passionerad .NET-utvecklare, som för närvarande arbetar med ett projekt som jag har byggt från grunden tillsammans med min vän och kollega Atte. Vi hoppas att vi snart kan släppa detta till allmänheten.
+           Mina färdigheter sträcker sig över hela spektrumet av programmering, inklusive frontend, backend, cloud och databas. <br>
+           Jag är van vid att arbeta i miljöer med högt tempo och tvekar aldrig att gå ett steg längre och uppnå den "extra mil" som är avgörande för de flesta projekts framgång.<br>
+           Mitt engagemang för kontinuerligt lärande och min orubbliga tro på kraften i lagarbete gör mig till en stark tillgång för alla utvecklarteam.<br><br>
+           Och mer än något annat älskar jag att lösa ett bra problem!
+        </span>
+      </p>
+      <div class="gap-2 justify-end items-start flex">
+        <h3 class="text-xl md:text-3xl xl:text-4xl vertical-text">
+          <span lang="en">My favourite song </span> 
+          <span lang="sv">Min favourite låt </span>
+          <fa-icon class="text-heart" [icon]="['fas', 'heart']"></fa-icon>
+        </h3>
+        <iframe class="rounded-box w-[300px] h-[300px]"  src="https://www.youtube.com/embed/a4QQ7HYYdWw?si=gtYIXuLQoARCl2Y-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="w-screen h-screen flex items-center justify-center fixed top-2 xl:top-10 z-30" *ngIf="hobbiesInput.checked || backstoryInput.checked">
+      <app-hobbies [hobbiesInput]="hobbiesInput"></app-hobbies>
+      <app-backstory [backstoryInput]="backstoryInput"></app-backstory>
+    </div>  
+  </div>
+</section>
