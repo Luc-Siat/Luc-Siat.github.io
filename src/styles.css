@@ -69,7 +69,7 @@ body {
   left: 20%;
   height: 30%;
   width: 90%;
-  opacity: 40%;
+  opacity: 60%;
 }
 
 .highlight-cap::after {
@@ -81,7 +81,7 @@ body {
   left: 20%;
   height: 50%;
   width: 90%;
-  opacity: 40%;
+  opacity: 60%;
 }
 .slide-in-view {
   opacity: 0;

@@ -28,6 +28,7 @@ import {
   faCompactDisc as faCompactDisc,
   faEnvelope,
   faDiceD20,
+  faDog,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { NavbarSettingsComponent } from './components/navbar/utils/settings/navbar-settings.component';
@@ -106,7 +107,8 @@ export class AppModule{
       fabLinkedinIn,
       faEnvelope,
       faCompactDisc,
-      faDiceD20
+      faDiceD20,
+      faDog
     );
   }
 

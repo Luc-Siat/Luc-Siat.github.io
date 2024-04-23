@@ -16,5 +16,4 @@ export const toggleLanguage = () => {
    : 'en';
 
   document.documentElement.setAttribute('lang', lang);
-  console.log(document.documentElement.lang);
 }

@@ -5,7 +5,7 @@
             "name": "hiking",
             "description": "Hiking in the Nordics with my dog Polka",
             "descriptionSv" : "Vandring i Norden med min hund Polka",
-            "icon": ["fas","person-hiking"],
+            "icon": ["fas","dog"],
             "background": "#5b8e7d"
         },
         {

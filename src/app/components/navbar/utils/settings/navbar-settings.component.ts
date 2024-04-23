@@ -14,17 +14,17 @@ export class NavbarSettingsComponent implements OnInit{
   toggleLanguage = toggleLanguage;
 
   
-  public darkThemes = ['coffee','darkroast', 'dim','luxury','forest','halloween', 'black','dracula',
+  public darkThemes = ['darkroast','coffee', 'dim','luxury','forest','halloween', 'black','dracula',
   'business', 'night', 'dark', 'synthwave'
   ];
   
-  public lightThemes =  ['retro','homebrew', 'cyberpunk',  'valentine',   'garden',  'aqua',  'lofi',  'pastel', 'fantasy',  'wireframe',  'cmyk',  'autumn',
+  public lightThemes =  ['homebrew','retro', 'cyberpunk',  'valentine',   'garden',  'aqua',  'lofi',  'pastel', 'fantasy',  'wireframe',  'cmyk',  'autumn',
     'acid',  'lemonade', 'winter',  'nord', 
     'light', 'cupcake', 'bumblebee',  'emerald',  'corporate'
   ];
 
-  public currentDarkTheme = 'coffee';
-  public currentLightTheme = 'retro';
+  public currentDarkTheme = 'darkroast';
+  public currentLightTheme = 'homebrew';
   public themes : string[] = [];
 
 

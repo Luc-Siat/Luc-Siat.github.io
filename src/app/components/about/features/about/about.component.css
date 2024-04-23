@@ -8,6 +8,10 @@
     mask-repeat: no-repeat;
 }
 
+.vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
 
 
 
