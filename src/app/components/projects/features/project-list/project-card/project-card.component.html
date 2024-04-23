@@ -1,7 +1,7 @@
  <div class="aspect-square bg-base-200 rounded-box relative flex justify-center items-center p-4 bg-opacity-50 " >
     <a [href]="project.deployedLink"><img [src]="project.imagePath" alt="project image" class="object-contain hover:mb-4  w-[75%]  mx-auto hover:drop-shadow-2xl hover:grayscale shadow-2xl transition-all duration-500 rounded-lg "></a>
     <div class="absolute bottom-0 w-full flex justify-between px-4 py-2 opacity-50">
-        <a ><h2 class="font-thin text-2xl">{{project.title}}</h2></a>
+        <a ><h2 class="font-thin text-2xl">{{project.name}}</h2></a>
         <a [href]="project.githubLink" class=""><fa-icon [icon]="['fab','github']" class="text-3xl "></fa-icon></a>
     </div>
 </div>

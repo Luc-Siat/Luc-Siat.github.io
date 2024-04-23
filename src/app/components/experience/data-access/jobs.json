@@ -6,11 +6,32 @@
             "descriptionPoints": [
                 "Orchestrating the planification and development of the website in a team of two using a kanban board, pair programming and agile methodologies.",
                 "Designed and developed a micro-services ready backend based on modules using .NET, SignalR, Auth0, SQL Server, Github CI/CD and ElasticSearch.",
-                "Designed UI and developed frontend using React/Angular and libraries such as NGRX Store.",
+                "Designed UI and developed frontend using React/Angular and libraries such as NGRX Store and React Query.",
                 "Handled deployment on Azure with a CI/CD pipeline and custom Github Actions"
+            ],
+            "titleSv": "Full Stack .NET Utvecklare | MedGrundare",
+            "descriptionPointsSv": [
+                "Orchestrera planeringen och utvecklingen av webbplatsen i ett team om två med hjälp av en kanban-tavla, parprogrammering och agila metoder.",
+                 "Designade och utvecklade en micro-services färdig backend baserad på moduler som använder .NET, SignalR, Auth0, SQL Server, Github CI/CD och ElasticSearch.",
+                 "Designade UI och utvecklade frontend med hjälp av React/Angular och bibliotek som NGRX Store och React Query.",
+                 "Hanterat distribution på Azure med en CI/CD-pipeline och anpassade Github-åtgärder"
             ],
             "timeline": "Apr 2023 - Current",
             "skills" : [
+                "C#",
+                "Typescript",
+                "TailwindCSS",
+                "Xunit",
+                "React",
+                "Rest Api",
+                "Entity Framework",
+                "Azure",
+                "Auth0",
+                "Angular",
+                "Azure SQL Server",
+                "SignalR Websocket"
+            ],
+            "skillsSv" : [
                 "C#",
                 "Typescript",
                 "TailwindCSS",
@@ -31,8 +52,24 @@
             "descriptionPoints": [
                 "In charge of planning and designing the open-source DealFortress marketplace project. "
             ],
+            "titleSv": "Full Stack .NET Utvecklare Konsult",
+            "descriptionPointsSv": [
+                "Ansvarig för planering och design av open source DealFortress-marknadsplatsprojektet"
+            ],
             "timeline": "Apr 2023 - Feb 2024",
             "skills" : [
+                "C#",
+                "Typescript",
+                "TailwindCSS",
+                "Xunit",
+                "React",
+                "Rest Api",
+                "Entity Framework",
+                "Azure",
+                "Agile",
+                "SQL Server"
+            ],
+            "skillsSv" : [
                 "C#",
                 "Typescript",
                 "TailwindCSS",
@@ -51,6 +88,10 @@
             "descriptionPoints": [
                 "Unbound Collection By Hyatt"
             ],
+            "titleSv" : "Front Desk Receptionist",
+            "descriptionPointsSv": [
+                "Unbound Collection By Hyatt"
+            ],
             "timeline": "Jan 2019 - Dec 2021",
             "skills" : [
                 "Social skills",
@@ -59,6 +100,14 @@
                 "Multi-Tasking",
                 "Prioritizing",
                 "Stakeholders communication"
+            ],
+            "skillsSv" : [
+                "Sociala färdigheter",
+                 "Kommunikation",
+                 "Krishantering",
+                 "Göra flera saker samtidigt",
+                 "Prioritera",
+                 "Kommunikation med intressenter"
             ]
         }
     ]

@@ -5,6 +5,9 @@ class="bouncy-btn rounded-full  p-1 aspect-square w-[3rem] h-[3rem] md:w-[4rem] 
 [style.background]="hobby.background"
 >
     <fa-icon class="text-2xl md:text-3xl xl:text-5xl " [icon]="hobby.icon"></fa-icon>
-    <p class="text-lg md:text-2xl xl:text-3xl py-2 rounded-full" [ngClass]="isSelected ? 'opacity-100 ' : 'hidden opacity-0 '"  >{{hobby.description}}</p>
+    <p class="text-lg md:text-2xl xl:text-3xl py-2 rounded-full" [ngClass]="isSelected ? 'opacity-100 ' : 'hidden opacity-0 '"  >
+        <span lang="en">{{hobby.description}}</span>
+        <span lang="sv">{{hobby.descriptionSv}}</span>
+    </p>
 </li>
 <li class="w-[3rem] h-[3rem] md:w-[4rem] md:h-[4rem] xl:w-[5rem] xl:h-[5rem]" *ngIf="isSelected"></li>

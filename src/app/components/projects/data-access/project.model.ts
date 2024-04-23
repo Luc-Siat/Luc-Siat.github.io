@@ -1,6 +1,7 @@
 export type Project = {
-    title: string,
+    name: string,
     description: string,
+    descriptionSv: string,
     imagePath: string,
     githubLink: string,
     isDeployed: boolean,

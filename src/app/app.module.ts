@@ -23,9 +23,11 @@ import {
   faPersonHiking as fasPersonHiking,
   faMountain as fasMountain,
   faPuzzlePiece as fasPuzzlePiece,
+  faDiceD20 as fasDiceD20,
   faHammer as fasHammer,
   faCompactDisc as faCompactDisc,
   faEnvelope,
+  faDiceD20,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { NavbarSettingsComponent } from './components/navbar/utils/settings/navbar-settings.component';
@@ -43,8 +45,9 @@ import { ExperienceCardComponent } from './components/experience/features/experi
 import { EnvelopeCssComponent } from './components/about/utils/envelope-css/envelope-css.component';
 import { CorgiCssComponent } from './components/banner/utils/corgi-css/corgi-css.component';
 import { LandscapeCssComponent } from './components/banner/utils/landscape-css/landscape-css.component';
-import { AboutHobbiesComponent } from './components/about/features/about-hobbies/about-hobbies.component';
 import { HobbyButtonComponent } from './components/about/utils/hobby-button/hobby-button.component';
+import { BackstoryComponent } from './components/about/features/about/backstory/backstory.component';
+import { HobbiesComponent } from './components/about/features/about/hobbies/hobbies.component';
 
 
 
@@ -68,8 +71,9 @@ import { HobbyButtonComponent } from './components/about/utils/hobby-button/hobb
     EnvelopeCssComponent,
     CorgiCssComponent,
     LandscapeCssComponent,
-    AboutHobbiesComponent,
-    HobbyButtonComponent
+    HobbiesComponent,
+    HobbyButtonComponent,
+    BackstoryComponent
   ],
   imports: [
     BrowserModule,
@@ -101,7 +105,8 @@ export class AppModule{
       fasHammer,
       fabLinkedinIn,
       faEnvelope,
-      faCompactDisc
+      faCompactDisc,
+      faDiceD20
     );
   }
 

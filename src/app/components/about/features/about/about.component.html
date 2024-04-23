@@ -34,54 +34,39 @@
       </div>
     
       <p class="text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow border-2 px-4 border-r-secondary-content border-l-secondary-content border-t-transparent border-b-transparent border-opacity-5">
-        Originally from a hospitality background, I have decided a few years ago to pursue a career that I would
-        be passionate about.<br>
-        While I enjoyed the thrills, social aspect and multi-tasking of the reception, I lacked continuous learning, creativity and
-        complex problem solving.<br>
-        I bridged the gap with Le Wagon bootcamp and never looked back.
-        <br>
-        <br>
-        I would describe myself as a passionate .NET developer, currently working on a project I have co-built from the ground up with my friend and colleague Atte. We hope we can soon release this to the public. 
-        My skills extend across the entire spectrum of programming, encompassing frontend, backend, and database. <br>
-        I am used to working in high paced environments and never hesitate to go a step further, achieving that “extra-mile” essential to most projects’ success.<br>
-        My dedication to continuous learning and my unwavering belief in the power of teamwork make me a strong asset to any developer team.<br><br>
-        And more than anything I love to solve a good problem!
+        <span lang="en">
+          Originally from a hospitality background, I have decided a few years ago to pursue a career that I would
+          be passionate about.<br>
+          While I enjoyed the thrills, social aspect and multi-tasking of the reception, I lacked continuous learning, creativity and
+          complex problem solving.<br>
+          I bridged the gap with Le Wagon bootcamp and never looked back.
+          <br>
+          <br>
+          I would describe myself as a passionate .NET developer, currently working on a project I have co-built from the ground up with my friend and colleague Atte. We hope we can soon release this to the public. 
+          My skills extend across the entire spectrum of programming, encompassing frontend, backend, cloud and databases. <br>
+          I am used to working in high paced environments and never hesitate to go a step further, achieving that “extra-mile” essential to most projects’ success.<br>
+          My dedication to continuous learning and my unwavering belief in the power of teamwork make me a strong asset to any developer team.<br><br>
+          And more than anything I love to solve a good problem!
+        </span>
+        <span lang="sv">
+          Jag kommer ursprungligen från en hotellsbakgrund och har för några år sedan bestämt mig för att göra en karriär som jag skulle göra
+           brinner för.<br>
+           Samtidigt som jag njöt av spänningen, den sociala aspekten och multi-taskingen av mottagningen, saknade jag kontinuerligt lärande, kreativitet och
+           komplex problemlösning.<br>
+           Jag överbryggade klyftan med Le Wagon bootcamp och tittade aldrig tillbaka.
+           <br>
+           <br>
+           Jag skulle beskriva mig själv som en passionerad .NET-utvecklare, som för närvarande arbetar med ett projekt som jag har byggt från grunden tillsammans med min vän och kollega Atte. Vi hoppas att vi snart kan släppa detta till allmänheten.
+           Mina färdigheter sträcker sig över hela spektrumet av programmering, inklusive frontend, backend, cloud och databas. <br>
+           Jag är van vid att arbeta i miljöer med högt tempo och tvekar aldrig att gå ett steg längre och uppnå den "extra mil" som är avgörande för de flesta projekts framgång.<br>
+           Mitt engagemang för kontinuerligt lärande och min orubbliga tro på kraften i lagarbete gör mig till en stark tillgång för alla utvecklarteam.<br><br>
+           Och mer än något annat älskar jag att lösa ett bra problem!
+        </span>
       </p>
     </div>
     <div class="w-screen h-screen flex items-center justify-center fixed top-2 xl:top-10 z-30" *ngIf="hobbiesInput.checked || backstoryInput.checked">
-      <!-- <template *ngTemplateOutlet="hobbiesTemplate"></template> -->
-      <app-about-hobbies [hobbiesInput]="hobbiesInput"></app-about-hobbies>
-      <template *ngTemplateOutlet="backstoryTemplate"></template>
+      <app-hobbies [hobbiesInput]="hobbiesInput"></app-hobbies>
+      <app-backstory [backstoryInput]="backstoryInput"></app-backstory>
     </div>
   </div>
 </section>
-
-<ng-template #backstoryTemplate >
-  <div 
-  class="container flex flex-col gap-2 md:gap-6 xl:gap-16 z-20 justify-between w-full relative" 
-  *ngIf="backstoryInput.checked" 
-  >
-    <div class="flex justify-between items-center w-full">
-      <h3 class="text-4xl md:text-6xl xl:text-8xl font-[Zeyada] grow basis-0">Backstory</h3>
-      <button class="btn  md:btn-lg btn-circle btn-ghost" (click)="toggleOverflow(); backstoryInput.checked = false">
-        <svg xmlns="http://www.w3.org/2000/svg" class="p-2 h-12 w-12 xl:h-16 xl:w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-      </button>
-    </div>
-      <div class="flex flex-col md:flex-row justify-between gap-4 xl:gap-40">
-        <p class="text-xl md:text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow">
-          Born in Alsace, France, I carry with me a cultural bagage which, truth be told, mostly includes recipes like
-          Dampfnuddle and Flammekueche. 
-        </p>
-        <app-envelope-css class="basis-0 flex-grow hidden xl:block"></app-envelope-css>
-        <img class="md:w-[50%] xl:hidden" src="assets/images/alsace.png" alt="picture of alsace">
-      </div>
-
-      <div class="flex flex-col xl:flex-row justify-end gap-4 xl:gap-40 ">
-        <app-train-css class="basis-0 flex-grow hidden md:block"></app-train-css>
-        <p class="text-xl md:text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow ">I have settled in Sweden with my girlfriend (also from Alsace) almost 3 years ago and we really love it.
-          Very fond of nordic countries, we are currently trying to visit the 25 Swedish 'landskapen' with 17 done so far.<span class="hidden md:inline-block">I am also doing quite a bit of travelling across Europe with night trains. This includes Hamburg, Leipzig,
-          Copenhagen, Oslo and soon a trip to Slovenia.</span>
-        </p>
-      </div>
-    </div> 
-</ng-template>
