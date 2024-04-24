@@ -29,6 +29,7 @@ import {
   faEnvelope,
   faDiceD20,
   faDog,
+  faRotate,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { NavbarSettingsComponent } from './components/navbar/utils/settings/navbar-settings.component';
@@ -49,6 +50,7 @@ import { LandscapeCssComponent } from './components/banner/utils/landscape-css/l
 import { HobbyButtonComponent } from './components/about/utils/hobby-button/hobby-button.component';
 import { BackstoryComponent } from './components/about/features/about/backstory/backstory.component';
 import { HobbiesComponent } from './components/about/features/about/hobbies/hobbies.component';
+import { getSafePropertyAccessString } from '@angular/compiler';
 
 
 
@@ -74,7 +76,7 @@ import { HobbiesComponent } from './components/about/features/about/hobbies/hobb
     LandscapeCssComponent,
     HobbiesComponent,
     HobbyButtonComponent,
-    BackstoryComponent
+    BackstoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -109,7 +111,7 @@ export class AppModule{
       faCompactDisc,
       faDiceD20,
       faDog,
+      faRotate
     );
   }
-
- }
+}

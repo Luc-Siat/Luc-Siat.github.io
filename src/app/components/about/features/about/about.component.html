@@ -67,12 +67,15 @@
         </span>
       </p>
       <div class="gap-2 justify-end items-start flex">
-        <h3 class="text-xl md:text-3xl xl:text-4xl vertical-text">
-          <span lang="en">My favourite song </span> 
-          <span lang="sv">Min favorit låt </span>
-          <fa-icon class="text-heart" [icon]="['fas', 'heart']"></fa-icon>
-        </h3>
-        <iframe class="rounded-box w-[300px] h-[300px]"  src="https://www.youtube.com/embed/a4QQ7HYYdWw?si=gtYIXuLQoARCl2Y-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="text-xl md:text-2xl flex justify-between flex-col h-[300px]">
+          <h3 class=" vertical-text">
+            <span lang="en">My 5 favourite songs </span> 
+            <span lang="sv">Mina 5 favorita låtar </span>
+            <fa-icon class="text-heart" [icon]="['fas', 'heart']"></fa-icon>
+          </h3>
+          <button class="hover:rotate-180 transition-all duration-500" (click)="setNextSong(iframe)"><fa-icon class="text-base-content text-3xl" [icon]="['fas', 'rotate']"></fa-icon></button>
+        </div>
+        <iframe #iframe id="video-player" class="rounded-box w-[300px] h-[300px]"  src="https://www.youtube.com/embed/35N45tQocvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div class="w-screen h-screen flex items-center justify-center fixed top-2 xl:top-10 z-30" *ngIf="hobbiesInput.checked || backstoryInput.checked">
