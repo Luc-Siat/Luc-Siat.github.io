@@ -108,7 +108,7 @@ export class AppModule{
       faEnvelope,
       faCompactDisc,
       faDiceD20,
-      faDog
+      faDog,
     );
   }
 
