@@ -9,27 +9,27 @@
                 <app-navbar-settings [isOnMobile]="true" [drawerEvent]="closeThemeDropdownEvent" (isDarkEvent)="isDarkEvent.emit($event)"></app-navbar-settings>
             </li>
             <li>
-                <a (click)="drawerInput.checked =false;scrollTo('home')">
+                <a (click)="drawerInput.checked =false;scrollTo('home');toggleOverflow()">
                     <span lang="en">HOME</span>
                     <span lang="sv">HEM</span>
                 </a>
             </li>
 
             <li >
-                <a (click)="drawerInput.checked =false;scrollTo('projects')">
+                <a (click)="drawerInput.checked =false;scrollTo('projects');toggleOverflow()">
                     <span lang="en">PROJECTS</span>
                     <span lang="sv">PROJEKTER</span>
                 </a>
             </li>
 
             <li>
-                <a (click)="drawerInput.checked =false;scrollTo('experience')">
+                <a (click)="drawerInput.checked =false;scrollTo('experience');toggleOverflow()">
                     <span lang="en">EXPERIENCE</span>
                     <span lang="sv">ERFARENHET</span>
                 </a>
             </li>
             <li>
-                <a (click)="drawerInput.checked =false;scrollTo('about')">
+                <a (click)="drawerInput.checked =false;scrollTo('about');toggleOverflow()">
                   <span lang="en">ABOUT</span>
                   <span lang="sv">OM MIG</span>
                 </a>
