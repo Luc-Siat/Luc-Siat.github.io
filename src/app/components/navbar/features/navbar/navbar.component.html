@@ -2,11 +2,11 @@
 
 <div class="h-full absolute w-full">
   <nav id="home" class=" navbar z-10 text-base-100 text-center flex-col items-center justify-center !sticky top-0" [ngClass]="isDark ? 'bg-base-content' : 'bg-transparent'">
-    <ul class="container flex gap-3 justify-between items-center px-0 relative">
-      <li class="grow-[2] basis-0 justify-start lg:hidden flex relative">
+    <ul class="container flex gap-1 md:gap-3 justify-between items-center px-0 relative">
+      <li class="grow basis-0 justify-start lg:hidden flex relative">
         <app-side-drawer (isDarkEvent)="handleIsDarkEvent($event)"></app-side-drawer>
       </li>
-      <li class="grow-[2] basis-0 justify-start hidden lg:flex lg:justify-between">
+      <li class="grow basis-0 justify-start hidden lg:flex lg:justify-between">
         <ul class="menu menu-horizontal px-1 grow lg:flex lg:justify-between">
           <li  class="hover:text-accent">
             <a href="#home" >
@@ -29,16 +29,16 @@
           </li>
         </ul>
       </li>
-      <li class="grow-[4] md:grow xl:grow-[2] basis-0 justify-center">
+      <li class="grow-[2] md:grow-0 md:min-w-48 xl:grow basis-0 justify-center">
         <a class="flex flex-col hoverable " href="#home">
           <h3 class="font-['Pacifico'] ">Luc Siat</h3>
-          <p  class="text-md md:text-xl xl:text-2xl font-thin">
+          <p class="text-md md:text-xl xl:text-2xl font-thin basis-2 grow">
             <span lang="en">FULL STACK DEVELOPER</span>
             <span lang="sv">FULL STACK UTVECKLARE</span>
           </p>
         </a>
       </li>
-      <li class="grow-[2] basis-0 justify-end flex items-center ">
+      <li class="grow basis-0 justify-end flex items-center ">
         <ul class="menu menu-horizontal items-center justify-end lg:justify-evenly grow">
           <li class="hover:text-accent">
             <a class="px-4 py-2 hidden lg:flex" href="#about">

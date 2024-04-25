@@ -20,12 +20,12 @@
 
 .menu-toggle div input
 {
-  top: 0;
-  left: 0;
+  top: 1rem;
+  left: .5rem;
   display: block;
   width: 3.1rem;
   height: 3.1rem;
-  position: absolute;
+  position: fixed;
   padding: 1rem;
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */

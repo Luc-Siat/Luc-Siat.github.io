@@ -73,7 +73,7 @@
             <span lang="sv">Mina 5 favorita låtar </span>
             <fa-icon class="text-heart" [icon]="['fas', 'heart']"></fa-icon>
           </h3>
-          <button class="hover:rotate-180 transition-all duration-500" (click)="setNextSong(iframe)"><fa-icon class="text-base-content text-3xl" [icon]="['fas', 'rotate']"></fa-icon></button>
+          <button [style]="rotationClass" class="transition-all duration-[1.75s]" (mouseover)="rotateRefresh(45)" (click)="setNextSong(iframe);rotateRefresh(360)"><fa-icon class="rounded-full text-base-content text-3xl" [icon]="['fas', 'rotate']"></fa-icon></button>
         </div>
         <iframe #iframe id="video-player" class="rounded-box w-[300px] h-[300px]"  src="https://www.youtube.com/embed/35N45tQocvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
