@@ -34,19 +34,18 @@
         </span>
         <span lang="sv">
           Jag har många hobbyer för att jag älskar att lära mig och perfekta nya färdigheter.
-         Det inkluderar att tillverka mitt eget moderna fiskespö, löda mitt tangentbord eller skapa en historiskt korrekt viking
-         sköld från grunden. Men jag har några hobbyer som sticker ut:
+          Det inkluderar att tillverka mitt eget moderna fiskespö, löda mitt tangentbord eller skapa en historiskt korrekt viking
+          sköld från grunden. Men jag har några hobbyer som sticker ut:
         </span>
       </p>
-      <ul class="flex text-xl md:text-2xl xl:text-3xl  gap-2 md:gap-12 xl:gap-6 justify-between items-start flex-wrap mt-8 md:mt-0 z-30 basis-0 grow relative">
-        <ng-container  >
-          <app-hobby-button 
-          *ngFor="let hobby of hobbies" 
-          [selectedHobby]="selectedHobby" 
-          [hobby]="hobby" 
-          (hobbySelectionEvent)="handleHobbySelection($event)" 
-          ></app-hobby-button>
-        </ng-container>
+      <ul class="flex text-xl md:text-2xl xl:text-3xl w-100% gap-2 md:gap-12 xl:gap-6 justify-between items-start flex-wrap mt-8 md:mt-0 z-30 basis-0 grow relative">
+          <ng-container *ngFor="let hobby of hobbies">
+            <app-hobby-button  
+              [selectedHobby]="selectedHobby" 
+              [hobby]="hobby" 
+              (hobbySelectionEvent)="handleHobbySelection($event)" 
+            ></app-hobby-button>
+          </ng-container>
       </ul>
     </div>
   </div> 
