@@ -71,7 +71,7 @@
 }
 
 .env-wrapper:hover .letter {
-  transform: translateY(-150px);
+  transform: translateY(-135px);
   transition-delay: 0.5s;
   scale: 150%;
 }
