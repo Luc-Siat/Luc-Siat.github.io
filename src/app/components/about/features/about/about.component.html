@@ -50,6 +50,9 @@
           I am used to working in high paced environments and never hesitate to go a step further, achieving that “extra-mile” essential to most projects’ success.<br>
           My dedication to continuous learning and my unwavering belief in the power of teamwork make me a strong asset to any developer team.<br><br>
           And more than anything I love to solve a good problem!
+          <br>
+          <br>
+          Sometimes I feel like music tastes are a better way to picture a person than words. So here is a piece of my mind (It was really hard to choose the songs)
         </span>
         <span lang="sv">
           Jag kommer ursprungligen från en hotellsbakgrund och har för några år sedan bestämt mig för att göra en karriär som jag skulle göra
@@ -64,15 +67,21 @@
            Jag är van vid att arbeta i miljöer med högt tempo och tvekar aldrig att gå ett steg längre och uppnå den "extra mil" som är avgörande för de flesta projekts framgång.<br>
            Mitt engagemang för kontinuerligt lärande och min orubbliga tro på kraften i lagarbete gör mig till en stark tillgång för alla utvecklarteam.<br><br>
            Och mer än något annat älskar jag att lösa ett bra problem!
+           <br>
+           <br>
+           Ibland tycker jag att musiksmak är ett bättre sätt att förstå en person än ord. Så här är en del av mitt sinne (det var verkligen svårt att välja låtar)
         </span>
       </p>
       <div class="gap-2 justify-end items-start flex">
-        <h3 class="text-xl md:text-3xl xl:text-4xl vertical-text">
-          <span lang="en">My favourite song </span> 
-          <span lang="sv">Min favorit låt </span>
-          <fa-icon class="text-heart" [icon]="['fas', 'heart']"></fa-icon>
-        </h3>
-        <iframe class="rounded-box w-[300px] h-[300px]"  src="https://www.youtube.com/embed/a4QQ7HYYdWw?si=gtYIXuLQoARCl2Y-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="text-xl md:text-2xl flex justify-between flex-col h-[300px]">
+          <h3 class=" vertical-text">
+            <span lang="en">My 6 favourite songs </span> 
+            <span lang="sv">Mina 6 favorita låtar </span>
+            <fa-icon class="text-heart" [icon]="['fas', 'heart']"></fa-icon>
+          </h3>
+          <button [style]="rotationClass" class="transition-all duration-[1.75s]" (mouseover)="rotateRefresh(45)" (click)="setNextSong(iframe);rotateRefresh(360)"><fa-icon class="rounded-full text-base-content text-3xl" [icon]="['fas', 'rotate']"></fa-icon></button>
+        </div>
+        <iframe #iframe id="video-player" class="rounded-box w-[300px] h-[300px]"  src="https://www.youtube.com/embed/35N45tQocvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div class="w-screen h-screen flex items-center justify-center fixed top-2 xl:top-10 z-30" *ngIf="hobbiesInput.checked || backstoryInput.checked">
