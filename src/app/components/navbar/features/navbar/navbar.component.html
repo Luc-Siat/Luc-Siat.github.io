@@ -1,7 +1,7 @@
 
 
 <div class="h-full absolute w-full">
-  <nav id="home" class=" navbar z-10 text-base-100 text-center flex-col items-center justify-center !sticky top-0" [ngClass]="isDark ? 'bg-base-content' : 'bg-transparent'">
+  <nav id="home" class=" navbar z-20 text-base-100 text-center flex-col items-center justify-center !sticky top-0" [ngClass]="isDark ? 'bg-base-content' : 'bg-transparent'">
     <ul class="container flex gap-1 md:gap-3 justify-between items-center px-0 relative">
       <li class="grow basis-0 justify-start lg:hidden flex relative">
         <app-side-drawer (isDarkEvent)="handleIsDarkEvent($event)"></app-side-drawer>
@@ -48,7 +48,7 @@
           </li>
           <li>
             <a
-            class="btn btn-ghost btn-circle md:btn-md xl:btn-lg font-normal bg-base-100 text-base-content hover:bg-accent hover:text-base-100 " (click)="scrollToId('contact')">
+            class="btn btn-ghost btn-circle md:btn-md xl:btn-lg font-normal bg-base-100 text-base-content hover:bg-accent hover:text-base-100 z-50" (click)="scrollToId('contact')">
               <fa-icon [icon]="['fas', 'paper-plane']" class="fa-fw w-10 h-10 flex justify-center items-center" ></fa-icon>
             </a>
           </li>

@@ -18,7 +18,7 @@ export class SideDrawerComponent{
 
   public setScrollYOffset(e : MouseEvent) {
     console.log(e.offsetY, e.pageY, e.screenY);
-    this.top = `${+(e.pageY - 42)}px`;
+    this.top = `${+(e.pageY - 43)}px`;
   }
 
 }

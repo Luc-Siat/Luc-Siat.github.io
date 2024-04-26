@@ -1,8 +1,8 @@
-<div class="flex flex-col gap-4 md:gap-6 xl:gap-16 z-20  justify-between text-neutral-content w-full container md:items-center "  
+<div class="flex flex-col gap-4 z-20  justify-between text-neutral-content w-full container md:items-center grow"  
   *ngIf="hobbiesInput.checked" 
   >
     <div class="flex justify-between items-center w-full">
-      <h3 class="text-4xl md:text-6xl xl:text-8xl font-[Zeyada] grow basis-0 ">
+      <h3 class="text-4xl md:text-6xl xl:text-7xl font-[Zeyada] grow basis-0 ">
         <span lang="en">Hobbies & Passions</span>
         <span lang="sv">Hobbyer och Passioner</span>
       </h3>
@@ -26,7 +26,7 @@
       </div>
 
     <div class="flex flex-col xl:flex-row gap- md:gap-12 xl:gap-40 z-10 w-full ">
-      <p class="text-xl md:text-2xl xl:text-3xl max-w-[38rem] text-justify md:text-center xl:text-start md:self-center md:tracking-widest md:leading-loose basis-0 grow ">
+      <p class="text-xl md:text-2xl  max-w-[38rem] text-justify md:text-center xl:text-start md:self-center md:tracking-widest xl:leading-loose basis-0 grow ">
         <span lang="en">
           I have many hobbies mostly because I love to learn and perfect new skills.
           That includes taking those pictures, crafting my own modern fishing rod, soldering my keyboard or making a historically accurate viking
@@ -38,7 +38,7 @@
           sköld från grunden. Men jag har några hobbyer som sticker ut:
         </span>
       </p>
-      <ul class="flex text-xl md:text-2xl xl:text-3xl w-100% gap-2 md:gap-12 xl:gap-6 justify-between items-start flex-wrap mt-8 md:mt-0 z-30 basis-0 grow relative">
+      <ul class="flex text-xl md:text-2xl w-100% gap-2 md:gap-12 xl:gap-6 xl:mt-16 justify-between items-start flex-wrap mt-8 md:mt-0 z-30 basis-0 grow relative">
           <ng-container *ngFor="let hobby of hobbies">
             <app-hobby-button  
               [selectedHobby]="selectedHobby" 

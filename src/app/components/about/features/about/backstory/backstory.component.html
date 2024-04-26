@@ -1,9 +1,9 @@
 <div 
-class="container flex flex-col gap-2 md:gap-6 xl:gap-16 z-20 text-neutral-content justify-between w-full relative" 
+class="container flex flex-col gap-2 md:gap-6 xl:gap-8 z-20 text-neutral-content justify-between w-full relative" 
 *ngIf="backstoryInput.checked" 
 >
   <div class="flex justify-between items-center w-full">
-    <h3 class="text-4xl md:text-6xl xl:text-8xl font-[Zeyada] grow basis-0">
+    <h3 class="text-4xl md:text-6xl xl:text-7xl font-[Zeyada] grow basis-0">
         <span lang="en">Backstory</span>
         <span lang="sv">Bakgrundhistoria</span>
     </h3>
@@ -11,7 +11,7 @@ class="container flex flex-col gap-2 md:gap-6 xl:gap-16 z-20 text-neutral-conten
       <svg xmlns="http://www.w3.org/2000/svg" class="p-2 h-12 w-12 xl:h-16 xl:w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
     </button>
   </div>
-    <div class="flex flex-col md:flex-row justify-between gap-4 xl:gap-40">
+    <div class="flex flex-col md:flex-row justify-between gap-4 xl:gap-32">
       <p class="text-xl md:text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow">
         <span lang="en">
           Born in Alsace, France, I carry with me a cultural bagage which, truth be told, mostly includes recipes like
@@ -26,9 +26,9 @@ class="container flex flex-col gap-2 md:gap-6 xl:gap-16 z-20 text-neutral-conten
       <img class="md:w-[50%] xl:hidden" src="assets/images/alsace.png" alt="picture of alsace">
     </div>
 
-    <div class="flex flex-col xl:flex-row justify-end gap-4 xl:gap-40 ">
+    <div class="flex flex-col xl:flex-row justify-end gap-4 xl:gap-32 ">
       <app-train-css class="basis-0 flex-grow hidden md:block"></app-train-css>
-      <p class="text-xl md:text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow ">
+      <p class="text-xl md:text-2xl xl:text-3xl text-justify md:tracking-widest xl:leading-relaxed basis-0 grow ">
         <span lang="en">
           I have settled in Sweden with my girlfriend (also from Alsace) almost 3 years ago and we really love it.
           Very fond of nordic countries, we are currently trying to visit the 25 Swedish 'landskapen' with 17 done so far.
