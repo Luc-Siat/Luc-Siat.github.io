@@ -12,19 +12,20 @@ export class LandscapeCssComponent implements AfterViewInit {
   
     
   @HostListener('window:resize', ['$event']) onResize() {
-    if (this.canvas.nativeElement.width != document.body.clientWidth) {
-      this.canvas.nativeElement.width = document.body.clientWidth;
+    console.log(window.outerWidth);
+    if (this.canvas.nativeElement.width != window.innerWidth) {
+      this.canvas.nativeElement.width = window.innerWidth;
       this.createStars();
     }
-    if (this.canvas.nativeElement.height != window.outerHeight){
-      this.canvas.nativeElement.height = window.outerHeight;
-      this.createStars();
-    }
+    // if (this.canvas.nativeElement.height != window.innerHeight){
+    //   this.canvas.nativeElement.height = window.innerHeight;
+    //   this.createStars();
+    // }
  }
 
  
   ngAfterViewInit(): void {
-    this.canvas.nativeElement.height = window.outerHeight;
+    this.canvas.nativeElement.height = document.body.clientHeight;
     this.canvas.nativeElement.width = document.body.clientWidth;
     
     this.createStars();
