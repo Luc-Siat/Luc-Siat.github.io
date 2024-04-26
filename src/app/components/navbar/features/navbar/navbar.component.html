@@ -9,20 +9,20 @@
       <li class="grow basis-0 justify-start hidden lg:flex lg:justify-between">
         <ul class="menu menu-horizontal px-1 grow lg:flex lg:justify-between">
           <li  class="hover:text-accent">
-            <a href="#home" >
+            <a (click)="scrollToId('home')" >
               <span lang="en">HOME</span>
               <span lang="sv">HEM</span>
             </a>
           </li>
 
           <li  class="hover:text-accent">
-            <a href="#projects">
+            <a (click)="scrollToId('projects', true);">
               <span lang="en">PROJECTS</span>
               <span lang="sv">PROJEKTER</span>
             </a>
           </li>
           <li class="hover:text-accent">
-            <a href="#experience">
+            <a (click)="scrollToId('experience')">
               <span lang="en">EXPERIENCE</span>
               <span lang="sv">ERFARENHET</span>
             </a>
@@ -30,7 +30,7 @@
         </ul>
       </li>
       <li class="grow-[2] md:grow-0 md:min-w-48 xl:grow basis-0 justify-center">
-        <a class="flex flex-col hoverable " href="#home">
+        <a class="flex flex-col hoverable " (click)="scrollToId('home')">
           <h3 class="font-['Pacifico'] ">Luc Siat</h3>
           <p class="text-md md:text-xl xl:text-2xl font-thin basis-2 grow">
             <span lang="en">FULL STACK DEVELOPER</span>
@@ -41,14 +41,14 @@
       <li class="grow basis-0 justify-end flex items-center ">
         <ul class="menu menu-horizontal items-center justify-end lg:justify-evenly grow">
           <li class="hover:text-accent">
-            <a class="px-4 py-2 hidden lg:flex" href="#about">
+            <a class="px-4 py-2 hidden lg:flex" (click)="scrollToId('contact')">
               <span lang="en">ABOUT</span>
               <span lang="sv">OM MIG</span>
             </a>
           </li>
           <li>
             <a
-            class="btn btn-ghost btn-circle md:btn-md xl:btn-lg font-normal bg-base-100 text-base-content hover:bg-accent hover:text-base-100 " href="#contact">
+            class="btn btn-ghost btn-circle md:btn-md xl:btn-lg font-normal bg-base-100 text-base-content hover:bg-accent hover:text-base-100 " (click)="scrollToId('contact')">
               <fa-icon [icon]="['fas', 'paper-plane']" class="fa-fw w-10 h-10 flex justify-center items-center" ></fa-icon>
             </a>
           </li>

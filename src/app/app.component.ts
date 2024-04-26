@@ -59,7 +59,7 @@ export class AppComponent implements AfterViewInit{
     const currentScroll = window.scrollY;
     const navbar = document.querySelector('.navbar');
 
-    if (currentScroll < this.lastScrollY - 265) {
+    if (currentScroll < this.lastScrollY - 165) {
       setTimeout(() => navbar?.classList.remove('opacity-0'), 500)
       navbar?.classList.remove('hidden')
       this.lastScrollY = currentScroll;
@@ -69,7 +69,6 @@ export class AppComponent implements AfterViewInit{
      navbar?.classList.add('opacity-0');
      setTimeout(() => navbar?.classList.add('hidden'), 500)
      this.lastScrollY = currentScroll;
-
     }
     
     if (currentScroll > window.innerHeight - 50) {

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
-import { toggleOverflow } from 'src/app/shared/helper-functions/helper';
+import { scrollToId, toggleOverflow } from 'src/app/shared/helper-functions/helper';
 
 
 @Component({
@@ -11,6 +11,8 @@ export class NavbarComponent  {
   public scrollYOffset = '0';
   public toggleOverflow = toggleOverflow;
   public isDark = false;
+  public scrollToId = scrollToId;
+  public window = window
   
 
   public handleIsDarkEvent(isDark : boolean) {
