@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs';
 
 @Component({
@@ -10,6 +10,12 @@ export class LandscapeCssComponent implements AfterViewInit {
 
   @ViewChild('canvas')  canvas!: ElementRef<HTMLCanvasElement>;
   
+    
+  @HostListener('window:resize', ['$event']) onResize() {
+    this.canvas.nativeElement.height = window.outerHeight;
+    this.canvas.nativeElement.width = document.body.clientWidth;
+ }
+
  
   ngAfterViewInit(): void {
 
