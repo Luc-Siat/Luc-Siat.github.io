@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { scrollToId } from 'src/app/shared/helper-functions/helper';
 
 @Component({
   selector: 'app-contact',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-
+  public scrollToId = scrollToId;
 }
