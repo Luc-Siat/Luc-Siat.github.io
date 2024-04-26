@@ -11,13 +11,13 @@ export class LandscapeCssComponent implements AfterViewInit {
   @ViewChild('canvas')  canvas!: ElementRef<HTMLCanvasElement>;
   
     
-  @HostListener('window:resize', ['$event']) onResize(e : any) {
-    if (this.canvas.nativeElement.width != e.target?.outerWidth) {
-      this.canvas.nativeElement.width = e.target?.outerWidth;
+  @HostListener('window:resize', ['$event']) onResize() {
+    if (this.canvas.nativeElement.width != document.body.clientWidth) {
+      this.canvas.nativeElement.width = document.body.clientWidth;
       this.createStars();
     }
-    if (this.canvas.nativeElement.height != e.target?.outerHeight){
-      this.canvas.nativeElement.height = e.target?.outerHeight;
+    if (this.canvas.nativeElement.height != window.outerHeight){
+      this.canvas.nativeElement.height = window.outerHeight;
       this.createStars();
     }
  }
