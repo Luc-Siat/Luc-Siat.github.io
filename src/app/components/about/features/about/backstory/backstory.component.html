@@ -1,5 +1,5 @@
 <div 
-class="container flex flex-col gap-2 md:gap-8 2xl:gap-12 z-20 text-neutral-content justify-evenly w-full h-screen relative" 
+class="container flex flex-col gap-2 md:gap-8 2xl:gap-12 z-20 text-neutral-content justify-evenly w-full h-screen md:top-2 relative" 
 *ngIf="backstoryInput.checked" 
 >
   <div class="flex justify-between items-center w-full">
@@ -12,7 +12,7 @@ class="container flex flex-col gap-2 md:gap-8 2xl:gap-12 z-20 text-neutral-conte
     </button>
   </div>
     <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-20 xl:gap-20">
-      <p class="text-xl md:text-2xl text-justify md:tracking-widest 2xl:leading-loose basis-0 grow">
+      <p class="text-lg md:text-2xl text-justify md:tracking-widest 2xl:leading-loose basis-0 grow">
         <span lang="en">
           Born in Alsace, France, I carry with me a cultural bagage which, truth be told, mostly includes recipes like
           Dampfnuddle and Flammekueche. 
@@ -26,20 +26,20 @@ class="container flex flex-col gap-2 md:gap-8 2xl:gap-12 z-20 text-neutral-conte
       <img class="md:w-[50%] xl:hidden" src="assets/images/alsace.png" alt="picture of alsace">
     </div>
 
-    <div class="flex flex-col md:flex-row justify-end gap-4 md:gap-10 xl:gap-32">
-      <app-train-css class="basis-0 flex-grow hidden md:block scale-80 2xl:scale-100"></app-train-css>
-      <p class="text-xl md:text-2xl text-justify md:tracking-widest 2xl:leading-relaxed basis-0 grow ">
+    <div class="flex flex-col md:flex-row justify-end gap-4 md:gap-10 xl:gap-32 ">
+      <app-train-css class="basis-0 flex-grow hidden md:block scale-80 2xl:scale-100 relative lg:top-[-4rem]"></app-train-css>
+      <p class="text-lg md:text-2xl text-justify md:tracking-widest 2xl:leading-relaxed basis-0 grow ">
         <span lang="en">
           I have settled in Sweden with my girlfriend (also from Alsace) almost 3 years ago and we really love it.
           Very fond of nordic countries, we are currently trying to visit the 25 Swedish 'landskapen' with 17 done so far.
-          <span class="hidden md:inline-block">I am also doing quite a bit of travelling across Europe with night trains. This includes Hamburg, Leipzig,
-          Copenhagen, Oslo and soon a trip to Slovenia.</span>
+          I am also doing quite a bit of travelling across Europe with night trains. This includes Hamburg, Leipzig,
+          Copenhagen, Oslo and soon a trip to Slovenia.
         </span>
         <span lang="sv">
           Jag har bosatt mig i Sverige med min flickvän (också från Alsace) för snart 3 år sedan och vi älskar det.
           Väldigt förtjust i de nordiska länderna, vi försöker just nu besöka de 25 svenska landskapen med 17 gjorda hittills.
-          <span class="hidden md:inline-block">Jag reser också en hel del genom Europa med nattåg. Detta inkluderar Hamburg, Leipzig,
-          Köpenhamn, Oslo och snart en resa till Slovenien.</span>
+          Jag reser också en hel del genom Europa med nattåg. Detta inkluderar Hamburg, Leipzig,
+          Köpenhamn, Oslo och snart en resa till Slovenien.
         </span>
       </p>
     </div>
