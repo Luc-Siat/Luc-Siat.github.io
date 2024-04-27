@@ -17,10 +17,10 @@ export class LandscapeCssComponent implements AfterViewInit {
       this.canvas.nativeElement.width = window.innerWidth;
       this.createStars();
     }
-    // if (this.canvas.nativeElement.height != window.innerHeight){
-    //   this.canvas.nativeElement.height = window.innerHeight;
-    //   this.createStars();
-    // }
+    if (this.canvas.nativeElement.height != window.innerHeight){
+      this.canvas.nativeElement.height = window.innerHeight;
+      this.createStars();
+    }
  }
 
  
