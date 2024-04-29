@@ -51,6 +51,7 @@ import { HobbyButtonComponent } from './components/about/utils/hobby-button/hobb
 import { BackstoryComponent } from './components/about/features/about/backstory/backstory.component';
 import { HobbiesComponent } from './components/about/features/about/hobbies/hobbies.component';
 import { getSafePropertyAccessString } from '@angular/compiler';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -80,7 +81,8 @@ import { getSafePropertyAccessString } from '@angular/compiler';
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
