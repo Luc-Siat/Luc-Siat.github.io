@@ -1,7 +1,7 @@
 
 
-<div class="h-full absolute w-screen top-0">
-  <nav id="home" class="navbar z-20 text-base-100 text-center flex-col items-center justify-center !fixed top-0" [ngClass]="isDark ? 'bg-base-content' : 'bg-transparent'">
+<div class="h-full absolute top-0">
+  <nav id="home" class="navbar z-20 text-base-100 text-center flex-col items-center justify-center w-screen !fixed top-0" [ngClass]="isDark ? 'bg-base-content' : 'bg-transparent'">
     <ul class="container flex gap-1 md:gap-3 justify-between items-center px-0 relative">
       <li class="grow basis-0 justify-start lg:hidden flex relative">
         <app-side-drawer (isDarkEvent)="handleIsDarkEvent($event)"></app-side-drawer>
