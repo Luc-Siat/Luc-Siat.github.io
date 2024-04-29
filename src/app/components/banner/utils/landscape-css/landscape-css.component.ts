@@ -12,8 +12,8 @@ export class LandscapeCssComponent implements AfterViewInit {
 
  
   ngAfterViewInit(): void {
-    this.canvas.nativeElement.height = window.outerHeight - 200;
-    this.canvas.nativeElement.width = 3000;
+    this.canvas.nativeElement.height = window.outerHeight / 1.75;
+    this.canvas.nativeElement.width = window.outerWidth * 2;
     
     this.createStars();
   }
@@ -22,10 +22,8 @@ export class LandscapeCssComponent implements AfterViewInit {
     if (this.canvas!.nativeElement.getContext !== undefined){
       const context = this.canvas?.nativeElement.getContext("2d");
       var radius = 2;
-      const isLarge = window.outerWidth > 2000;
-      const starsCount = isLarge ? 200 : 2000;
 
-      for(var star = 0; star < starsCount; star++){ 
+      for(var star = 0; star < 80; star++){ 
         var min = ( Math.random() * 10 + 5 ) / 10;
         var max = this.canvas.nativeElement.width - radius;
 

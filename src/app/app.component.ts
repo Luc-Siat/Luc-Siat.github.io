@@ -63,13 +63,12 @@ export class AppComponent implements AfterViewInit{
       setTimeout(() => navbar?.classList.remove('opacity-0'), 500)
       navbar?.classList.remove('hidden')
       this.lastScrollY = currentScroll;
-    }
-    // } else if (currentScroll > 3000 && currentScroll > this.lastScrollY + 500) {
+    } else if (currentScroll > 3000 && currentScroll > this.lastScrollY + 500) {
 
-    //  navbar?.classList.add('opacity-0');
-    //  setTimeout(() => navbar?.classList.add('hidden'), 500)
-    //  this.lastScrollY = currentScroll;
-    // }
+     navbar?.classList.add('opacity-0');
+     setTimeout(() => navbar?.classList.add('hidden'), 500)
+     this.lastScrollY = currentScroll;
+    }
     
     if (currentScroll > window.innerHeight - 50) {
       navbar?.classList.add('navbar-negative-colors');
