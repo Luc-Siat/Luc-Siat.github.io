@@ -82,7 +82,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    RouterModule
+    // RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
