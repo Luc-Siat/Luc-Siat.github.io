@@ -1,12 +1,12 @@
 <div class="menu-toggle lg:hidden flex flex-col p-2 rounded-full aspect-square justify-center items-star relative" >
     <div class="z-40 aspect-square flex items-center justify-center">
-        <input #drawerInput  type="checkbox" class="my-auto mx-auto z-[60] top-0 left-0 absolute" (click)="setScrollYOffset($event); toggleOverflow()" />
+        <input #drawerInput  type="checkbox" class="my-auto mx-auto z-[60] top-0 left-0 absolute" (click)="toggleOverflow()" />
         <div class="flex flex-col aspect-square relative" [ngClass]="drawerInput.checked? 'justify-evenly' : 'justify-center gap-1'">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <!-- <ul  class="absolute top-0 side-drawer text-start container text-base-content w-[90vw] overflow-hidden h-screen flex flex-col justify-start gap-5 text-3xl z-[1]">
+        <ul  class="fixed left-0 top-0 side-drawer text-start my-1 container text-base-content w-[90vw] overflow-hidden h-screen flex flex-col justify-start gap-5 text-3xl z-[1]">
             <li class="flex flex-col">
                 <app-navbar-settings [isOnMobile]="true" [drawerEvent]="closeThemeDropdownEvent" (isDarkEvent)="isDarkEvent.emit($event)"></app-navbar-settings>
             </li>
@@ -36,7 +36,7 @@
                   <span lang="sv">OM MIG</span>
                 </a>
             </li>
-        </ul> -->
+        </ul>
     </div>
 </div>
-<span [style.top]="top" class="absolute h-full aspect-square rounded-full left-0 " [ngClass]="drawerInput.checked ? 'circle-grow-screen bg-base-content' : ''"></span>
+<span class="absolute h-full aspect-square rounded-full left-0 top-0" [ngClass]="drawerInput.checked ? 'circle-grow-screen bg-base-content' : ''"></span>

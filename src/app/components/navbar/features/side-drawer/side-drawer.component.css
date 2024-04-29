@@ -80,7 +80,7 @@
 .menu-toggle div input:checked ~ div span:nth-last-child(1)
 {
   transform: rotate(-45deg);
-  width: 33px;
+  width: 32px;
   top: 0;
   left: 18%;
 }

@@ -14,11 +14,4 @@ export class SideDrawerComponent{
   public scrollToId = scrollToId;
   public top = `0px`;
   @Output() isDarkEvent = new EventEmitter<boolean>();
-  
-
-  public setScrollYOffset(e : MouseEvent) {
-    console.log(e.offsetY, e.pageY, e.screenY);
-    this.top = `${+(e.pageY - 43)}px`;
-  }
-
 }
