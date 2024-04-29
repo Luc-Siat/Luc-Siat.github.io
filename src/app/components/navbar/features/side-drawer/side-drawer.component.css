@@ -33,7 +33,7 @@
   display: block;
   width: 33px;
   height: 3px;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   position: relative;
   border-radius: 25px;
   @apply bg-base-100;
@@ -63,11 +63,17 @@
 }
 
 
-
 .menu-toggle div  input:checked ~ div  span:nth-last-child(2)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu-toggle div  input:checked ~ div  span:first-child
+{
+  position: absolute;
+  top: 1px;
+  left: 1px;
 }
 
 
@@ -75,6 +81,8 @@
 {
   transform: rotate(-45deg) translate(0, -1px);
   width: 33px;
+  top: 1px;
+  left: 1px;
 }
 
 .menu-toggle::after input:checked {

@@ -9,24 +9,11 @@ import { fromEvent } from 'rxjs';
 export class LandscapeCssComponent implements AfterViewInit {
 
   @ViewChild('canvas')  canvas!: ElementRef<HTMLCanvasElement>;
-  
-    
-  @HostListener('window:resize', ['$event']) onResize() {
-    console.log(window.outerWidth);
-    if (this.canvas.nativeElement.width != window.innerWidth) {
-      this.canvas.nativeElement.width = window.innerWidth;
-      this.createStars();
-    }
-    if (this.canvas.nativeElement.height != window.innerHeight){
-      this.canvas.nativeElement.height = window.innerHeight;
-      this.createStars();
-    }
- }
 
  
   ngAfterViewInit(): void {
-    this.canvas.nativeElement.height = document.body.clientHeight;
-    this.canvas.nativeElement.width = document.body.clientWidth;
+    this.canvas.nativeElement.height = window.outerHeight - 200;
+    this.canvas.nativeElement.width = 3000;
     
     this.createStars();
   }
@@ -35,8 +22,10 @@ export class LandscapeCssComponent implements AfterViewInit {
     if (this.canvas!.nativeElement.getContext !== undefined){
       const context = this.canvas?.nativeElement.getContext("2d");
       var radius = 2;
+      const isLarge = window.outerWidth > 2000;
+      const starsCount = isLarge ? 200 : 2000;
 
-      for(var star = 0; star < 80; star++){ 
+      for(var star = 0; star < starsCount; star++){ 
         var min = ( Math.random() * 10 + 5 ) / 10;
         var max = this.canvas.nativeElement.width - radius;
 
