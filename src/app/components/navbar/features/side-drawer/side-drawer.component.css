@@ -71,18 +71,18 @@
 
 .menu-toggle div  input:checked ~ div  span:first-child
 {
-  position: absolute;
-  top: 1px;
-  left: 1px;
+  position: relative;
+  top: 0;
+  left: 22%;
 }
 
 
 .menu-toggle div input:checked ~ div span:nth-last-child(1)
 {
-  transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg);
   width: 33px;
-  top: 1px;
-  left: 1px;
+  top: 0;
+  left: 18%;
 }
 
 .menu-toggle::after input:checked {
