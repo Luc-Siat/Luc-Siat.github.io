@@ -20,21 +20,16 @@
 
 .menu-toggle div input
 {
-  top: 1rem;
-  left: .5rem;
-  display: block;
   width: 3.1rem;
   height: 3.1rem;
-  position: fixed;
   padding: 1rem;
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
 
 }
 
-.menu-toggle div > span
+.menu-toggle div > div > span
 {
-  top: 3px;
   display: block;
   width: 33px;
   height: 3px;
@@ -49,43 +44,37 @@
               opacity 0.55s ease;
 }
 
-.menu-toggle div span:first-child
+.menu-toggle div > div span:first-child
 {
   transform-origin: 0% 0%;
 }
 
-.menu-toggle  div  span:nth-last-child(2)
+.menu-toggle  div > div  span:nth-last-child(1)
 {
   transform-origin: 0% 100%;
   width: 18px;
 }
 
-.menu-toggle  div  input:checked ~ span
+.menu-toggle  div  input:checked ~ div span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-4px, -2px);
   @apply bg-base-100;
-  top:5px;
-  left: 4px;
 }
 
 
 
-.menu-toggle div  input:checked ~ span:nth-last-child(3)
+.menu-toggle div  input:checked ~ div  span:nth-last-child(2)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
-  top:5px;
-  left: 5px;
 }
 
 
-.menu-toggle div input:checked ~ span:nth-last-child(2)
+.menu-toggle div input:checked ~ div span:nth-last-child(1)
 {
   transform: rotate(-45deg) translate(0, -1px);
-  width: 32px;
-  top:5px;
-  left: 5px;
+  width: 33px;
 }
 
 .menu-toggle::after input:checked {
@@ -95,17 +84,8 @@
 }
 
 
-
-
-.custom-drawer
+.side-drawer
 {
-  position: absolute;
-  margin: -52px 0 0 -48px;
-  padding: 50px;
-  padding-top: 8px;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  overflow: hidden;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   
@@ -113,7 +93,7 @@
 }
 
 
-.custom-drawer li
+.side-drawer li
 {
   padding: 10px 0;
   @apply text-base-100;
