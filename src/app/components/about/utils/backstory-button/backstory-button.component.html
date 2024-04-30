@@ -1,0 +1,14 @@
+<span 
+        class="h-28 w-28  sm:h-36 sm:w-36 md:h-56 md:w-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center shadow-2xl relative drop-shadow-2xl" 
+        [ngClass]="backstoryInput.checked ? 'circle-grow-screen bg-accent z-40 bg-bouncy ' : 'bouncy-btn'">
+          <input 
+          #backstoryInput 
+          type="checkbox" 
+          class="h-full w-full opacity-0 z-50" 
+          >
+          <img  
+          *ngIf="!backstoryInput.checked" 
+          src="assets/images/books.png" alt="backstory icon" 
+          class="absolute aspect-square h-2/3 " 
+          [ngClass]="backstoryInput.checked? 'opacity-0': ''">
+</span>

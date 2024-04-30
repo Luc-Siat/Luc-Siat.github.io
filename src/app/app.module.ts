@@ -50,10 +50,9 @@ import { LandscapeCssComponent } from './components/banner/utils/landscape-css/l
 import { HobbyButtonComponent } from './components/about/utils/hobby-button/hobby-button.component';
 import { BackstoryComponent } from './components/about/features/about/backstory/backstory.component';
 import { HobbiesComponent } from './components/about/features/about/hobbies/hobbies.component';
-import { getSafePropertyAccessString } from '@angular/compiler';
-import { RouterModule } from '@angular/router';
-
-
+import { VideoPlayerComponent } from './components/about/utils/video-player/video-player.component';
+import { HobbyCardComponent } from './components/about/utils/hobby-card/hobby-card.component';
+import { BackstoryButtonComponent } from './components/about/utils/backstory-button/backstory-button.component';
 
 @NgModule({
   declarations: [
@@ -78,13 +77,17 @@ import { RouterModule } from '@angular/router';
     HobbiesComponent,
     HobbyButtonComponent,
     BackstoryComponent,
+    VideoPlayerComponent,
+    HobbyCardComponent,
+    BackstoryButtonComponent,
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    // RouterModule
   ],
-  providers: [],
+  providers: [
+  
+],
   bootstrap: [AppComponent]
 })
 export class AppModule{

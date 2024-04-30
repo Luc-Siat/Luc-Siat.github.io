@@ -5,7 +5,7 @@
         <span lang="en">ABOUT</span>
         <span lang="sv">OM MIG</span>
       </h2>
-      <div class="hidden lg:flex flex-row gap-6 sm:gap-10 justify-evenly items-center my-20 px-2">
+      <div class="flex flex-row gap-6 sm:gap-10 justify-evenly items-center my-20 px-2">
         <span 
         class="flex h-28 w-28  sm:h-36 sm:w-36 md:h-56 md:w-56 aspect-square rounded-full bg-secondary flex-col items-center justify-center shadow-2xl  relative drop-shadow-2xl" 
         [ngClass]="hobbiesInput.checked ? 'circle-grow-screen bg-accent z-40 bg-bouncy ' : 'bouncy-btn'">
@@ -13,12 +13,13 @@
           #hobbiesInput 
           type="checkbox" 
           class="h-full w-full opacity-0 z-50" 
-          (click)="toggleOverflow(); setScrollYOffset($event)">
+          >
           <img  
           *ngIf="!hobbiesInput.checked" 
           src="assets/images/heart.png" alt="passion icon" 
           class="absolute aspect-square h-2/3 " 
-          [ngClass]="backstoryInput.checked? 'opacity-0': ''">
+          [ngClass]="hobbiesInput.checked? 'opacity-0': ''"
+          >
         </span>
         <span 
         class="h-28 w-28  sm:h-36 sm:w-36 md:h-56 md:w-56 aspect-square rounded-full bg-secondary flex flex-col items-center justify-center shadow-2xl relative drop-shadow-2xl" 
@@ -27,16 +28,14 @@
           #backstoryInput 
           type="checkbox" 
           class="h-full w-full opacity-0 z-50" 
-          (click)="toggleOverflow(); setScrollYOffset($event)">
+          >
           <img  
           *ngIf="!backstoryInput.checked" 
           src="assets/images/books.png" alt="backstory icon" 
           class="absolute aspect-square h-2/3 " 
           [ngClass]="backstoryInput.checked? 'opacity-0': ''">
         </span>
-        <a routerLink="hobbies">hobbies</a>
       </div>
-    
       <p class="text-2xl xl:text-3xl text-justify md:tracking-widest md:leading-loose basis-0 grow border-2 px-4 border-r-secondary-content border-l-secondary-content border-t-transparent border-b-transparent border-opacity-5">
         <span lang="en">
           Originally from a hospitality background, I have decided a few years ago to pursue a career that I would
@@ -73,21 +72,9 @@
            Ibland tycker jag att musiksmak är ett bättre sätt att förstå en person än ord. Så här är en del av mitt sinne (det var verkligen svårt att välja låtar)
         </span>
       </p>
-      <div class="gap-2 justify-end items-start flex">
-        <div class="text-xl md:text-2xl flex justify-between flex-col h-[300px]">
-          <h3 class=" vertical-text">
-            <span lang="en">My 6 favourite songs </span> 
-            <span lang="sv">Mina 6 favorita låtar </span>
-            <fa-icon class="text-heart" [icon]="['fas', 'heart']"></fa-icon>
-          </h3>
-          <button [style]="rotationClass" class="transition-all duration-[1.75s]" (mouseover)="rotateRefresh(45)" (click)="setNextSong(iframe);rotateRefresh(360)"><fa-icon class="rounded-full text-base-content text-3xl" [icon]="['fas', 'rotate']"></fa-icon></button>
-        </div>
-        <iframe #iframe id="video-player" class="rounded-box w-[300px] h-[300px]"  src="https://www.youtube.com/embed/35N45tQocvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+     <app-video-player></app-video-player>
     </div>
-    <div class="w-screen h-screen flex items-center justify-center fixed top-0 md:top-2 z-30" *ngIf="hobbiesInput.checked || backstoryInput.checked">
       <app-hobbies [hobbiesInput]="hobbiesInput"></app-hobbies>
-      <app-backstory [backstoryInput]="backstoryInput"></app-backstory>
-    </div>  
+      <app-backstory [backstoryInput]="backstoryInput"></app-backstory> 
   </div>
 </section>

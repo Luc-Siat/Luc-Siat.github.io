@@ -125,7 +125,7 @@ body {
 
 
 .cursor {
-  z-index: 50;
+  z-index: 100;
   width: 26px;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -138,7 +138,7 @@ body {
 }
 
 .cursor-dot {
-  z-index: 50;
+  z-index: 100;
   width: 6px;
   aspect-ratio: 1/1;
   border-radius: 50%;
