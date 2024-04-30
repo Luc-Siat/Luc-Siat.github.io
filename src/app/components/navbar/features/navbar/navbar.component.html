@@ -1,8 +1,8 @@
 
 
 <div class="h-full absolute top-0">
-  <nav id="home" class="navbar z-20 text-base-100 text-center flex-col items-center justify-center w-screen !fixed top-0" [ngClass]="isDark ? 'bg-base-content' : 'bg-transparent'">
-    <ul class="container flex gap-1 md:gap-3 justify-between items-center px-0 relative">
+  <nav id="home" class="navbar z-20 text-base-100 text-center flex-col items-center justify-center w-screen !fixed top-0 max-md:py-1 px-0" [ngClass]="isDark ? 'bg-base-content' : 'bg-transparent'">
+    <ul class="container flex gap-1 md:gap-3 justify-between items-center relative">
       <li class="grow basis-0 justify-start lg:hidden flex relative">
         <app-side-drawer (isDarkEvent)="handleIsDarkEvent($event)"></app-side-drawer>
       </li>
@@ -32,7 +32,7 @@
       <li class="grow-[2] md:grow-0 md:min-w-48 xl:grow basis-0 justify-center">
         <a class="flex flex-col hoverable " (click)="scrollToId('home')">
           <h3 class="font-['Pacifico'] ">Luc Siat</h3>
-          <p class="text-md md:text-xl xl:text-2xl font-thin basis-2 grow">
+          <p class="text-sm sm:text-md md:text-xl xl:text-2xl font-thin basis-2 grow">
             <span lang="en">FULL STACK DEVELOPER</span>
             <span lang="sv">FULL STACK UTVECKLARE</span>
           </p>

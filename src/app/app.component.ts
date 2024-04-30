@@ -33,6 +33,7 @@ export class AppComponent implements AfterViewInit{
     });
 
     const slidingElements= document.querySelectorAll('.slide-in-view')
+    console.log(slidingElements)
     slidingElements.forEach(el => observer.observe(el));
   }
 

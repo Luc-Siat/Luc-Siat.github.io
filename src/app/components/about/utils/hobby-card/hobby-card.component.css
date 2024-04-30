@@ -1,0 +1,22 @@
+.bouncy-btn-sm{
+    transform: scale(.95, .95) translate3d(0, 0, 0);
+    
+    &:hover{
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-duration: 400ms;
+        transform:scale(1.0,1.0) translate3d(0,0,0)
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .bouncy-btn-sm{
+        transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+        
+        &:hover{
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-duration: 400ms;
+            transform:scale(1.2,1.2) translate3d(0,0,0)
+        }
+      }
+  }
+
