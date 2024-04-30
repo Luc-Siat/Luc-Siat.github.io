@@ -1,15 +1,15 @@
 <div 
-class="items-center grow fixed top-0 left-0 w-screen h-screen z-[60] gradual-opacity bg-secondary " *ngIf="backstoryInput.checked" 
+class="items-center grow fixed top-[-5vh] left-0 w-screen h-[110vh] z-[60] gradual-opacity bg-secondary " *ngIf="backstoryInput.checked" 
 >
   <div 
-class="container flex flex-col sm:gap-2 md:gap-8 2xl:gap-12 z-30 text-neutral-content justify-between sm:justify-center md:justify-evenly xl:justify-center w-full h-full md:top-2 relative" 
+class="mx-auto container flex flex-col sm:gap-2 md:gap-8 2xl:gap-12 z-30 text-neutral-content justify-between sm:justify-center md:justify-evenly xl:justify-center w-full h-full md:top-2 relative" 
 >
-  <div class="flex justify-between items-center w-full grow">
+  <div class="flex justify-between items-center w-full">
     <h3 class="text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-[Zeyada] grow basis-0 xl:mt-10">
         <span lang="en">Backstory</span>
         <span lang="sv">Bakgrundhistoria</span>
     </h3>
-    <button class="btn  md:btn-lg btn-circle btn-ghost" (click)="toggleOverflow(); backstoryInput.checked = false">
+    <button class="btn  md:btn-lg btn-circle btn-ghost" (click)="backstoryInput.checked = false;scrollToId('about', false)">
       <svg xmlns="http://www.w3.org/2000/svg" class="p-2 h-12 w-12 xl:h-16 xl:w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
     </button>
   </div>

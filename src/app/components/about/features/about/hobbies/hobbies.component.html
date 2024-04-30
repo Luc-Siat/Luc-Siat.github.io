@@ -1,4 +1,4 @@
-<div class="items-center grow fixed top-0 left-0 w-screen h-screen z-[60] gradual-opacity bg-secondary " *ngIf="hobbiesInput.checked" >
+<div class="items-center grow fixed top-[-5vh] left-0 w-screen h-[110vh] z-[60] gradual-opacity bg-secondary " *ngIf="hobbiesInput.checked" >
   <div class="flex flex-col gap-2 sm:gap-4 z-30 justify-evenly xl:justify-center text-neutral-content w-full h-full container mx-auto md:items-center"  
     >
       <div class="flex justify-between items-end sm:items-center w-full">
@@ -6,7 +6,7 @@
           <span lang="en">Hobbies & Passions</span>
           <span lang="sv">Hobbyer och Passioner</span>
         </h3>
-        <button class="btn  md:btn-lg btn-circle btn-ghost" (click)="toggleOverflow(); hobbiesInput.checked = false">
+        <button class="btn  md:btn-lg btn-circle btn-ghost" (click)="hobbiesInput.checked = false; scrollToId('about', false)">
           <svg xmlns="http://www.w3.org/2000/svg" class="p-2 h-12 w-12 xl:h-16 xl:w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
         </button>
       </div>

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Hobby } from '../../../data-access/hobby.model';
 import data from '../../../data-access/hobbies.json'
-import { toggleOverflow } from 'src/app/shared/helper-functions/helper';
+import { scrollToId, toggleOverflow } from 'src/app/shared/helper-functions/helper';
 
 
 @Component({
@@ -14,8 +14,8 @@ export class HobbiesComponent {
   @Output() hobbySelectionEvent = new EventEmitter<string>();
   hobbies  = data.hobbies as Hobby[];
   toggleOverflow = toggleOverflow;
+  scrollToId = scrollToId;
   selectedHobby = '';
-
 
 
   handleHobbySelection(hobby : string) {
