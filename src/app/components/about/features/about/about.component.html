@@ -12,7 +12,8 @@
           <input 
           #hobbiesInput 
           type="checkbox" 
-          class="h-full w-full opacity-0 z-50" 
+          class="h-full w-full opacity-0 z-50"
+          (click)="toggleOverflow();" 
           >
           <img  
           *ngIf="!hobbiesInput.checked" 
@@ -27,7 +28,8 @@
           <input 
           #backstoryInput 
           type="checkbox" 
-          class="h-full w-full opacity-0 z-50" 
+          class="h-full w-full opacity-0 z-50"
+          (click)="toggleOverflow();" 
           >
           <img  
           *ngIf="!backstoryInput.checked" 
